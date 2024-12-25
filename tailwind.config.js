@@ -11,7 +11,9 @@ export default {
     },
     extend: {
       fontFamily: {
-        heading: ["Poppins", "sans-serif"],
+        poppin: ["Poppins", "sans-serif"],
+        roboto: ["Roboto", "sans-serif"],
+        pacifico: ["Pacifico", "sans-serif"],
       },
     },
   },
