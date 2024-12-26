@@ -6,7 +6,7 @@ const HomePage = () => {
   return (
     <>
       <HomeHeroSection/>
-      <Footer bgImg={footerBg} />
+      <Footer bgImg={footerBg} newsLetterBgColor={'orange'} />
     </>
   );
 };

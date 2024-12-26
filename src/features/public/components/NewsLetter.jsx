@@ -1,9 +1,9 @@
 import React from 'react'
 import newsLetteLogo from "../../../assets/homePage/flower_newsletter.png"
 import rightArrow from "../../../assets/homePage/arrow-right.png"
-const NewsLetter = () => {
+const NewsLetter = ({color}) => {
   return (
-    <div className='max-w-[1062px] px-14 py-7  rounded-lg bg-orange-500 relative mx-auto top-16 h-[212px] '>
+    <div className={`max-w-[1062px] px-14 py-7  rounded-lg bg-${color}-500 relative mx-auto top-16 h-[212px] `}>
         <div className=' relative'>
         <div className=' h-10 w-10 absolute left-0 top-0'>
             <img src={`${newsLetteLogo}`} alt="" />
