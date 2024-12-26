@@ -1,6 +1,7 @@
 import React from 'react'
 import newsLetteLogo from "../../../assets/homePage/flower_newsletter.png"
 import rightArrow from "../../../assets/homePage/arrow-right.png"
+
 const NewsLetter = ({color}) => {
   return (
     <div className={`max-w-[1062px] px-14 py-7  rounded-lg bg-${color}-500 relative mx-auto top-16 h-[212px] `}>

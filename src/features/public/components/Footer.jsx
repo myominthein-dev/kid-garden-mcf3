@@ -23,11 +23,11 @@ const Footer = ({bgImg,newsLetterBgColor}) => {
               <div className="flex items-center justify-center">
                 <img  src={footerLogo} alt="" />
               </div>
-              <p className="font-roboto text-lg lg:px-20 my-5 text-center font-thin">"Find the perfect class tailored to your child's needs and interests."</p>
+              <p className="font-roboto text-lg lg:px-20 my-5 text-center text-neutral-700">"Find the perfect class tailored to your child's needs and interests."</p>
               <ul className="text-orange-600 flex items-center justify-evenly leading-4 font-semibold">
                 <li onClick={()=>link('/')} className="cursor-pointer">Home</li>
                 <li onClick={()=>link('about-us')} className="cursor-pointer">About Us</li>
-                <li onClick={()=>link('courses')} className="cursor-pointer">Courses</li>
+                <li onClick={()=>link('our-courses')} className="cursor-pointer">Courses</li>
                 <li onClick={()=>link('contact-us')} className="cursor-pointer">Contact Us</li>
                 <li onClick={()=>link('events')} className="cursor-pointer">Events</li>
               </ul>

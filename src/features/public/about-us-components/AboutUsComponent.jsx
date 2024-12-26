@@ -4,7 +4,7 @@ import Container from '../components/Container'
 const AboutUsHeroSection = () => {
     return (
      <Container>
-          <h1>This is contact</h1>
+          <h1>This is about</h1>
      </Container>
     )
   }
