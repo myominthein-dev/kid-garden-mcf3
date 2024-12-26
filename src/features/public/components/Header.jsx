@@ -2,11 +2,13 @@ import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../../../assets/logo.svg";
 import { MdOutlinePhoneInTalk } from "react-icons/md";
+import Container from "./Container";
 
 const Header = () => {
   return (
     <header className=" border-b-2 border-gray-200 ">
-      <nav className="bg-white border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800">
+      <Container>
+      <nav className="bg-white border-gray-200 py-2.5 dark:bg-gray-800">
         <div className="flex flex-wrap justify-between items-center mx-auto">
           <Link to="/" className="flex items-center">
             <img
@@ -69,6 +71,7 @@ const Header = () => {
           </div>
         </div>
       </nav>
+      </Container>
     </header>
   );
 };
