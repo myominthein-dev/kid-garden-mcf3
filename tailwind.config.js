@@ -4,6 +4,12 @@ import flowbite from "flowbite/plugin";
 
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  safelist: [
+    "bg-orange-500",
+    "bg-blue-500",
+    "bg-red-500",
+    // Add more colors as needed
+  ],
 
   theme: {
     fontFamily: {
