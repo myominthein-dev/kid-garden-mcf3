@@ -59,6 +59,7 @@ const HomeHeroSection = () => {
         return (
           <div key={index} className="absolute" style={shape.position}>
             <Ellipse
+              initial="39% 61% 50% 50% / 37% 40% 60% 63%"
               width="100px"
               height="100px"
               bgColor={shape.bgColor}
