@@ -1,12 +1,9 @@
-import React from 'react'
-import Container from '../components/Container'
+import React from "react";
+import Container from "../components/Container";
+import CourseCategoriesMain from "./CourseCategoriesMain";
 
 const CourseHeroSection = () => {
-  return (
-    <Container>
-        <div>CourseHeroSection</div>
-    </Container>
-  )
-}
+  return <CourseCategoriesMain />;
+};
 
-export default CourseHeroSection
+export default CourseHeroSection;
