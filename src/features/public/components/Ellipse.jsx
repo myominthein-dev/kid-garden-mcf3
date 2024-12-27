@@ -3,7 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const Ellipse = ({
-  shape,
+  shadow,
   bgColor = "blue",
   borderColor = "blue",
   width = "160px",
@@ -17,7 +17,11 @@ const Ellipse = ({
         border: `3px solid ${borderColor}`,
         width: width,
         height: height,
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
       }}
+      className={shadow ? "shadow-2xl" : ""}
       animate={{
         borderRadius: [
           "39% 61% 50% 50% / 37% 40% 60% 63%",

@@ -16,7 +16,7 @@ const Footer = ({ bgImg, newsLetterBgColor }) => {
   return (
     <footer
       style={{ backgroundImage: `url(${bgImg})` }}
-      className={`border-t-2 h-[832px] bg-[url()] bg-cover bg-no-repeat  border-gray-200 antialiased dark:bg-gray-800 mt-auto`}
+      className={` h-[832px] bg-[url()] bg-cover bg-no-repeat  border-gray-200 antialiased dark:bg-gray-800 mt-auto`}
     >
       <Container>
         <NewsLetter color={newsLetterBgColor} />
