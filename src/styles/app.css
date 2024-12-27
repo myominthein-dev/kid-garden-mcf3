@@ -6,7 +6,9 @@
 .page-loading-progress {
   animation: progress 1s infinite linear;
 }
-
+.class{
+  background-color: bg-;
+}
 .left-right {
   transform-origin: 0% 50%;
 }
