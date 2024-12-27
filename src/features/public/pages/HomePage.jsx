@@ -3,12 +3,14 @@ import footerBg from "../../../assets/homePage/bg_footer.jpg";
 import Footer from "../components/Footer";
 import HomeCaterogires from "../home-components/HomeCaterogires";
 import HomeProcess from "../home-components/HomeProcess";
+import LangLitetracy from "../courses/components/LangLitetracy";
 const HomePage = () => {
   return (
     <>
       <HomeHeroSection />
       <HomeCaterogires />
       <HomeProcess />
+     
       <Footer bgImg={footerBg} newsLetterBgColor={"orange"} />
     </>
   );
