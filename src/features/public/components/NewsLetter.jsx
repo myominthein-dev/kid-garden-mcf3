@@ -2,11 +2,12 @@ import React, { useEffect, useState } from "react";
 import newsLetteLogo from "../../../assets/homePage/flower_newsletter.png";
 import rightArrow from "../../../assets/homePage/arrow-right.png";
 import { initial } from "lodash";
+import Button from "./Button";
 
 const NewsLetter = ({ color }) => {
   return (
     <div
-      className={`max-w-[1062px] px-14 py-7 rounded-lg relative mx-auto top-16 h-[212px] bg-${color}-500`}
+      className={`max-w-[1062px] px-14 py-7 rounded-lg relative mx-auto top-16 h-[212px] bg-${color}-500 border-2 border-black border-dashed`}
     >
       <div className=" relative">
         <div className=" h-10 w-10 absolute left-0 top-0">
@@ -27,9 +28,7 @@ const NewsLetter = ({ color }) => {
               className="bg-white h-full rounded-xl border-none"
               type="email"
             />
-            <button className="bg-orange-400 flex gap-3 items-center text-white px-3 py-2  rounded-xl">
-              Subscribe <img src={rightArrow} alt="" />
-            </button>
+            <Button label="Subscribe" bgColor="orange-400" />
           </div>
         </div>
       </div>
