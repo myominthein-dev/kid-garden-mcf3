@@ -4,8 +4,9 @@ import { LuBrainCircuit, LuCodepen, LuPuzzle, LuSlack } from "react-icons/lu";
 import Ellipse from "../components/Ellipse";
 import starOrange from "../../../assets/homePage/star-orange.svg";
 import starPurple from "../../../assets/homePage/star-purple.svg";
+import { motion } from "framer-motion";
 
-const HomeCaterogires = () => {
+const HomeCategories = () => {
   const categories = [
     {
       icon: (
@@ -41,15 +42,29 @@ const HomeCaterogires = () => {
         <h1 className="font-pacifico text-xl text-orange-500 mb-4">
           Course Categories
         </h1>
-        <img
+        <motion.img
           src={starOrange}
           alt="Orange Star"
           className="absolute top-20 left-10"
+          initial={{ x: -10, y: 0 }}
+          animate={{ x: 10, y: 0 }}
+          transition={{
+            duration: 3,
+            repeat: Infinity,
+            repeatType: "reverse",
+          }}
         />
-        <img
+        <motion.img
           src={starPurple}
           alt="Purple Star"
           className="absolute top-36 right-20"
+          initial={{ x: 10, y: 0 }}
+          animate={{ x: -10, y: 0 }}
+          transition={{
+            duration: 3,
+            repeat: Infinity,
+            repeatType: "reverse",
+          }}
         />
         <h2 className="text-4xl text-neutral-900 font-semibold font-poppin w-[600px] text-center">
           Building Foundations for Lifelong Learning
@@ -61,6 +76,8 @@ const HomeCaterogires = () => {
               className="flex flex-col items-center gap-3 px-7 py-7 border border-neutral-700 border-dashed rounded-xl"
             >
               <Ellipse
+                initial="39% 61% 50% 50% / 37% 40% 60% 63%"
+                isAnimate={true}
                 width="194px"
                 height="174px"
                 shadow={true}
@@ -80,4 +97,4 @@ const HomeCaterogires = () => {
   );
 };
 
-export default HomeCaterogires;
+export default HomeCategories;
