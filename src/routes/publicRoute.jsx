@@ -2,12 +2,10 @@ import { lazy } from "react";
 import CoursePage from "../features/public/pages/CoursePage";
 import GalleryPage from "../features/public/pages/GalleryPage";
 import coursesDetailRoute from "./coursesDetailRoute";
+import HomePage from "../features/public/pages/HomePage";
+import AboutUsPage from "../features/public/pages/AboutUsPage";
+import ContactUsPage from "../features/public/pages/ContactUsPage";
 
-const AboutUsPage = lazy(() => import("../features/public/pages/AboutUsPage"));
-const ContactUsPage = lazy(() =>
-  import("../features/public/pages/ContactUsPage")
-);
-const HomePage = lazy(() => import("../features/public/pages/HomePage"));
 
 const publicRoute = [
   {

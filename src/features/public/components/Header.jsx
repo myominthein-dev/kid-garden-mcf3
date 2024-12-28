@@ -1,10 +1,16 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import logo from "../../../assets/logo.svg";
 import { MdOutlinePhoneInTalk } from "react-icons/md";
 import Container from "./Container";
 
+
 const Header = () => {
+const nav  = useNavigate();
+
+const link = (path) => {
+  nav(path);
+}
   return (
     <header className="">
       <Container>
@@ -27,45 +33,45 @@ const Header = () => {
             >
               <ul className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
                 <li>
-                  <Link
-                    to="/"
+                  <button
+                    onClick={()=>nav('/')}
                     className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:underline lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
                   >
                     Home
-                  </Link>
+                  </button>
                 </li>
                 <li>
-                  <Link
-                    to="our-courses"
+                  <button
+                    onClick={()=>nav('our-courses')}
                     className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:underline lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
                   >
                     Our courses
-                  </Link>
+                  </button>
                 </li>
 
                 <li>
-                  <Link
-                    to="gallery"
+                  <button
+                    onClick={()=> nav('gallery')}
                     className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:underline lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
                   >
                     Gallery
-                  </Link>
+                  </button>
                 </li>
                 <li>
-                  <Link
-                    to="about-us"
+                  <button
+                    onClick={()=>nav('about-us')}
                     className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:underline lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
                   >
                     About us
-                  </Link>
+                  </button>
                 </li>
                 <li>
-                  <Link
-                    to="contact-us"
+                  <button
+                    onClick={()=>nav('contact-us')}
                     className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:underline lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
                   >
                     Contact us
-                  </Link>
+                  </button>
                 </li>
               </ul>
             </div>

@@ -1,7 +1,10 @@
 import React from "react";
+import SocialDevelopment from "../../components/SocialDevelopment";
 
 const SocialDevelopmentPage = () => {
-  return <div>SocialDevelopmentPage SocialDevelopmentPage</div>;
+  return <div>
+    <SocialDevelopment />
+  </div>;
 };
 
 export default SocialDevelopmentPage;

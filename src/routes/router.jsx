@@ -8,8 +8,9 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <PublicLayout />,
-    errorElement: <NotFound />,
     children: [...publicRoute],
+    
+
   },
 ]);
 

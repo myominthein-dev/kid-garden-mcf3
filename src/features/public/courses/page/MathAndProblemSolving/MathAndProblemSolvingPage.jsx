@@ -1,7 +1,10 @@
 import React from "react";
+import MathAndCriticalThinking from "../../components/MathAndCriticalThinking";
 
 const MathAndProblemSolvingPage = () => {
-  return <div>MathAndProblemSolvingPage MathAndProblemSolvingPage</div>;
+  return <div>
+    <MathAndCriticalThinking/>
+  </div>;
 };
 
 export default MathAndProblemSolvingPage;
