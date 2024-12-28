@@ -1,39 +1,44 @@
 import React, { useState } from "react";
 import StarOrange from "../../../assets/ourCoursesPage/StarOrange.svg";
 import StarPink from "../../../assets/ourCoursesPage/StarPink.svg";
-import LanguageAndLiteracy from "../../../assets/ourCoursesPage/LanguageAndLiteracy.png";
-import ArtsAndCreativity from "../../../assets/ourCoursesPage/ArtsAndCreativity.png";
-import MathAndProblemSolving from "../../../assets/ourCoursesPage/MathAndProblemSolving.png";
-import SocialDevelopment from "../../../assets/ourCoursesPage/SocialDevelopment.png";
+
 import CourseCategoriesCard from "./courseCategoriesCard";
+import Ellipse from "../components/Ellipse";
+import { LuBrainCircuit, LuCodepen, LuPuzzle, LuSlack } from "react-icons/lu";
 const CourseCategoriesMain = () => {
   const [courseCategoriesArray, setCourseCategoriesArray] = useState([
     {
       title: " Language and Literacy",
-      imgUrl: LanguageAndLiteracy,
+      icon: (
+        <LuBrainCircuit className="text-white w-[30px] h-[30px] border-none" />
+      ),
       out_let: "",
       activeColor: "bg-rose-100",
       active: true,
+      iconColor: "#FDA4AF",
     },
     {
       title: "Arts and Creativity",
-      imgUrl: ArtsAndCreativity,
+      icon: <LuCodepen className="text-white w-[30px] h-[30px] border-none" />,
       activeColor: "bg-orange-100",
       active: false,
       out_let: "arts-and-creativity",
+      iconColor: "#FB923C",
     },
     {
       title: "Math and Problem-Solving",
-      imgUrl: MathAndProblemSolving,
+      icon: <LuPuzzle className="text-white w-[30px] h-[30px] border-none" />,
       out_let: "math-and-problem-solving",
       active: false,
+      iconColor: "#F0ABFC",
       activeColor: " bg-fuchsia-100",
     },
     {
       title: "Social Development",
-      imgUrl: SocialDevelopment,
+      icon: <LuSlack className="text-white w-[30px] h-[30px] border-none" />,
       out_let: "social-development",
       active: false,
+      iconColor: "#A3E635",
       activeColor: "bg-lime-100",
     },
   ]);
