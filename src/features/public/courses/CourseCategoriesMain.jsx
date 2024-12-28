@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import StarOrange from "../../../assets/ourCoursesPage/StarOrange.svg";
 import StarPink from "../../../assets/ourCoursesPage/StarPink.svg";
+
+
 import LanguageAndLiteracy from "../../../assets/ourCoursesPage/LanguageAndLiteracy.png";
 import ArtsAndCreativity from "../../../assets/ourCoursesPage/ArtsAndCreativity.png";
 import MathAndProblemSolving from "../../../assets/ourCoursesPage/MathAndProblemSolving.png";
 import SocialDevelopment from "../../../assets/ourCoursesPage/SocialDevelopment.png";
-import CourseCategoriesCard from "./courseCategoriesCard";
+import CourseCategoriesCard from "./CourseCategoriesCard";
 const CourseCategoriesMain = () => {
   const [courseCategoriesArray, setCourseCategoriesArray] = useState([
     {

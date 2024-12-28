@@ -35,4 +35,4 @@ const ArtCreativity = () => {
   )
 }
 
-export default ArtCreativity
+export default ArtCreativity;

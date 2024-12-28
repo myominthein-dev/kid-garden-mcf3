@@ -1,7 +1,10 @@
 import React from "react";
+import LangLitetracy from "../../components/LangLitetracy";
 
 const LanguageAndLiteracyPage = () => {
-  return <div>LanguageAndLiteracyPage LanguageAndLiteracyPage</div>;
+  return <section>
+      <LangLitetracy/>
+  </section>;
 };
 
 export default LanguageAndLiteracyPage;

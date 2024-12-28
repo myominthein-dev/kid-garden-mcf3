@@ -1,7 +1,10 @@
 import React from "react";
+import ArtCreativity from "../../components/ArtCreativity";
 
 const ArtsAndCreativityPage = () => {
-  return <div>ArtsAndCreativityPage ArtsAndCreativityPage</div>;
+  return <section>
+            <ArtCreativity/>
+        </section>;
 };
 
 export default ArtsAndCreativityPage;
