@@ -24,7 +24,7 @@ const Ellipse = ({
 
   const transition = isAnimate
     ? {
-        duration: 5,
+        duration: 4,
         repeat: Infinity,
         repeatType: "reverse",
       }
