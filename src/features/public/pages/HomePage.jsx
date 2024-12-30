@@ -10,6 +10,7 @@ const HomePage = () => {
      
       <HomeCaterogires />
       <HomeProcess />
+
       <Footer bgImg={footerBg} newsLetterBgColor={"orange"} />
     </>
   );

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
+import Ellipse from "../components/Ellipse";
 
 const CourseCategoriesCard = ({
   category,
@@ -27,7 +28,17 @@ const CourseCategoriesCard = ({
       }`}
     >
       <div className=" cursor-pointer flex flex-col justify-center items-center w-[302px] border h-[139px]  rounded-xl border-dashed   border-neutral-900 py-[10px]">
-        <img className=" w-20" src={category.imgUrl} alt="" />
+        <Ellipse
+          initial="39% 61% 50% 50% / 37% 40% 60% 63%"
+          isAnimate={true}
+          width="80px"
+          height="80px"
+          shadow={true}
+          bgColor={category.iconColor}
+          borderColor={category.iconColor}
+        >
+          {category.icon}
+        </Ellipse>
         <h2 className=" font-pacifico font-normal text-xl text-neutral-900">
           {category.title}
         </h2>
