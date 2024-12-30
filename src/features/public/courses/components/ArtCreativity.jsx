@@ -12,7 +12,7 @@ const ArtCreativity = () => {
   return (
     <Container className={'my-16 py-5'}>
       <div className='max-w-[1183px]  relative  mx-auto'>
-        <img src={sun} alt="" />
+        <img className='absolute' src={sun} alt="" />
        <h1 className='font-poppin w-[618px] mx-auto font-semibold leading-10 text-4xl text-center'>"Unleashing Imagination Through Art and Creativity”</h1>
       </div>
        <div className='mt-20  '>
