@@ -1,4 +1,5 @@
 import React from "react";
+import ArtCreativity from "../../components/ArtCreativity";
 import CategoriesDetail from "../../CategoriesDetail";
 import WhatYourKidWillLearn from "../../WhatYourKidWillLearn";
 import HightLightCourses from "../../HightLightCourses";
@@ -14,6 +15,7 @@ const ArtsAndCreativityPage = () => {
   ];
   return (
     <div className=" my-10 ">
+      <ArtCreativity/>
       <CategoriesDetail
         imgPeopleUrl={ArtsAndCreativityOne}
         flexFlow={"flex-row-reverse"}
@@ -36,6 +38,7 @@ const ArtsAndCreativityPage = () => {
       <HightLightCourses VedioUrl={ArtsAndCreativityVedio} />
     </div>
   );
+  
 };
 
 export default ArtsAndCreativityPage;

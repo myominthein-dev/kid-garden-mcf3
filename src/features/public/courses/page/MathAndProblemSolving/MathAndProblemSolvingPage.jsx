@@ -1,4 +1,5 @@
 import React from "react";
+import MathAndCriticalThinking from "../../components/MathAndCriticalThinking";
 import CategoriesDetail from "../../CategoriesDetail";
 import ArtsAndCreativityOne from "../../../../../assets/ourCoursesPage/People (2).png";
 import WhatYourKidWillLearn from "../../WhatYourKidWillLearn";
@@ -7,6 +8,7 @@ import MathAndProblemSolvingVedio from "../../../../../assets/ourCoursesPage/Mat
 import HightLightCourses from "../../HightLightCourses";
 
 const MathAndProblemSolvingPage = () => {
+  
   const learningSkill = [
     "Use Hands-On Activities",
     "Relate Math to Daily Life",
@@ -15,6 +17,7 @@ const MathAndProblemSolvingPage = () => {
   ];
   return (
     <div className=" my-10 ">
+      <MathAndCriticalThinking/>
       <CategoriesDetail
         imgPeopleUrl={ArtsAndCreativityOne}
         flexFlow={"flex-row"}

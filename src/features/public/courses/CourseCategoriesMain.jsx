@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import StarOrange from "../../../assets/ourCoursesPage/StarOrange.svg";
 import StarPink from "../../../assets/ourCoursesPage/StarPink.svg";
 
-import CourseCategoriesCard from "./courseCategoriesCard";
+
+
+import CourseCategoriesCard from "./CourseCategoriesCard";
 import Ellipse from "../components/Ellipse";
 import { LuBrainCircuit, LuCodepen, LuPuzzle, LuSlack } from "react-icons/lu";
 const CourseCategoriesMain = () => {

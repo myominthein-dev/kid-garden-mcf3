@@ -1,4 +1,5 @@
 import React from "react";
+import LangLitetracy from "../../components/LangLitetracy";
 import People from "../../../../../assets/ourCoursesPage/People.png";
 import RectangleImg from "../../../../../assets/ourCoursesPage/Rectangle.png";
 import CategoriesDetail from "../../CategoriesDetail";
@@ -16,6 +17,7 @@ const LanguageAndLiteracyPage = () => {
   ];
   return (
     <div className=" my-10">
+      <LangLitetracy/>
       <CategoriesDetail
         imgPeopleUrl={People}
         flexFlow={"flex-row"}
@@ -38,6 +40,7 @@ const LanguageAndLiteracyPage = () => {
       <HightLightCourses VedioUrl={LanguageAndLiteracyVedio} />
     </div>
   );
+ 
 };
 
 export default LanguageAndLiteracyPage;
