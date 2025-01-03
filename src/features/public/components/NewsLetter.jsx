@@ -4,10 +4,10 @@ import rightArrow from "../../../assets/homePage/arrow-right.png";
 import { initial } from "lodash";
 import Button from "./Button";
 
-const NewsLetter = ({ color }) => {
+const NewsLetter = ({ className }) => {
   return (
     <div
-      className={`max-w-[1062px] px-14 py-7 rounded-lg relative mx-auto top-16 h-[212px] bg-${color}-500 border-2 border-black border-dashed`}
+      className={`max-w-[1062px] px-14 py-7 rounded-lg relative mx-auto top-16 h-[212px] ${className} border-2 border-black border-dashed`}
     >
       <div className=" relative">
         <div className=" h-10 w-10 absolute left-0 top-0">
