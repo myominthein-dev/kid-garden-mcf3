@@ -7,11 +7,11 @@ const HomePage = () => {
   return (
     <>
       <HomeHeroSection />
-     
+
       <HomeCaterogires />
       <HomeProcess />
 
-      <Footer bgImg={footerBg} newsLetterBgColor={"orange"} />
+      <Footer bgImg={footerBg} className={"bg-orange-500"} />
     </>
   );
 };

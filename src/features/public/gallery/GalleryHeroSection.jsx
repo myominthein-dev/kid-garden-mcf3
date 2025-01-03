@@ -1,5 +1,4 @@
 import Container from "../components/Container";
-
 import SeeMoreBtn from "./components/SeeMoreBtn";
 import TopTitle from "./components/TopTitle";
 import PhotoSection from "./PhotoSection";

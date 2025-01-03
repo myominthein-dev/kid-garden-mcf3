@@ -7,7 +7,7 @@ import facebook from "../../../assets/homePage/facebook_vec.png";
 import twitter from "../../../assets/homePage/twitter_vec.png";
 import instagram from "../../../assets/homePage/ig_vec.png";
 
-const Footer = ({ bgImg, newsLetterBgColor }) => {
+const Footer = ({ bgImg, className }) => {
   const nav = useNavigate();
 
   const link = (path) => {
@@ -19,7 +19,7 @@ const Footer = ({ bgImg, newsLetterBgColor }) => {
       className={` h-[832px] bg-[url()] bg-cover bg-no-repeat  border-gray-200 antialiased dark:bg-gray-800 mt-auto`}
     >
       <Container>
-        <NewsLetter color={newsLetterBgColor} />
+        <NewsLetter className={className} />
 
         <div className="max-w-[561px] mx-auto relative top-44  h-[316px] ">
           <div className="flex items-center justify-center">
