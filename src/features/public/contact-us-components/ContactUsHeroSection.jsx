@@ -8,7 +8,7 @@ import ContactHeroListGroup from "./ContactHeroListGroup";
 const ContactUsHeroSection = () => {
   return (
     <Container>
-      <div className=" flex flex-col py-24 gap-24 justify-center items-center w-full min-h-screen ">
+      <div className=" flex flex-col pt-24 gap-24 justify-center items-center w-full min-h-screen ">
         {" "}
         <div className="  flex justify-center items-center  gap-4 flex-col w-[618px]">
           <h3 className=" text-orange-500 font-normal text-xl font-pacifico">
