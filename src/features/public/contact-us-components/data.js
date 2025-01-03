@@ -1,6 +1,10 @@
 import image1 from "../../../assets/contactUsPage/image1.png";
 import image2 from "../../../assets/contactUsPage/image2.png";
 import image3 from "../../../assets/contactUsPage/image3.png";
+import help from "../../../assets/contactUsPage/help.png";
+import mutualAid from "../../../assets/contactUsPage/mutual-aid.png";
+import creativeProcess from "../../../assets/contactUsPage/creative-process.png";
+import plant from "../../../assets/contactUsPage/plant.png";
 
 export const heroContents = [
   {
@@ -23,5 +27,36 @@ export const heroContents = [
     description:
       "Our approach is centered on play-based learning, fostering curiosity and creativity in every child. By combining a nurturing environment with structured activities.",
     image: image3,
+  },
+];
+
+export const contactMarkets = [
+  {
+    id: 1,
+    title: "Community",
+    description:
+      "Alone we can do so little, but together we can create a world where every child belongs, learns, and thrives.",
+    image: help,
+  },
+  {
+    id: 2,
+    title: "Respect",
+    description:
+      "Respect begins with listening, grows with understanding, and creates a space where every child feels seen, heard, and valued",
+    image: mutualAid,
+  },
+  {
+    id: 3,
+    title: "Creativity",
+    description:
+      "Creativity unlocks the magic within every child, turning dreams into ideas and ideas into possibilities",
+    image: creativeProcess,
+  },
+  {
+    id: 4,
+    title: "Growth",
+    description:
+      "Every child is a seed full of potential—nurture them with care, and they will grow into something extraordinary",
+    image: plant,
   },
 ];
