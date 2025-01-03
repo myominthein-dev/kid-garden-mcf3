@@ -5,6 +5,10 @@ import help from "../../../assets/contactUsPage/help.png";
 import mutualAid from "../../../assets/contactUsPage/mutual-aid.png";
 import creativeProcess from "../../../assets/contactUsPage/creative-process.png";
 import plant from "../../../assets/contactUsPage/plant.png";
+import teacher1 from "../../../assets/contactUsPage/teacher1.png";
+import teacher2 from "../../../assets/contactUsPage/teacher2.png";
+import teacher3 from "../../../assets/contactUsPage/teacher3.png";
+import teacher4 from "../../../assets/contactUsPage/teacher4.png";
 
 export const heroContents = [
   {
@@ -58,5 +62,39 @@ export const contactMarkets = [
     description:
       "Every child is a seed full of potential—nurture them with care, and they will grow into something extraordinary",
     image: plant,
+  },
+];
+export const teachers = [
+  {
+    id: 1,
+    name: "Emily Carter",
+    position: "Science Teacher",
+    image: teacher1,
+    bgColor: "#FFD464",
+    borderColor: "#E879F9",
+  },
+  {
+    id: 2,
+    name: "Sophia Wilson",
+    position: "Art & Culture Teacher",
+    image: teacher2,
+    bgColor: "#DEC8FE",
+    borderColor: "#FFD464",
+  },
+  {
+    id: 3,
+    name: "Adam Smith",
+    position: "Reading Teacher",
+    image: teacher3,
+    bgColor: "#ff5a1f",
+    borderColor: "#a3e635",
+  },
+  {
+    id: 4,
+    name: "Mia Russel",
+    position: "Gymnastics Teacher",
+    image: teacher4,
+    bgColor: "#e74694",
+    borderColor: "#075985",
   },
 ];
