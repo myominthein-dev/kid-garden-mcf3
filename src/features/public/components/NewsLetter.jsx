@@ -4,10 +4,11 @@ import rightArrow from "../../../assets/homePage/arrow-right.png";
 import { initial } from "lodash";
 import Button from "./Button";
 
-const NewsLetter = ({ className }) => {
+const NewsLetter = ({ color, subscribeBtnColor }) => {
+  
   return (
     <div
-      className={`max-w-[1062px] px-14 py-7 rounded-lg relative mx-auto top-16 h-[212px] ${className} border-2 border-black border-dashed`}
+      className={`max-w-[1062px] px-14 py-7 rounded-lg relative mx-auto top-16 h-[212px] ${color} border-2 border-black border-dashed`}
     >
       <div className=" relative">
         <div className=" h-10 w-10 absolute left-0 top-0">
@@ -28,7 +29,7 @@ const NewsLetter = ({ className }) => {
               className="bg-white h-full rounded-xl border-none"
               type="email"
             />
-            <Button label="Subscribe" bgColor="orange-400" />
+            <Button label="Subscribe" bgColor={`${subscribeBtnColor}`} />
           </div>
         </div>
       </div>

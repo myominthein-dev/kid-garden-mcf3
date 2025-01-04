@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Container from "./Container";
 import NewsLetter from "./NewsLetter";
 import footerLogo from "../../../assets/homePage/footer_tinyverse.png";
@@ -7,8 +7,13 @@ import facebook from "../../../assets/homePage/facebook_vec.png";
 import twitter from "../../../assets/homePage/twitter_vec.png";
 import instagram from "../../../assets/homePage/ig_vec.png";
 
-const Footer = ({ bgImg, className }) => {
+const Footer = ({ bgImg, newsLetterBgColor,subscribeBtnColor }) => {
   const nav = useNavigate();
+  const [state, setState] = useState(newsLetterBgColor);
+
+  useEffect(() => {
+    setState(state);
+  }, [state]);
 
   const link = (path) => {
     nav(path);
@@ -19,7 +24,7 @@ const Footer = ({ bgImg, className }) => {
       className={` h-[832px] bg-[url()] bg-cover bg-no-repeat  border-gray-200 antialiased dark:bg-gray-800 mt-auto`}
     >
       <Container>
-        <NewsLetter className={className} />
+        <NewsLetter color={state} subscribeBtnColor={subscribeBtnColor} />
 
         <div className="max-w-[561px] mx-auto relative top-44  h-[316px] ">
           <div className="flex items-center justify-center">

@@ -10,7 +10,7 @@ const Button = ({
 }) => {
   return (
     <button
-      className={`bg-${bgColor} flex gap-3 items-center text-white px-3 py-2 rounded-xl active:scale-90 duration-200 group ${className}`}
+      className={`${bgColor} flex gap-3 items-center text-white px-3 py-2 rounded-xl active:scale-90 duration-200 group ${className}`}
       {...props}
     >
       {label}{" "}

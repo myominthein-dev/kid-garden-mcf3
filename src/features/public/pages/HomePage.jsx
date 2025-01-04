@@ -3,6 +3,7 @@ import footerBg from "../../../assets/homePage/bg_footer.jpg";
 import Footer from "../components/Footer";
 import HomeCaterogires from "../home-components/HomeCaterogires";
 import HomeProcess from "../home-components/HomeProcess";
+import EventCalendar from "../home-components/EventCalendar";
 const HomePage = () => {
   return (
     <>
