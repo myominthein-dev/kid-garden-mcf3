@@ -12,7 +12,7 @@ const HomePage = () => {
       <HomeCaterogires />
       <HomeProcess />
 
-      <Footer bgImg={footerBg} className={"bg-orange-500"} />
+      <Footer bgImg={footerBg} color={"orange"} />
     </>
   );
 };

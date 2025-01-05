@@ -3,17 +3,11 @@ import Container from "./Container";
 import NewsLetter from "./NewsLetter";
 import footerLogo from "../../../assets/homePage/footer_tinyverse.png";
 import { useNavigate } from "react-router-dom";
-import facebook from "../../../assets/homePage/facebook_vec.png";
-import twitter from "../../../assets/homePage/twitter_vec.png";
-import instagram from "../../../assets/homePage/ig_vec.png";
 
-const Footer = ({ bgImg, newsLetterBgColor,subscribeBtnColor }) => {
+import { LuFacebook, LuInstagram, LuTwitter } from "react-icons/lu";
+
+const Footer = ({ bgImg, color }) => {
   const nav = useNavigate();
-  const [state, setState] = useState(newsLetterBgColor);
-
-  useEffect(() => {
-    setState(state);
-  }, [state]);
 
   const link = (path) => {
     nav(path);
@@ -24,7 +18,7 @@ const Footer = ({ bgImg, newsLetterBgColor,subscribeBtnColor }) => {
       className={` h-[832px] bg-[url()] bg-cover bg-no-repeat  border-gray-200 antialiased dark:bg-gray-800 mt-auto`}
     >
       <Container>
-        <NewsLetter color={state} subscribeBtnColor={subscribeBtnColor} />
+        <NewsLetter color={color} />
 
         <div className="max-w-[561px] mx-auto relative top-44  h-[316px] ">
           <div className="flex items-center justify-center">
@@ -34,7 +28,9 @@ const Footer = ({ bgImg, newsLetterBgColor,subscribeBtnColor }) => {
             "Find the perfect class tailored to your child's needs and
             interests."
           </p>
-          <ul className="text-orange-600 flex items-center justify-evenly leading-4 font-semibold">
+          <ul
+            className={`text-${color}-600 flex items-center justify-evenly leading-4 font-semibold`}
+          >
             <li onClick={() => link("/")} className="cursor-pointer">
               Home
             </li>
@@ -52,10 +48,12 @@ const Footer = ({ bgImg, newsLetterBgColor,subscribeBtnColor }) => {
             </li>
           </ul>
 
-          <div className="max-w-[144px] flex justify-evenly mx-auto my-5">
-            <img src={twitter} alt="" />
-            <img src={facebook} alt="" />
-            <img src={instagram} alt="" />
+          <div
+            className={`max-w-[144px] text-${color}-600 flex justify-evenly mx-auto my-5`}
+          >
+            <LuTwitter size={25} />
+            <LuFacebook size={25} />
+            <LuInstagram size={25} />
           </div>
 
           <p className="font-roboto leading-4 text-center">

@@ -6,7 +6,7 @@ const GalleryPage = () => {
   return (
     <main>
       <GalleryHeroSection />
-      <Footer bgImg={BgImg} className={"bg-fuchsia-500"} />
+      <Footer bgImg={BgImg} color={"fuchsia"} />
     </main>
   );
 };
