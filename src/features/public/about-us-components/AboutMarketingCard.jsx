@@ -1,8 +1,6 @@
 import React from "react";
 
-const ContactMarketingCard = ({
-  content: { id, title, description, image },
-}) => {
+const AboutMarketingCard = ({ content: { id, title, description, image } }) => {
   return (
     <div
       className={`col-span-1 flex flex-col  justify-center items-start p-4 gap-5 rounded-lg bg-white ${
@@ -38,4 +36,4 @@ const ContactMarketingCard = ({
   );
 };
 
-export default ContactMarketingCard;
+export default AboutMarketingCard;

@@ -3,7 +3,7 @@ import Ellipse from "../components/Ellipse";
 import StarPink from "../../../assets/ourCoursesPage/StarPink.svg";
 import { motion } from "framer-motion";
 
-const ContactTeamCard = ({
+const AboutTeamCard = ({
   teacher: { id, name, position, image, bgColor, borderColor },
 }) => {
   return (
@@ -60,4 +60,4 @@ const ContactTeamCard = ({
   );
 };
 
-export default ContactTeamCard;
+export default AboutTeamCard;

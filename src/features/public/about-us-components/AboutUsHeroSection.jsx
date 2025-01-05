@@ -4,8 +4,8 @@ import StarOrange from "../../../assets/ourCoursesPage/StarOrange.svg";
 import StarPink from "../../../assets/ourCoursesPage/StarPink.svg";
 import ourClass from "../../../assets/contactUsPage/ourClass.png";
 import plane from "../../../assets/contactUsPage/plane.svg";
-import ContactHeroListGroup from "./ContactHeroListGroup";
-const ContactUsHeroSection = () => {
+import AboutHeroListGroup from "./AboutHeroListGroup";
+const AboutUsHeroSection = () => {
   return (
     <Container>
       <div className=" flex flex-col pt-24 gap-24 justify-center items-center w-full min-h-screen ">
@@ -40,7 +40,7 @@ const ContactUsHeroSection = () => {
             <img src={ourClass} alt="ourClass" />
           </div>
           <div className="flex-1">
-            <ContactHeroListGroup />
+            <AboutHeroListGroup />
           </div>
         </div>
       </div>
@@ -48,4 +48,4 @@ const ContactUsHeroSection = () => {
   );
 };
 
-export default ContactUsHeroSection;
+export default AboutUsHeroSection;
