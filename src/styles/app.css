@@ -6,7 +6,7 @@
 .page-loading-progress {
   animation: progress 1s infinite linear;
 }
-.class{
+.class {
   background-color: bg-;
 }
 .left-right {
@@ -21,5 +21,11 @@
   }
   100% {
     transform: translateX(100%) scaleX(0.5);
+  }
+}
+
+@layer components {
+  .breadCrumbLabel {
+    @apply font-pacifico font-normal text-orange-500 text-xl;
   }
 }
