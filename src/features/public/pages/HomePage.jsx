@@ -4,6 +4,7 @@ import Footer from "../components/Footer";
 import HomeCaterogires from "../home-components/HomeCaterogires";
 import HomeProcess from "../home-components/HomeProcess";
 import EventCalendar from "../home-components/EventCalendar";
+import CalendarCard from "../home-components/CalendarCard";
 const HomePage = () => {
   return (
     <>
@@ -11,8 +12,8 @@ const HomePage = () => {
 
       <HomeCaterogires />
       <HomeProcess />
-
-      <Footer bgImg={footerBg} color={"orange"} />
+      <EventCalendar/>
+      <Footer bgImg={footerBg} className={"bg-orange-500"} />
     </>
   );
 };
