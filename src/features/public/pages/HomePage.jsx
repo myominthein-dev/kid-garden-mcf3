@@ -12,8 +12,8 @@ const HomePage = () => {
 
       <HomeCaterogires />
       <HomeProcess />
-      <EventCalendar/>
-      <Footer bgImg={footerBg} className={"bg-orange-500"} />
+      <EventCalendar />
+      <Footer bgImg={footerBg} color={"orange"} />
     </>
   );
 };
