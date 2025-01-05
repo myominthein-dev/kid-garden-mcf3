@@ -1,12 +1,12 @@
 import React from "react";
 import Container from "../components/Container";
-import ContactMarketingGroup from "./ContactMarketingGroup";
+import AboutMarketingGroup from "./AboutMarketingGroup";
 import StarOrange from "../../../assets/ourCoursesPage/StarOrange.svg";
 import StarPink from "../../../assets/ourCoursesPage/StarPink.svg";
 import abc from "../../../assets/contactUsPage/abc.svg";
 import arrow from "../../../assets/contactUsPage/arrow.svg";
 import notation from "../../../assets/contactUsPage/notation.png";
-const ContactMarketing = () => {
+const AboutMarketing = () => {
   return (
     <section className="bg-[#FEF5DB]">
       <Container>
@@ -30,7 +30,7 @@ const ContactMarketing = () => {
           </>
           <div className="flex justify-between items-center gap-5 w-full">
             <div className="w-full">
-              <ContactMarketingGroup />
+              <AboutMarketingGroup />
             </div>
             <div className="w-full px-20 ">
               <img
@@ -47,7 +47,7 @@ const ContactMarketing = () => {
                   believe every child is unique, capable, and full of potential.
                 </p>
                 <button className="bg-orange-500 px-6 py-3 rounded-full text-white">
-                  Contact Us
+                  About Us
                 </button>
               </div>
               <img
@@ -63,4 +63,4 @@ const ContactMarketing = () => {
   );
 };
 
-export default ContactMarketing;
+export default AboutMarketing;

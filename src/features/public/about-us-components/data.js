@@ -34,7 +34,7 @@ export const heroContents = [
   },
 ];
 
-export const contactMarkets = [
+export const aboutMarkets = [
   {
     id: 1,
     title: "Community",

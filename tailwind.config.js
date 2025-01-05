@@ -12,6 +12,7 @@ export default {
     "bg-lime-500",
     "bg-lime-400",
     "bg-fuchsia-500",
+    "bg-fuchsia-400",
     "text-lime-600",
     "text-fuchsia-600",
     "text-orange-600",

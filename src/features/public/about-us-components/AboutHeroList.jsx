@@ -1,6 +1,6 @@
 import React from "react";
 
-const ContactHeroList = ({ content: { id, title, description, image } }) => {
+const AboutHeroList = ({ content: { id, title, description, image } }) => {
   return (
     <div className="flex  items-start gap-5">
       <div>
@@ -26,4 +26,4 @@ const ContactHeroList = ({ content: { id, title, description, image } }) => {
   );
 };
 
-export default ContactHeroList;
+export default AboutHeroList;

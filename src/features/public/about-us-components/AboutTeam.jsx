@@ -1,10 +1,10 @@
 import React from "react";
 import Container from "../components/Container";
-import ContactTeamGroup from "./ContactTeamGroup";
+import AboutTeamGroup from "./AboutTeamGroup";
 import StarOrange from "../../../assets/ourCoursesPage/StarOrange.svg";
 import greenArrow from "../../../assets/contactUsPage/greenArrow.svg";
 import { motion } from "framer-motion";
-const ContactTeam = () => {
+const AboutTeam = () => {
   return (
     <Container>
       <div className=" relative flex flex-col py-24 gap-24 justify-center items-center w-full min-h-screen ">
@@ -43,11 +43,11 @@ const ContactTeam = () => {
           />
         </>
         <div className="w-full">
-          <ContactTeamGroup />
+          <AboutTeamGroup />
         </div>
       </div>
     </Container>
   );
 };
 
-export default ContactTeam;
+export default AboutTeam;

@@ -1,15 +1,15 @@
 import React from "react";
 import { heroContents } from "./data";
-import ContactHeroList from "./ContactHeroList";
+import AboutHeroList from "./AboutHeroList";
 
-const ContactHeroListGroup = () => {
+const AboutHeroListGroup = () => {
   return (
     <div className="w-full flex flex-col items-start gap-5">
       {heroContents.map((content) => (
-        <ContactHeroList key={content.id} content={content} />
+        <AboutHeroList key={content.id} content={content} />
       ))}
     </div>
   );
 };
 
-export default ContactHeroListGroup;
+export default AboutHeroListGroup;
