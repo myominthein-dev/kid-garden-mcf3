@@ -14,8 +14,8 @@ const CoursePage = () => {
     <main>
       <BreadCrumb
         bgImg={breadCrumb1}
-        rightImg={youngGirl}
-        leftImg={rabbit}
+        leftImg={youngGirl}
+        rightImg={rabbit}
         title={"Our Courses"}
         currentPageTitle={"Our Courses"}
       />

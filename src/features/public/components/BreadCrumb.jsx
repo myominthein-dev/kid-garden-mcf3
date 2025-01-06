@@ -7,6 +7,10 @@ const BreadCrumb = ({
   title,
   rightImg,
   leftImg,
+  lImgWidth = 400,
+  rImgWidth = 300,
+  lImgPos,
+  rImgPos,
   currentPageTitle,
   links,
 }) => {
@@ -16,12 +20,15 @@ const BreadCrumb = ({
     <div className=" w-full flex items-center    justify-between gap-3 mb-5  py-1">
       <nav
         style={{ backgroundImage: `url(${bgImg})` }}
-        className={` bg-cover bg-no-repeat bg-top w-full h-[400px]  p-10 overflow-hidden`}
+        className={` bg-cover bg-no-repeat bg-top w-full h-[400px] flex items-center   p-10 overflow-hidden `}
         aria-label="Breadcrumb"
       >
-        <Container className="flex items-center ">
-          <img src={rightImg} className="w-[400px]" alt="" />
-
+        <Container className="flex items-center">
+          <img
+            src={leftImg}
+            className={`w-[${lImgWidth}px]  absolute ${lImgPos}`}
+            alt=""
+          />
           <ol className="w-full text-center">
             <div className="mb-4">
               <h1 className="font-poppin font-semibold text-2xl text-neutral-800">
@@ -58,7 +65,13 @@ const BreadCrumb = ({
               </li>
             </div>
           </ol>
-          <img src={leftImg} className="w-[300px] -mb-20" alt="" />
+          <img
+            src={rightImg}
+            className={`w-[${rImgWidth}px] absolute ${
+              rImgPos || "right-0 -top-16"
+            } `}
+            alt=""
+          />
         </Container>
       </nav>
     </div>

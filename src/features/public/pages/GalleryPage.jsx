@@ -12,8 +12,9 @@ const GalleryPage = () => {
     <main>
       <BreadCrumb
         bgImg={breadCrumb2}
-        rightImg={woof}
-        leftImg={youngBoy}
+        leftImg={woof}
+        lImgWidth={300}
+        rightImg={youngBoy}
         title={"Gallery"}
         currentPageTitle={"Gallery"}
       />
