@@ -5,6 +5,7 @@ import coursesDetailRoute from "./coursesDetailRoute";
 import HomePage from "../features/public/pages/HomePage";
 import AboutUsPage from "../features/public/pages/AboutUsPage";
 import ContactUsPage from "../features/public/pages/ContactUsPage";
+import UpcomingEventsPage from "../features/public/pages/UpcomingEventsPage";
 
 const publicRoute = [
   {
@@ -27,6 +28,10 @@ const publicRoute = [
   {
     path: "gallery",
     element: <GalleryPage />,
+  },
+  {
+    path: "upcoming-events",
+    element: <UpcomingEventsPage />,
   },
 ];
 
