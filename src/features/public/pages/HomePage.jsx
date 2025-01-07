@@ -5,6 +5,7 @@ import HomeCaterogires from "../home-components/HomeCaterogires";
 import HomeProcess from "../home-components/HomeProcess";
 import EventCalendar from "../home-components/EventCalendar";
 import CalendarCard from "../home-components/CalendarCard";
+import HomeGallery from "../home-components/HomeGallery";
 const HomePage = () => {
   return (
     <>
@@ -13,6 +14,7 @@ const HomePage = () => {
       <HomeCaterogires />
       <HomeProcess />
       <EventCalendar />
+      <HomeGallery />
       <Footer bgImg={footerBg} color={"orange"} />
     </>
   );
