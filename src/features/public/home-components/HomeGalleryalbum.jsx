@@ -39,10 +39,10 @@ const HomeGalleryalbum = () => {
     <div className="grid grid-rows-3 grid-flow-col gap-4  ">
       <LongCol src={pexels2} />
       <ShortCol src={pexels6} className={"self-end"} />
-      <ShortCol src={pexels1} />
-      <LongCol src={pexels5} />
-      <LongCol src={pexels3} />
-      <ShortCol src={pexels4} className={"self-end"} />
+      <ShortCol src={pexels1} className={"hidden  md:inline-block"} />
+      <LongCol src={pexels5} className={"hidden md:inline-block"} />
+      <LongCol src={pexels3} className={"hidden xl:inline-block"} />
+      <ShortCol src={pexels4} className={"self-end hidden xl:inline-block"} />
     </div>
   );
 };
