@@ -27,7 +27,7 @@ const CourseCategoriesCard = ({
         category.active ? category.activeColor : "bg-white"
       }`}
     >
-      <div className=" cursor-pointer flex flex-col justify-center items-center w-[302px] border h-[139px]  rounded-xl border-dashed   border-neutral-900 py-[10px]">
+      <div className="  cursor-pointer flex flex-col justify-center items-center lg:w-[466px] xl:w-[302px] border xl:h-[139px] lg:py-[30px] lg:px-[10px] lg:gap-8  rounded-xl border-dashed   border-neutral-900 xl:py-[10px]">
         <Ellipse
           initial="39% 61% 50% 50% / 37% 40% 60% 63%"
           isAnimate={true}

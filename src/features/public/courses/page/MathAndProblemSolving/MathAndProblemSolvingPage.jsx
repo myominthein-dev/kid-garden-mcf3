@@ -8,7 +8,6 @@ import MathAndProblemSolvingVedio from "../../../../../assets/ourCoursesPage/Mat
 import HightLightCourses from "../../HightLightCourses";
 
 const MathAndProblemSolvingPage = () => {
-  
   const learningSkill = [
     "Use Hands-On Activities",
     "Relate Math to Daily Life",
@@ -17,15 +16,19 @@ const MathAndProblemSolvingPage = () => {
   ];
   return (
     <div className=" my-10 ">
-      <MathAndCriticalThinking/>
+      <MathAndCriticalThinking />
       <CategoriesDetail
         imgPeopleUrl={ArtsAndCreativityOne}
         flexFlow={"flex-row"}
-        DimaondGroupPositon={"top-1 left-[45%]"}
+        DimaondGroupPositon={"xl:top-0 xl:left-[45%] lg:top-1 lg:right-[10%]"}
         headerText={" Math and Problem-Solving"}
         ParagText={
           "in early education focus on developing children’s ability to understand numbers, shapes, patterns, and relationships. Through engaging activities like counting, sorting, measuring, and solving simple puzzles, children learn to approach challenges logically and think critically."
         }
+        LgParagTex={[
+          "in early education focus on developing children’s ability to understand numbers, shapes, patterns, and relationships. Through engaging activities like ",
+          "counting, sorting, measuring, and solving simple puzzles, children learn to approach challenges logically and think critically.",
+        ]}
       />
       {/* What Your Kid Will Learn */}
       <WhatYourKidWillLearn

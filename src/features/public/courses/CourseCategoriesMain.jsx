@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import StarOrange from "../../../assets/ourCoursesPage/StarOrange.svg";
 import StarPink from "../../../assets/ourCoursesPage/StarPink.svg";
 
-
-
 import CourseCategoriesCard from "./CourseCategoriesCard";
 import Ellipse from "../components/Ellipse";
 import { LuBrainCircuit, LuCodepen, LuPuzzle, LuSlack } from "react-icons/lu";
@@ -12,7 +10,7 @@ const CourseCategoriesMain = () => {
     {
       title: " Language and Literacy",
       icon: (
-        <LuBrainCircuit className="text-white w-[30px] h-[30px] border-none" />
+        <LuBrainCircuit className="text-white  w-[30px] h-[30px] border-none" />
       ),
       out_let: "",
       activeColor: "bg-rose-100",
@@ -52,19 +50,23 @@ const CourseCategoriesMain = () => {
         <div>
           {" "}
           <img className=" absolute top-28 left-14" src={StarOrange} alt="" />
-          <img className=" absolute top-36 right-32" src={StarPink} alt="" />
+          <img
+            className=" absolute top-36 xl:right-32 lg:right-24"
+            src={StarPink}
+            alt=""
+          />
         </div>
         <div className="  flex justify-center items-center  gap-4 flex-col w-[618px]">
           <h3 className=" text-orange-500 font-normal text-xl font-pacifico">
             Course Categories
           </h3>
-          <h1 className=" text-center text-4xl font-poppin font-semibold text-neutral-900">
+          <h1 className=" text-[24px]  leading-[34px] text-center xl:text-4xl font-poppin font-semibold text-neutral-900">
             Building Foundations for Lifelong Learning
           </h1>
         </div>
       </div>
 
-      <div className=" flex gap-6 items-center">
+      <div className=" flex lg:flex-wrap gap-6 items-center lg:justify-center">
         {courseCategoriesArray.map((category, index) => (
           <CourseCategoriesCard
             category={category}
