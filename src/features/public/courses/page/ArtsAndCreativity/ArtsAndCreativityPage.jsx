@@ -15,7 +15,7 @@ const ArtsAndCreativityPage = () => {
   ];
   return (
     <div className=" my-10 ">
-      <ArtCreativity/>
+      <ArtCreativity />
       <CategoriesDetail
         imgPeopleUrl={ArtsAndCreativityOne}
         flexFlow={"flex-row-reverse"}
@@ -24,6 +24,10 @@ const ArtsAndCreativityPage = () => {
         ParagText={
           "In early education play a crucial role in fostering self-expression, imagination, and emotional development in children. Through activities like drawing, painting, crafting, music, and movement, kids explore their unique ideas and feelings. These activities not only enhance fine motor skills and hand-eye coordination but also build confidence and problem-solving abilities."
         }
+        LgParagTex={[
+          "In early education play a crucial role in fostering self-expression, imagination, and emotional development in children. Through activities like drawing, painting, crafting, music, and movement, kids explore their unique ideas and feelings. ",
+          "elements and how to use them to create their own artwork. Children will also practice fine motor skills by using tools like brushes, crayons, and scissors, improving hand-eye coordination.",
+        ]}
       />
       {/* What Your Kid Will Learn */}
       <WhatYourKidWillLearn
@@ -38,7 +42,6 @@ const ArtsAndCreativityPage = () => {
       <HightLightCourses VedioUrl={ArtsAndCreativityVedio} />
     </div>
   );
-  
 };
 
 export default ArtsAndCreativityPage;

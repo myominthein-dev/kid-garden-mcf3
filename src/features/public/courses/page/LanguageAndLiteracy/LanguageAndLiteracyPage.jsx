@@ -6,7 +6,6 @@ import CategoriesDetail from "../../CategoriesDetail";
 import WhatYourKidWillLearn from "../../WhatYourKidWillLearn";
 import HightLightCourses from "../../HightLightCourses";
 import LanguageAndLiteracyVedio from "../../../../../assets/ourCoursesPage/LanguageAndLiteracy.mp4";
-import Footer from "../../../components/Footer";
 
 const LanguageAndLiteracyPage = () => {
   const learningSkill = [
@@ -16,16 +15,20 @@ const LanguageAndLiteracyPage = () => {
     "Writing Skills",
   ];
   return (
-    <div className=" my-10">
-      <LangLitetracy/>
+    <div className=" my-10 ">
+      <LangLitetracy />
       <CategoriesDetail
         imgPeopleUrl={People}
-        flexFlow={"flex-row"}
-        DimaondGroupPositon={"top-0 left-[45%]"}
+        flexFlow={"flex-row "}
+        DimaondGroupPositon={"xl:top-0 xl:left-[45%] lg:top-1 lg:right-[10%]"}
         headerText={" Language and Literacy"}
         ParagText={
-          "We focuses on helping young children develop foundational         communication skills, including speaking, listening, reading, andwriting. Through storytelling, phonics, and vocabulary-building      activities, children learn to express themselves, understand others,and explore the joy of language. These skills lay the groundwork for academic success and lifelong learning."
+          "We focuses on helping young children develop foundational communication skills, including speaking, listening, reading, andwriting. Through storytelling, phonics, and vocabulary-building      activities, children learn to express themselves, understand others,and explore the joy of language. These skills lay the groundwork for academic success and lifelong learning."
         }
+        LgParagTex={[
+          "We focuses on helping young children develop foundational communication skills, including speaking, listening, reading, and writing and explore the joy of language. These skills lay the groundwork for academic success and lifelong learning",
+          "Through storytelling, phonics, and vocabulary-building activities, children learn to express themselves, understand others, and explore the joy of language. These skills lay the groundwork for academic success and lifelong learning.",
+        ]}
       />
       {/* What Your Kid Will Learn */}
       <WhatYourKidWillLearn
@@ -40,7 +43,6 @@ const LanguageAndLiteracyPage = () => {
       <HightLightCourses VedioUrl={LanguageAndLiteracyVedio} />
     </div>
   );
- 
 };
 
 export default LanguageAndLiteracyPage;

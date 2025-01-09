@@ -3,18 +3,18 @@ import LearnSkill from "./LearnSkill";
 import backGroundImg from "../../../assets/ourCoursesPage/Background.png";
 const WhatYourKidWillLearn = ({ ImageUrl, text, learningSkill, flexFlow }) => {
   return (
-    <div className=" relative">
+    <div className=" relative ">
       <div>
-        <img src={backGroundImg} alt="" />
+        <img src={backGroundImg} className="lg:h-[1250px] xl:h-auto" alt="" />
       </div>
-      <div className=" absolute w-full h-full top-0 left-0">
+      <div className=" absolute xl:p-10 w-full h-full top-0 left-0">
         <div
-          className={`w-full h-full gap-6 flex  justify-center items-center ${flexFlow}`}
+          className={`w-full lg:py-10 xl:py-0 h-full gap-6 flex lg:justify-around   xl:justify-center items-center lg:flex-col xl:${flexFlow}`}
         >
-          <div>
-            <img src={ImageUrl} alt="" />
+          <div className=" lg:w-[80%]  ">
+            <img className=" lg:w-full" src={ImageUrl} alt="" />
           </div>
-          <div className=" flex flex-col gap-12 w-[628px]">
+          <div className=" flex flex-col gap-12 xl:w-[628px] lg:w-[80%] ">
             <div className=" flex flex-col gap-4">
               <h1 className="font-semibold text-[36px] leading-[54px] font-poppin text-orange-600">
                 What Your Kid Will Learn
@@ -23,7 +23,7 @@ const WhatYourKidWillLearn = ({ ImageUrl, text, learningSkill, flexFlow }) => {
                 {text}
               </p>
             </div>
-            <div className=" flex flex-wrap gap-10">
+            <div className=" flex flex-wrap gap-10 w-[628px]">
               {learningSkill.map((skill, index) => (
                 <LearnSkill key={index} skill={skill} />
               ))}
