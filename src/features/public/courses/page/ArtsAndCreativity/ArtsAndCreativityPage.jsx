@@ -18,7 +18,7 @@ const ArtsAndCreativityPage = () => {
       <ArtCreativity />
       <CategoriesDetail
         imgPeopleUrl={ArtsAndCreativityOne}
-        flexFlow={"flex-row-reverse"}
+        flexFlow={"xl:flex-row-reverse"}
         DimaondGroupPositon={"top-1 right-[10%]"}
         headerText={" Art and Creative"}
         ParagText={
