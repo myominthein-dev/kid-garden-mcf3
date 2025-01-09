@@ -1,10 +1,11 @@
 import React from "react";
-import ContactHeroSection from "../contact-us-components/ContactUsComponent";
 import BreadCrumb from "../components/BreadCrumb";
 
 import breadCrumb3 from "../../../assets/breadcrumb/breadcrumb-3.png";
 import painted from "../../../assets/breadcrumb/painted-girl.png";
 import ellipse from "../../../assets/breadcrumb/ellipse.png";
+import ContactUsHeroSection from "../contact-us-components/ContactUsHeroSection";
+import ContactUsFaqSection from "../contact-us-components/ContactUsFaqSection";
 
 const ContactUsPage = () => {
   return (
@@ -20,7 +21,8 @@ const ContactUsPage = () => {
         title={"Contact Us"}
         currentPageTitle={"Contact Us"}
       />
-      <ContactHeroSection />
+      <ContactUsHeroSection />
+      <ContactUsFaqSection />
     </>
   );
 };
