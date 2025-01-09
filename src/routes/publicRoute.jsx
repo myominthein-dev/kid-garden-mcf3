@@ -1,10 +1,14 @@
-import { lazy } from "react";
-import CoursePage from "../features/public/pages/CoursePage";
-import GalleryPage from "../features/public/pages/GalleryPage";
+import React, { lazy } from "react";
+
+const CoursePage = lazy(() => import("../features/public/pages/CoursePage"));
+const GalleryPage = lazy(() => import("../features/public/pages/GalleryPage"));
+const HomePage = lazy(() => import("../features/public/pages/HomePage"));
+const AboutUsPage = lazy(() => import("../features/public/pages/AboutUsPage"));
+const ContactUsPage = lazy(() =>
+  import("../features/public/pages/ContactUsPage")
+);
 import coursesDetailRoute from "./coursesDetailRoute";
-import HomePage from "../features/public/pages/HomePage";
-import AboutUsPage from "../features/public/pages/AboutUsPage";
-import ContactUsPage from "../features/public/pages/ContactUsPage";
+import PageLoading from "../features/public/components/PageLoading";
 import UpcomingEventsPage from "../features/public/pages/UpcomingEventsPage";
 
 const publicRoute = [
@@ -20,6 +24,7 @@ const publicRoute = [
     path: "contact-us",
     element: <ContactUsPage />,
   },
+
   {
     path: "our-courses",
     element: <CoursePage />,
