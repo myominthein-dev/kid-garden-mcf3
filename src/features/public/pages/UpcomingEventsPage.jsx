@@ -12,6 +12,10 @@ import playingFootball from "../../../assets/homePage/kid_playing_football.png"
 import spider from "../../../assets/homePage/spider_with_kids.png"
 import hollowenKid from "../../../assets/homePage/kid_with_hollowen.png"
 import Footer from '../components/Footer'
+import greenSq from '../../../assets/events/small_green.png'
+import orangeSq from '../../../assets/events/bigger_orange.png'
+import roseSq from '../../../assets/events/big_rose.png'
+import cloud from "../../../assets/events/orange_cloud.png"
 
 const events = [
     writingInFense,groupingInClas,ropeRace,playingInCompound,groupRanning,makingCircle,playingFootball,spider,hollowenKid
@@ -19,8 +23,14 @@ const events = [
 const UpcomingEventsPage = () => {
   return (
    <>
-         <Container>
-        <div className=" mx-auto flex justify-center items-center  gap-4 flex-col w-[618px]">
+         <Container className={'relative'}>
+        <img className='absolute right-5' src={cloud} alt="" />
+        <div className="relative mx-auto flex justify-center items-center  gap-4 flex-col w-[618px]">
+          <div className='w-20 h-20  absolute -top-5 -left-5'>
+            <img className='absolute right-0 bottom-0' src={greenSq} alt="" />
+            <img className='absolute left-0 top-0 bottom-0 my-auto' src={orangeSq} alt="" />
+            <img className='absolute top-0 right-0' src={roseSq} alt="" />
+          </div>
           <h3 className=" text-orange-500 font-normal text-xl font-pacifico">
             Upcoming Events
           </h3>
