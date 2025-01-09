@@ -19,7 +19,7 @@ const LanguageAndLiteracyPage = () => {
       <LangLitetracy />
       <CategoriesDetail
         imgPeopleUrl={People}
-        flexFlow={"flex-row "}
+        flexFlow={"xl:flex-row "}
         DimaondGroupPositon={"xl:top-0 xl:left-[45%] lg:top-1 lg:right-[10%]"}
         headerText={" Language and Literacy"}
         ParagText={

@@ -17,7 +17,7 @@ const CategoriesDetail = ({
         <img src={BirdTwo} alt="" />
       </div>
       <div
-        className={`flex relative  gap-4 justify-center items-center lg:flex-col-reverse xl:${flexFlow}`}
+        className={`flex relative  gap-4 justify-center items-center lg:flex-col-reverse ${flexFlow}`}
       >
         <div className=" lg:w-full xl:w-[545px] flex flex-col gap-4">
           <h1 className=" text-orange-600 font-poppin text-4xl  ">
