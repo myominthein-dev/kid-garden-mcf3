@@ -43,7 +43,7 @@ const Footer = ({ bgImg, color }) => {
             <li onClick={() => link("contact-us")} className="cursor-pointer">
               Contact Us
             </li>
-            <li onClick={() => link("events")} className="cursor-pointer">
+            <li onClick={() => link("upcoming-events")} className="cursor-pointer">
               Events
             </li>
           </ul>
