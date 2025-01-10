@@ -9,17 +9,17 @@ import { motion } from "framer-motion";
 const AboutUsHeroSection = () => {
   return (
     <Container>
-      <div className=" flex flex-col pt-24 gap-24 justify-center items-center w-full min-h-screen ">
+      <div className=" flex flex-col pt-24 gap-14 md:gap-24 justify-center items-center w-full min-h-screen ">
         {" "}
-        <div className="  flex justify-center items-center  gap-4 flex-col w-[618px]">
-          <h3 className=" text-orange-500 font-normal text-xl font-pacifico">
+        <div className="  flex justify-center items-start sm:items-center  gap-4 flex-col w-full">
+          <h3 className=" text-orange-500 font-normal text-lg sm:text-xl font-pacifico">
             How We Work
           </h3>
-          <h1 className=" text-center text-4xl font-poppin font-semibold text-neutral-900">
+          <h1 className=" text-2xl sm:text-3xl md:text-4xl font-poppin font-semibold text-neutral-900">
             We Are Best In Education
           </h1>
         </div>
-        <div className="relative flex justify-between h-full  w-full pt-20 gap-5">
+        <div className="relative  justify-between h-full  w-full pt-20 gap-5 grid  md::grid-cols-2  md:grid-flow-col">
           <>
             <motion.img
               src={plane}
@@ -37,7 +37,7 @@ const AboutUsHeroSection = () => {
             <motion.img
               src={StarOrange}
               alt="starOrange"
-              className="absolute top-0 left-28 h-10"
+              className="absolute top-0 left-56 md:left-28 h-10"
               initial={{ x: 0, y: -10 }}
               animate={{ x: 0, y: 10 }}
               transition={{
@@ -47,11 +47,11 @@ const AboutUsHeroSection = () => {
               }}
             />
           </>
-          <div className="flex-1 relative">
+          <div className="order-2 md:order-1 relative">
             <motion.img
               src={StarPink}
               alt="starPink"
-              className="absolute top-2 right-24 h-10"
+              className="absolute top-2 right-24 sm:right-8 lg:right-16 h-10"
               initial={{ x: 0, y: -10 }}
               animate={{ x: 0, y: 10 }}
               transition={{
@@ -60,9 +60,13 @@ const AboutUsHeroSection = () => {
                 repeatType: "reverse",
               }}
             />
-            <img src={ourClass} alt="ourClass" />
+            <img
+              src={ourClass}
+              alt="ourClass"
+              className="w-full h-full object-cover"
+            />
           </div>
-          <div className="flex-1">
+          <div className="order-1 md:order-2">
             <AboutHeroListGroup />
           </div>
         </div>

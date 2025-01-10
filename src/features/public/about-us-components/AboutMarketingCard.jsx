@@ -5,13 +5,13 @@ const AboutMarketingCard = ({ content: { id, title, description, image } }) => {
     <div
       className={`col-span-1 flex flex-col  justify-center items-start p-4 gap-5 rounded-lg bg-white ${
         id === 2
-          ? "mt-8"
+          ? "mt-0 md:mt-8"
           : id === 4
-          ? "mt-8"
+          ? "mt-0 md:mt-8"
           : id === 1
-          ? "mb-8"
+          ? "mb-0 md:mb-8"
           : id === 3
-          ? "mb-8"
+          ? "mb-0 md:mb-8"
           : ""
       }`}
     >
@@ -31,7 +31,9 @@ const AboutMarketingCard = ({ content: { id, title, description, image } }) => {
       >
         {title}
       </h3>
-      <p className=" text-base text-gray-700">{description}</p>
+      <p className=" text-base md:text-[20px] leading-[30px] text-gray-700">
+        {description}
+      </p>
     </div>
   );
 };
