@@ -6,12 +6,12 @@ import { motion } from "framer-motion";
 const ContactUsFaqSection = () => {
   return (
     <Container>
-      <div className=" flex flex-col pt-12 pb-24 gap-20  items-center w-full h-full relative min-h-screen">
+      <div className=" flex flex-col pt-12 pb-24 gap-14 md:gap-20  items-center w-full h-full relative">
         <>
           <motion.img
             src={earth}
             alt="earth"
-            className="absolute top-20 left-16"
+            className="absolute md:top-32 lg:top-20 md:left-0 lg:left-16 hidden md:inline-block"
             initial={{ x: -15, y: -10 }}
             animate={{ x: 0, y: 0 }}
             transition={{
@@ -21,15 +21,15 @@ const ContactUsFaqSection = () => {
             }}
           />
         </>
-        <div className="  flex justify-center items-center  gap-4 flex-col w-[618px]">
+        <div className="   flex justify-center items-start sm:items-center  gap-4 flex-col w-full">
           <h3 className=" text-orange-500 font-normal text-xl font-pacifico">
             Contact Form
           </h3>
-          <h1 className=" text-center text-4xl font-poppin font-semibold text-neutral-900">
+          <h1 className=" text-2xl sm:text-3xl md:text-4xl font-poppin font-semibold text-neutral-900">
             Frequently Asked Questions
           </h1>
         </div>
-        <div className=" w-[618px] flex justify-center items-center h-full">
+        <div className=" w-full sm:w-[70%] md:w-[60%] flex justify-center items-center h-full">
           <ContactFaqGroup />
         </div>
       </div>
