@@ -19,7 +19,7 @@ const AboutUsHeroSection = () => {
             We Are Best In Education
           </h1>
         </div>
-        <div className="relative  justify-between h-full  w-full pt-20 gap-5 grid  md::grid-cols-2  md:grid-flow-col">
+        <div className="relative  justify-between h-full  w-full pt-20 gap-5 grid  md:grid-cols-2  md:grid-flow-col">
           <>
             <motion.img
               src={plane}
