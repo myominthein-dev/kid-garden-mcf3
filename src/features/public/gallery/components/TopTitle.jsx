@@ -11,7 +11,7 @@ const TopTitle = () => {
         Our Colourful Journey
       </p>
       <img
-        className=" absolute bottom-2 left-0 translate-x-44 translate-y-24 rotate-3 "
+        className="  hidden xl:inline-block absolute bottom-2 left-0 translate-x-44 translate-y-24 rotate-3 "
         src={letterImg}
         alt=""
       />
