@@ -5,7 +5,7 @@ import ImgGridRow3 from "./components/ImgGridRow3";
 
 const PhotoSection = () => {
   return (
-    <div className=" flex flex-col  gap-8 mx-4">
+    <div className=" flex flex-col  gap-6 mx-4">
       <ImgGridRow1 />
       <ImgGridRow2 />
       <ImgGridRow3 />

@@ -6,7 +6,7 @@ import PhotoSection from "./PhotoSection";
 const GalleryHeroSection = () => {
   return (
     <Container>
-      <div className=" flex flex-col  gap-28">
+      <div className=" flex flex-col md:gap-12 gap-8 xl:gap-28">
         <TopTitle />
         <PhotoSection />
         <SeeMoreBtn />
