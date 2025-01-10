@@ -9,21 +9,18 @@ import img6 from "../../../../assets/gallery/img6.png";
 const ImgGridRow1 = () => {
   return (
     <div>
-      <div
-        style={{ gridAutoFlow: "column", direction: "rtl" }}
-        className=" w-full h-[640px] grid grid-cols-9 direction-rtl  gap-8"
-      >
+      <div className=" w-full xl:h-[640px] md:grid-flow-col md:auto-cols-fr grid md:grid-cols-9 direction-rtl  gap-6">
         {/* left  */}
-        <div className=" md:col-start-1 md:col-end-6  xl:col-start-1 xl:col-end-5   grid justify-between  gap-6  ">
+        <div className=" md:col-start-5 md:col-end-10  xl:col-start-1 xl:col-end-5   grid justify-between  gap-6  ">
           <ImageDiv className={"border-green-500 "} src={img1} />
-          <div className="  grid grid-cols-2  gap-6 ">
+          <div className=" hidden md:grid grid-cols-2  gap-6 ">
             <ImageDiv className={"border-red-600 "} src={img5} />
             <ImageDiv className={"border-red-600 "} src={img4} />
           </div>
         </div>
 
         {/* middle  */}
-        <div className=" md:col-start-6 md:col-end-10 xl:col-span-2 h-full     ">
+        <div className="hidden md:grid md:col-start-1 md:col-end-5 xl:col-span-2 h-full     ">
           <ImageDiv className={"border-orange-500"} src={img2} />
         </div>
         {/* right*/}

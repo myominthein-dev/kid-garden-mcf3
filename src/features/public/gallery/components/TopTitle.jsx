@@ -7,7 +7,7 @@ const TopTitle = () => {
       <h1 className=" text-xl leading-9 font-normal text-orange-500 font-pacifico">
         Gallery
       </h1>
-      <p className=" text-4xl font-poppin leading-[54px] font-semibold">
+      <p className=" xl:text-4xl text-2xl font-poppin leading-[54px] font-semibold">
         Our Colourful Journey
       </p>
       <img

@@ -15,9 +15,9 @@ const ImgGridRow2 = () => {
         src={svg3}
         alt=""
       />
-      <div className=" w-full h-[640px] grid grid-cols-9  gap-8">
+      <div className=" w-full xl:h-[640px] grid md:grid-cols-9  gap-6">
         {/* left  */}
-        <div className=" md:col-start-1 md:col-end-4 xl:col-start-1 xl:col-end-3 col-span-2 h-full     ">
+        <div className=" md:col-start-1 md:col-end-4 md:grid hidden xl:col-start-1 xl:col-end-3 col-span-2 h-full     ">
           <ImageDiv className={"border-orange-400 "} src={img1} />
         </div>
 
@@ -31,7 +31,10 @@ const ImgGridRow2 = () => {
         </div>
         {/* right*/}
         <div className=" md:col-start-4 md:col-end-10 xl:col-start-7 xl:col-end-10   grid grid-col-1 gap-6  ">
-          <ImageDiv className={"border-green-400 "} src={img6} />
+          <ImageDiv
+            className={"md:inline-block hidden border-green-400 "}
+            src={img6}
+          />
 
           <ImageDiv className={"border-slate-600 "} src={img5} />
         </div>
