@@ -10,6 +10,7 @@ const ContactUsPage = lazy(() =>
 import coursesDetailRoute from "./coursesDetailRoute";
 import PageLoading from "../features/public/components/PageLoading";
 import UpcomingEventsPage from "../features/public/pages/UpcomingEventsPage";
+import EventDetailPage from "../features/public/pages/EventDetailPage";
 
 const publicRoute = [
   {
@@ -38,6 +39,10 @@ const publicRoute = [
     path: "upcoming-events",
     element: <UpcomingEventsPage />,
   },
+  {
+    path : "event-details",
+    element : <EventDetailPage/>
+  }
 ];
 
 export default publicRoute;
