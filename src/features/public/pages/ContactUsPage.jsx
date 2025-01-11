@@ -13,9 +13,11 @@ const ContactUsPage = () => {
       <BreadCrumb
         bgImg={breadCrumb3}
         leftImg={painted}
+        leftImgShow={true}
+        flexFlow={"flex-col-reverse"}
         rightImg={ellipse}
         rImgWidth={150}
-        lImgPos={"-top-0 -left-44"}
+        lImgPos={"md:-top-0 md:-left-44 relative bottom-[-28%] "}
         rImgPos={" right-44"}
         lImgWidth={600}
         title={"Contact Us"}

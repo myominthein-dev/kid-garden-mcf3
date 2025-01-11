@@ -16,8 +16,10 @@ const CoursePage = () => {
         bgImg={breadCrumb1}
         leftImg={youngGirl}
         rightImg={rabbit}
+        leftImgShow={false}
         title={"Our Courses"}
         currentPageTitle={"Our Courses"}
+        flexFlow={"flex-col"}
       />
       <Container>
         <CourseHeroSection />
