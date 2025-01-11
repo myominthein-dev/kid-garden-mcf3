@@ -16,6 +16,11 @@ import greenSq from '../../../assets/events/small_green.png'
 import orangeSq from '../../../assets/events/bigger_orange.png'
 import roseSq from '../../../assets/events/big_rose.png'
 import cloud from "../../../assets/events/orange_cloud.png"
+import BreadCrumb from '../components/BreadCrumb'
+import breadCrumb3 from "../../../assets/breadcrumb/breadcrumb-3.png";
+import breadCrumbBg from '../../../assets/events/breadcrumb_bg.png'
+import garaffe from '../../../assets/events/event_garaffee.png'
+import kid from '../../../assets/events/event_kid.png'
 
 const events = [
     writingInFense,groupingInClas,ropeRace,playingInCompound,groupRanning,makingCircle,playingFootball,spider,hollowenKid
@@ -23,7 +28,18 @@ const events = [
 const UpcomingEventsPage = () => {
   return (
    <>
-         <Container className={'relative'}>
+        <BreadCrumb 
+        bgImg={breadCrumb3}
+        leftImg={kid}
+        rightImg={garaffe}
+        rImgWidth={69}
+        lImgPos={"-top-16 left-48"}
+        rImgPos={"-top-4 right-5"}
+        lImgWidth={60}
+        title={"Events"}
+        currentPageTitle={"Events"}
+      />
+        <Container className={'relative my-10 pt-10'}>
         <img className='absolute right-5' src={cloud} alt="" />
         <div className="relative mx-auto flex justify-center items-center  gap-4 flex-col w-[618px]">
           <div className='w-20 h-20  absolute -top-5 -left-5'>
