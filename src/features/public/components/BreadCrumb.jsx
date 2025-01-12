@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Container from "./Container";
+import breadcrumbFooter from "../../../assets/breadcrumb/breadcrumbFooter.png";
 
 const BreadCrumb = ({
   bgImg,
@@ -13,20 +14,26 @@ const BreadCrumb = ({
   rImgPos,
   currentPageTitle,
   links,
+  leftImgShow,
+  flexFlow,
 }) => {
   const navigate = useNavigate();
 
   return (
-    <div className=" w-full flex items-center    justify-between gap-3 mb-5  py-1">
+    <div className=" w-full flex items-center    justify-center gap-3 mb-5  py-1">
       <nav
         style={{ backgroundImage: `url(${bgImg})` }}
-        className={` bg-cover bg-no-repeat bg-top w-full h-[400px] flex items-center   p-10 overflow-hidden `}
+        className={` bg-cover bg-no-repeat bg-top w-full h-[600px] md:h-[400px] flex items-center   p-10 overflow-hidden `}
         aria-label="Breadcrumb"
       >
-        <Container className="flex items-center">
+        <Container
+          className={`flex ${flexFlow} h-full md:h-auto  md:flex-row justify-center gap-5 md:gap-0 md:justify-start items-center`}
+        >
           <img
             src={leftImg}
-            className={`w-[${lImgWidth}px]  absolute ${lImgPos}`}
+            className={`w-[${lImgWidth}px] ${
+              leftImgShow ? "block " : "md:block hidden"
+            }  md:absolute ${lImgPos}`}
             alt=""
           />
           <ol className="w-full text-center">
@@ -67,12 +74,17 @@ const BreadCrumb = ({
           </ol>
           <img
             src={rightImg}
-            className={`w-[${rImgWidth}px] absolute ${
-              rImgPos || "right-0 -top-16"
-            } `}
+            className={`w-[${rImgWidth}px] md:absolute ${
+              leftImgShow ? "hidden md:block" : "block"
+            } ${rImgPos || "right-0 -top-16"} `}
             alt=""
           />
         </Container>
+        <img
+          src={breadcrumbFooter}
+          alt=""
+          className=" md:hidden block absolute bottom-12 w-full left-0"
+        />
       </nav>
     </div>
   );
