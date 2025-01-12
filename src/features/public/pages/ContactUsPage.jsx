@@ -1,11 +1,13 @@
 import React from "react";
 import BreadCrumb from "../components/BreadCrumb";
+import footerBg from "../../../assets/homePage/bg_footer.jpg";
 
 import breadCrumb3 from "../../../assets/breadcrumb/breadcrumb-3.png";
 import painted from "../../../assets/breadcrumb/painted-girl.png";
 import ellipse from "../../../assets/breadcrumb/ellipse.png";
 import ContactUsHeroSection from "../contact-us-components/ContactUsHeroSection";
 import ContactUsFaqSection from "../contact-us-components/ContactUsFaqSection";
+import Footer from "../components/Footer";
 
 const ContactUsPage = () => {
   return (
@@ -25,6 +27,8 @@ const ContactUsPage = () => {
       />
       <ContactUsHeroSection />
       <ContactUsFaqSection />
+      <Footer bgImg={footerBg} color={"orange"} />
+
     </>
   );
 };

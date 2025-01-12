@@ -1,10 +1,12 @@
 import React from "react";
 import Container from "../components/Container";
 import bgImage from "../../../assets/homePage/homeHeroBg.png";
-import cloud from "../../../assets/homePage/clouds.svg";
+import cloud from "../../../assets/homePage/cloud2.png";
 import twoKid from "../../../assets/homePage/twoKids.png";
 import Button from "../components/Button";
 import Ellipse from "../components/Ellipse";
+import breadCrumb3 from "../../../assets/breadcrumb/breadcrumb-3.png";
+
 
 const HomeHeroSection = () => {
   const ellipseShapes = [
@@ -22,15 +24,16 @@ const HomeHeroSection = () => {
     {
       bgColor: "#A3E6353A",
       borderColor: "#A3E635",
-      position: { bottom: "15%", right: "5%" },
+      position: { bottom: "25%", right: "5%" },
     },
   ];
   return (
     <div
-      style={{ backgroundImage: `url(${bgImage})` }}
-      className=" relative bg-cover bg-no-repeat bg-center flex flex-col items-center justify-center"
+      style={{ backgroundImage: `url(${breadCrumb3})` }}
+      className="  relative bg-cover h-[1140px] pt-32 bg-no-repeat bg-center "
     >
-      <h1 className="font-pacifico text-lg text-orange-500 mb-4">
+    <div className="flex flex-col gap-3   items-center justify-center">
+     <h1 className="font-pacifico text-lg text-orange-500 mb-4">
         Quality School
       </h1>
       <div className="font-poppin font-semibold text-5xl text-center mb-6">
@@ -43,17 +46,18 @@ const HomeHeroSection = () => {
         Our nurturing environment inspires children to explore, grow, and shine
         every day!"
       </p>
-      <Button bgColor="orange-500" label="Learn More" arrowDirection={315} />
+      <Button className={'bg-orange-500'} label="Learn More" arrowDirection={315} />
 
+     </div>
       <img
         src={twoKid}
         alt="two kids"
-        className="-mt-28 w-full h-[600px] object-contain"
+        className=" w-full absolute bottom-0 h-[751px] object-contain"
       />
       <img
         src={cloud}
         alt="clouds"
-        className="absolute bottom-0 bg-contain w-full"
+        className="absolute bottom-0 bg-cover w-full"
       />
       {ellipseShapes.map((shape, index) => {
         return (

@@ -2,7 +2,6 @@
 
 import emotions from "../../../assets/breadcrumb/emotions.png";
 import EmotionsRight from "../../../assets/breadcrumb/EmotionsRight.png";
-import breadCrumb3 from "../../../assets/breadcrumb/breadcrumb-3.png";
 
 import React from 'react'
 import Container from '../components/Container'
