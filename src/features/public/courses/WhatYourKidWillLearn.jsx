@@ -7,7 +7,7 @@ const WhatYourKidWillLearn = ({ ImageUrl, text, learningSkill, flexFlow }) => {
       <div>
         <img
           src={backGroundImg}
-          className="md:h-[1250px] xl:h-auto h-[1000px]"
+          className="md:h-[1250px] xl:h-auto h-[1100px]"
           alt=""
         />
       </div>
