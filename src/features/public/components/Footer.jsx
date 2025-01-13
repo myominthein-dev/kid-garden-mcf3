@@ -34,16 +34,16 @@ const Footer = ({ bgImg, color }) => {
             <li onClick={() => link("/")} className="cursor-pointer">
               Home
             </li>
-            <li onClick={() => link("about-us")} className="cursor-pointer">
+            <li onClick={() => link("/about-us")} className="cursor-pointer">
               About Us
             </li>
-            <li onClick={() => link("our-courses")} className="cursor-pointer">
+            <li onClick={() => link("/our-courses")} className="cursor-pointer">
               Courses
             </li>
-            <li onClick={() => link("contact-us")} className="cursor-pointer">
+            <li onClick={() => link("/contact-us")} className="cursor-pointer">
               Contact Us
             </li>
-            <li onClick={() => link("upcoming-events")} className="cursor-pointer">
+            <li onClick={() => link("/upcoming-events")} className="cursor-pointer">
               Events
             </li>
           </ul>

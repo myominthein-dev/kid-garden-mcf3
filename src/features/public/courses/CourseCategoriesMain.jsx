@@ -49,14 +49,18 @@ const CourseCategoriesMain = () => {
         {/* star image */}
         <div>
           {" "}
-          <img className=" absolute top-28 left-14" src={StarOrange} alt="" />
           <img
-            className=" absolute top-36 xl:right-32 lg:right-24"
+            className=" absolute top-0 md:top-28 left-14"
+            src={StarOrange}
+            alt=""
+          />
+          <img
+            className=" absolute right-0  top-10 md:top-36 xl:right-32 md:right-[7%]"
             src={StarPink}
             alt=""
           />
         </div>
-        <div className="  flex justify-center items-center  gap-4 flex-col w-[618px]">
+        <div className="  flex justify-center items-center  gap-4 flex-col w-[75%] mx-auto md:w-[618px]">
           <h3 className=" text-orange-500 font-normal text-xl font-pacifico">
             Course Categories
           </h3>
@@ -66,7 +70,7 @@ const CourseCategoriesMain = () => {
         </div>
       </div>
 
-      <div className=" flex lg:flex-wrap gap-6 items-center lg:justify-center">
+      <div className=" flex flex-wrap gap-8 md:gap-6 items-center justify-center">
         {courseCategoriesArray.map((category, index) => (
           <CourseCategoriesCard
             category={category}

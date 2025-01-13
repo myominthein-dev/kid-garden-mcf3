@@ -19,8 +19,10 @@ const MathAndProblemSolvingPage = () => {
       <MathAndCriticalThinking />
       <CategoriesDetail
         imgPeopleUrl={ArtsAndCreativityOne}
-        flexFlow={"flex-row"}
-        DimaondGroupPositon={"xl:top-0 xl:left-[45%] lg:top-1 lg:right-[10%]"}
+        flexFlow={"xl:flex-row"}
+        DimaondGroupPositon={
+          "xl:top-0 xl:left-[45%] top-0  md:top-1 right-[10%]"
+        }
         headerText={" Math and Problem-Solving"}
         ParagText={
           "in early education focus on developing children’s ability to understand numbers, shapes, patterns, and relationships. Through engaging activities like counting, sorting, measuring, and solving simple puzzles, children learn to approach challenges logically and think critically."

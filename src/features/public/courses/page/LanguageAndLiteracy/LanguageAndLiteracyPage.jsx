@@ -19,8 +19,10 @@ const LanguageAndLiteracyPage = () => {
       <LangLitetracy />
       <CategoriesDetail
         imgPeopleUrl={People}
-        flexFlow={"flex-row "}
-        DimaondGroupPositon={"xl:top-0 xl:left-[45%] lg:top-1 lg:right-[10%]"}
+        flexFlow={"xl:flex-row "}
+        DimaondGroupPositon={
+          "xl:top-0 xl:left-[45%] lg:top-1 lg:right-[10%] top-0 left-[10%]"
+        }
         headerText={" Language and Literacy"}
         ParagText={
           "We focuses on helping young children develop foundational communication skills, including speaking, listening, reading, andwriting. Through storytelling, phonics, and vocabulary-building      activities, children learn to express themselves, understand others,and explore the joy of language. These skills lay the groundwork for academic success and lifelong learning."

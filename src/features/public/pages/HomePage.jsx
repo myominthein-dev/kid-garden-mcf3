@@ -6,11 +6,11 @@ import HomeProcess from "../home-components/HomeProcess";
 import EventCalendar from "../home-components/EventCalendar";
 import CalendarCard from "../home-components/CalendarCard";
 import HomeGallery from "../home-components/HomeGallery";
+
 const HomePage = () => {
   return (
     <>
       <HomeHeroSection />
-
       <HomeCaterogires />
       <HomeProcess />
       <EventCalendar />

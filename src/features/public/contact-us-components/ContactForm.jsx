@@ -34,8 +34,8 @@ const ContactForm = () => {
           className={`${
             errors.name
               ? "focus:border-red-500 focus:ring-red-500 border-red-500 "
-              : "focus:ring-orange-300 focus:border-orange-300 border-gray-300  "
-          } disabled:opacity-75 bg-white border border-orange-300 focus:ring-orange-500 focus:border-orange-500  text-gray-900 text-sm rounded-full  block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500`}
+              : "focus:ring-orange-400 focus:border-orange-400 border-gray-300  "
+          } disabled:opacity-75 bg-transparent border border-orange-400 focus:ring-orange-500 focus:border-orange-500  text-gray-900 text-sm rounded-full  block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500`}
         />
         {errors.name?.type === "required" && (
           <p className="text-red-500 mt-2 text-sm">Name is required !</p>
@@ -71,8 +71,8 @@ const ContactForm = () => {
           className={`${
             errors.email
               ? "focus:border-red-500 focus:ring-red-500 border-red-500 "
-              : "focus:ring-orange-300 focus:border-orange-300 border-gray-300  "
-          } disabled:opacity-75 bg-white border rounded-full border-orange-300  text-gray-900 text-sm focus:ring-orange-500 focus:border-orange-500  block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-orange-500 dark:focus:border-orange-500`}
+              : "focus:ring-orange-400 focus:border-orange-400 border-gray-300  "
+          } disabled:opacity-75 bg-transparent border rounded-full border-orange-400  text-gray-900 text-sm focus:ring-orange-500 focus:border-orange-500  block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-orange-500 dark:focus:border-orange-500`}
         />
         {errors.email?.type === "required" && (
           <p className="text-red-500 mt-2 text-sm">Email is required !</p>
@@ -91,7 +91,7 @@ const ContactForm = () => {
         <div className="flex rounded-full ">
           <select
             id="states"
-            className="bg-white text-gray-900 text-sm inline-block w-28 focus:border-orange-300 focus:ring-0 border border-orange-300 border-e-0 rounded-full rounded-e-none disabled:opacity-75  p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-orange-500 dark:focus:border-orange-500"
+            className="bg-transparent text-gray-900 text-sm inline-block w-28 focus:border-orange-400 focus:ring-0 border border-orange-400 border-e-0 rounded-full rounded-e-none disabled:opacity-75  p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-orange-500 dark:focus:border-orange-500"
           >
             {res.map((el) => (
               <option
@@ -117,8 +117,8 @@ const ContactForm = () => {
             className={`${
               errors.phone
                 ? "focus:border-red-500 focus:ring-red-500 border-red-500 "
-                : "focus:ring-orange-300 focus:border-orange-300 border-gray-300  "
-            } disabled:opacity-75 bg-white border border-orange-300  text-gray-900 text-sm rounded-full  block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 rounded-s-none border-s-0 border-s-none`}
+                : "focus:ring-orange-400 focus:border-orange-400 border-gray-300  "
+            } disabled:opacity-75 bg-transparent border border-orange-400  text-gray-900 text-sm rounded-full  block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 rounded-s-none border-s-0 border-s-none`}
           />
           {errors.phone?.type === "required" && (
             <p className="text-red-500 mt-2 text-sm">
@@ -157,8 +157,8 @@ const ContactForm = () => {
           className={`${
             errors.message
               ? "focus:border-red-500 focus:ring-red-500 border-red-500 "
-              : "focus:ring-orange-300 focus:border-orange-300 border-gray-300  "
-          } disabled:opacity-75 bg-white border border-orange-300 focus:ring-orange-500 focus:border-orange-500  text-gray-900 text-sm rounded-2xl  block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500`}
+              : "focus:ring-orange-400 focus:border-orange-400 border-gray-300  "
+          } disabled:opacity-75 bg-transparent border border-orange-400 focus:ring-orange-500 focus:border-orange-500  text-gray-900 text-sm rounded-2xl  block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500`}
         />
         {errors.message?.type === "required" && (
           <p className="text-red-500 mt-2 text-sm">
@@ -175,6 +175,11 @@ const ContactForm = () => {
             Message must not be at more than 500 letters !
           </p>
         )}
+      </div>
+      <div className="flex justify-center items-center">
+        <button className="bg-orange-500 px-6 py-3 rounded-full text-white w-full sm:w-auto ">
+          Contact Us
+        </button>
       </div>
     </form>
   );

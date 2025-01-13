@@ -18,8 +18,8 @@ const ArtsAndCreativityPage = () => {
       <ArtCreativity />
       <CategoriesDetail
         imgPeopleUrl={ArtsAndCreativityOne}
-        flexFlow={"flex-row-reverse"}
-        DimaondGroupPositon={"top-1 right-[10%]"}
+        flexFlow={"xl:flex-row-reverse"}
+        DimaondGroupPositon={"md:top-1 md:right-[10%] top-0"}
         headerText={" Art and Creative"}
         ParagText={
           "In early education play a crucial role in fostering self-expression, imagination, and emotional development in children. Through activities like drawing, painting, crafting, music, and movement, kids explore their unique ideas and feelings. These activities not only enhance fine motor skills and hand-eye coordination but also build confidence and problem-solving abilities."
