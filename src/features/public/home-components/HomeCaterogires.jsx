@@ -10,26 +10,32 @@ const HomeCategories = () => {
   const categories = [
     {
       icon: (
-        <LuBrainCircuit className="text-white w-[80px] h-[80px] border-none" />
+        <LuBrainCircuit className="text-white w-[30px] h-[30px] lg:w-[80px] lg:h-[80px] border-none" />
       ),
       title: "Language and Literacy",
       bgColor: "#FDA4AF",
       borderColor: "#FDA4AF",
     },
     {
-      icon: <LuCodepen className="text-white w-[80px] h-[80px] border-none" />,
+      icon: (
+        <LuCodepen className="text-white w-[30px] h-[30px] lg:w-[80px] lg:h-[80px] border-none" />
+      ),
       title: "Arts and Creativity",
       bgColor: "#FB923C",
       borderColor: "#FB923C",
     },
     {
-      icon: <LuPuzzle className="text-white w-[80px] h-[80px] border-none" />,
+      icon: (
+        <LuPuzzle className="text-white w-[30px] h-[30px] lg:w-[80px] lg:h-[80px] border-none" />
+      ),
       title: "Math and Problem-Solving",
       bgColor: "#F0ABFC",
       borderColor: "#F0ABFC",
     },
     {
-      icon: <LuSlack className="text-white w-[80px] h-[80px] border-none" />,
+      icon: (
+        <LuSlack className="text-white w-[30px] h-[30px] lg:w-[80px] lg:h-[80px] border-none" />
+      ),
       title: "Social Development",
       bgColor: "#A3E635",
       borderColor: "#A3E635",
@@ -39,13 +45,11 @@ const HomeCategories = () => {
   return (
     <Container>
       <div className="relative flex justify-center flex-col items-center py-24">
-        <h1 className="font-pacifico text-xl text-orange-500 mb-4">
-          Course Categories
-        </h1>
+        <h1 className="sub-heading">Course Categories</h1>
         <motion.img
           src={starOrange}
           alt="Orange Star"
-          className="absolute top-20 left-10"
+          className="absolute -top-4 left-8 lg:top-20 lg:left-10"
           initial={{ x: -10, y: 0 }}
           animate={{ x: 10, y: 0 }}
           transition={{
@@ -57,7 +61,7 @@ const HomeCategories = () => {
         <motion.img
           src={starPurple}
           alt="Purple Star"
-          className="absolute top-36 right-20"
+          className="absolute top-8 right-10 lg:top-36 lg:right-20"
           initial={{ x: 10, y: 0 }}
           animate={{ x: -10, y: 0 }}
           transition={{
@@ -66,27 +70,25 @@ const HomeCategories = () => {
             repeatType: "reverse",
           }}
         />
-        <h2 className="text-4xl text-neutral-900 font-semibold font-poppin w-[600px] text-center">
-          Building Foundations for Lifelong Learning
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mt-8">
+        <h2 className="heading">Building Foundations for Lifelong Learning</h2>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 mt-8">
           {categories.map((category, index) => (
             <div
               key={index}
-              className="flex flex-col items-center gap-3 px-7 py-7 border border-neutral-700 border-dashed rounded-xl"
+              className="flex flex-col items-center gap-7 p-3 md:p-7 border border-neutral-700 border-dashed rounded-xl"
             >
               <Ellipse
                 initial="39% 61% 50% 50% / 37% 40% 60% 63%"
                 isAnimate={true}
-                width="194px"
-                height="174px"
+                width={window.innerWidth < 768 ? "100px" : "194px"}
+                height={window.innerWidth < 768 ? "80px" : "174px"}
                 shadow={true}
                 bgColor={category.bgColor}
                 borderColor={category.borderColor}
               >
                 {category.icon}
               </Ellipse>
-              <p className="text-xl font-pacifico text-neutral-900">
+              <p className="text-lg md:text-xl font-pacifico text-neutral-900 text-center">
                 <span className="drop-shadow-lg">{category.title}</span>
               </p>
             </div>

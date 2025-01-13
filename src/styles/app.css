@@ -28,4 +28,12 @@
   .breadCrumbLabel {
     @apply font-pacifico font-normal text-orange-500 text-xl;
   }
+
+  .sub-heading {
+    @apply font-pacifico text-xl lg:text-2xl text-orange-500 mb-4;
+  }
+
+  .heading {
+    @apply font-poppin font-semibold text-2xl lg:text-5xl text-center mb-6;
+  }
 }

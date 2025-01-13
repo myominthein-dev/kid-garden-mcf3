@@ -42,7 +42,7 @@ const Ellipse = ({
         justifyContent: "center",
         alignItems: "center",
       }}
-      className={shadow ? "shadow-2xl" : ""}
+      className={`${shadow ? "shadow-2xl" : ""} `}
       initial={initial}
       animate={animate}
       transition={transition}
