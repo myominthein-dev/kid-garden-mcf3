@@ -1,4 +1,3 @@
-
 import Container from "../components/Container";
 import footerBg from "../../../assets/homePage/bg_footer.jpg";
 import writingInFense from "../../../assets/homePage/writing_in_fense.png";
@@ -19,8 +18,9 @@ import roseSq from "../../../assets/events/big_rose.png";
 import cloud from "../../../assets/events/orange_cloud.png";
 import DetailBtn from "../home-components/DetailBtn";
 import BreadCrumb from "../components/BreadCrumb";
-
-
+import breadCrumb3 from "../../../assets/breadcrumb/breadcrumb-3.png";
+import emotions from "../../../assets/breadcrumb/emotions.png";
+import EmotionsRight from "../../../assets/breadcrumb/EmotionsRight.png";
 const events = [
   writingInFense,
   groupingInClas,
@@ -34,15 +34,17 @@ const events = [
 ];
 const UpcomingEventsPage = () => {
   return (
-
     <>
       <BreadCrumb
-        bgImg={bgImage}
-        leftImg={"hdalh"}
-        lImgWidth={300}
-        rightImg={"dldahl"}
-        title={"Our Courses"}
-        currentPageTitle={"Event"}
+        lImgWidth={200}
+        bgImg={breadCrumb3}
+        leftImg={emotions}
+        leftImgShow={false}
+        lImgPos={"left-[15%] top-[-90%]"}
+        flexFlow={"flex-col"}
+        rightImg={EmotionsRight}
+        title={"Events"}
+        currentPageTitle={"Events"}
       />
       <Container className={"relative"}>
         <img
@@ -52,7 +54,6 @@ const UpcomingEventsPage = () => {
         />
         <div className="relative md:mx-auto flex md:justify-center md:items-center  gap-4 flex-col md:w-[618px]">
           <div className="w-20 h-20 xl:inline-block hidden absolute -top-5 -left-5">
-
             <img className="absolute right-0 bottom-0" src={greenSq} alt="" />
             <img
               className="absolute left-0 top-0 bottom-0 my-auto"
@@ -69,17 +70,14 @@ const UpcomingEventsPage = () => {
             Calendar Of School Event
           </h1>
           <p className="md:text-lg text-base font-roboto md:text-center  text-neutral-700">
-
             We have 9 amazing events planned for this year, filled with fun,
             learning, and community activities for students and families. Stay
             tuned and join us to create wonderful memories together!"
           </p>
         </div>
 
-
         {/* Card loop  */}
         <div className="my-10 xl:grid xl:grid-cols-3 justify-between items-center hidden gap-4">
-
           {events.map((e, i) => (
             <CalendarCard key={i} imgUrl={e} />
           ))}
