@@ -23,7 +23,7 @@ const BreadCrumb = ({
     <div className=" w-full flex items-center    justify-center gap-3 mb-5  py-1">
       <nav
         style={{ backgroundImage: `url(${bgImg})` }}
-        className={` bg-cover bg-no-repeat bg-top w-full h-[600px] md:h-[400px] flex items-center   p-10 overflow-hidden `}
+        className={`relative bg-cover bg-no-repeat bg-top w-full h-[600px] md:h-[400px] flex items-center  p-0  md:p-10 overflow-hidden `}
         aria-label="Breadcrumb"
       >
         <Container
@@ -83,7 +83,7 @@ const BreadCrumb = ({
         <img
           src={breadcrumbFooter}
           alt=""
-          className=" md:hidden block absolute bottom-12 w-full left-0"
+          className=" md:hidden block absolute bottom-0 w-full left-0"
         />
       </nav>
     </div>
