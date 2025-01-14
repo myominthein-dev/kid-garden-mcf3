@@ -15,21 +15,21 @@ const Footer = ({ bgImg, color }) => {
   return (
     <footer
       style={{ backgroundImage: `url(${bgImg})` }}
-      className={` h-[832px] bg-[url()] bg-cover bg-no-repeat  border-gray-200 antialiased dark:bg-gray-800 mt-auto`}
+      className={` xl:h-[832px]   bg-[url()] bg-cover object-cover  bg-no-repeat pt-52 pb-24   border-gray-200  dark:bg-gray-800 mt-auto relative xl:px-0 md:px-8 flex items-center flex-col justify-center`}
     >
       <Container>
         <NewsLetter color={color} />
 
-        <div className="max-w-[561px] mx-auto relative top-44  h-[316px] ">
+        <div className="max-w-[561px] mx-auto relative gap-2.5  ">
           <div className="flex items-center justify-center">
             <img src={footerLogo} alt="" />
           </div>
-          <p className="font-roboto text-lg lg:px-20 my-5 text-center text-neutral-700">
+          <p className="font-roboto  md:px-40 px-24 text-xs my-5 text-center text-neutral-700">
             "Find the perfect class tailored to your child's needs and
             interests."
           </p>
           <ul
-            className={`text-${color}-600 flex items-center justify-evenly leading-4 font-semibold`}
+            className={`text-${color}-600 flex xl:gap-8 gap-4 xl:text-base  text-xs items-center  justify-center leading-4 font-semibold`}
           >
             <li onClick={() => link("/")} className="cursor-pointer">
               Home
@@ -43,7 +43,10 @@ const Footer = ({ bgImg, color }) => {
             <li onClick={() => link("/contact-us")} className="cursor-pointer">
               Contact Us
             </li>
-            <li onClick={() => link("/upcoming-events")} className="cursor-pointer">
+            <li
+              onClick={() => link("/upcoming-events")}
+              className="cursor-pointer"
+            >
               Events
             </li>
           </ul>
