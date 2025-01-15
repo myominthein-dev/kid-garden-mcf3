@@ -50,17 +50,15 @@ const UpcomingEventsPage = () => {
         <img
           className="absolute xl:inline-block md:hidden xl:right-5  -top-4 right-16"
           src={cloud}
-          alt=""
         />
         <div className="relative md:mx-auto flex md:justify-center md:items-center  gap-4 flex-col md:w-[618px]">
           <div className="w-20 h-20 xl:inline-block hidden absolute -top-5 -left-5">
-            <img className="absolute right-0 bottom-0" src={greenSq} alt="" />
+            <img className="absolute right-0 bottom-0" src={greenSq} />
             <img
               className="absolute left-0 top-0 bottom-0 my-auto"
               src={orangeSq}
-              alt=""
             />
-            <img className="absolute top-0 right-0" src={roseSq} alt="" />
+            <img className="absolute top-0 right-0" src={roseSq} />
           </div>
           <h3 className=" text-orange-500 leading-9 font-normal text-xl  font-pacifico">
             Upcoming Events

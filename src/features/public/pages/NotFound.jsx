@@ -25,12 +25,8 @@ const NotFound = () => {
       />
       <Container>
         <div className=" relative flex justify-center items-center gap-3 py-12 px-[10px]">
-          <img
-            className=" absolute top-[20%] left-0"
-            src={NotFoundSticker}
-            alt=""
-          />
-          <img src={NotFoundImg} alt="" />
+          <img className=" absolute top-[20%] left-0" src={NotFoundSticker} />
+          <img src={NotFoundImg} />
         </div>
       </Container>
       <Footer bgImg={footerBg} color={"orange"} />
