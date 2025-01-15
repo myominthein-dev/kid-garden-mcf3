@@ -9,6 +9,10 @@
 .class {
   background-color: bg-;
 }
+.active {
+  @apply bg-gradient-to-r from-[#EA580C] via-[#FB923C] to-[#648F1C] bg-clip-text text-transparent;
+}
+
 .left-right {
   transform-origin: 0% 50%;
 }
