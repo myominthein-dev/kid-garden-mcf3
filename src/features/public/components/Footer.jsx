@@ -22,7 +22,7 @@ const Footer = ({ bgImg, color }) => {
 
         <div className="max-w-[561px] mx-auto relative gap-2.5  ">
           <div className="flex items-center justify-center">
-            <img src={footerLogo} alt="" />
+            <img src={footerLogo} />
           </div>
           <p className="font-roboto  md:px-40 px-24 text-xs my-5 text-center text-neutral-700">
             "Find the perfect class tailored to your child's needs and

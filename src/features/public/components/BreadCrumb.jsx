@@ -34,7 +34,6 @@ const BreadCrumb = ({
             className={`w-[${lImgWidth}px] ${
               leftImgShow ? "block " : "md:block hidden"
             }  md:absolute ${lImgPos}`}
-            alt=""
           />
           <ol className="w-full text-center">
             <div className="mb-4">
@@ -77,12 +76,10 @@ const BreadCrumb = ({
             className={`w-[${rImgWidth}px] md:absolute ${
               leftImgShow ? "hidden md:block" : "block"
             } ${rImgPos || "right-0 -top-16"} `}
-            alt=""
           />
         </Container>
         <img
           src={breadcrumbFooter}
-          alt=""
           className=" md:hidden block absolute bottom-0 w-full left-0"
         />
       </nav>
