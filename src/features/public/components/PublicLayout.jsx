@@ -2,6 +2,7 @@ import React, { Suspense, useEffect, useState } from "react";
 import { Outlet } from "react-router-dom";
 import Header from "./Header";
 import PageLoading from "./PageLoading";
+import Drager from "./Drager";
 
 const PublicLayout = () => {
   const [loading, setLoading] = useState(true);
@@ -12,7 +13,9 @@ const PublicLayout = () => {
   }, []);
 
   return (
-    <main className="flex flex-col min-h-screen">
+    
+     
+        <main className="flex flex-col min-h-screen">
       <Header />
       {loading ? (
         <PageLoading />
@@ -21,7 +24,11 @@ const PublicLayout = () => {
           <Outlet />
         </Suspense>
       )}
+
+      <Drager/>
     </main>
+    
+      
   );
 };
 

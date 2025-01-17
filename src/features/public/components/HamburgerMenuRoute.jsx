@@ -10,7 +10,7 @@ const HamburgerMenuRoute = ({ route, name }) => {
     setHoverEff(false);
   };
   return (
-    <li
+    <li className="z-50"
       onMouseEnter={() => handalHoverEnter()}
       onMouseLeave={() => handalHoverLeave()}
     >

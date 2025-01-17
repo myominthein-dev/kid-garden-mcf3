@@ -25,7 +25,7 @@ const Header = () => {
         <nav className="bg-white border-gray-200 py-2.5 dark:bg-gray-800">
           <div className="flex flex-row  justify-between items-center mx-auto">
             <Link to="/" className="flex items-center">
-              <img src={logo} className="mr-3 w-[193px] h-[110px]" />
+              <img src={logo} className="mr-3 w-[193px] z-50 h-[110px]" />
             </Link>
             <div className=" gap-3 items-center md:order-2 md:flex hidden   cursor-pointer">
               <img src={telephoneCall} />
@@ -41,6 +41,7 @@ const Header = () => {
                 {routerPath.map((path, index) => {
                   return (
                     <HamburgerMenuRoute
+
                       key={index}
                       route={path.PagePath}
                       name={path.PageName}
