@@ -6,6 +6,7 @@ import img4 from "../../../../assets/gallery/grid2_4.png";
 import img5 from "../../../../assets/gallery/grid2_5.png";
 import img6 from "../../../../assets/gallery/grid2_6.png";
 import svg3 from "../../../../assets/gallery/3.svg";
+
 import ImageDiv from "./ImageDiv";
 const ImgGridRow2 = () => {
   return (
