@@ -6,7 +6,9 @@ import mapVec from "../../../assets/homePage/map_vec.png";
 import clockVec from "../../../assets/homePage/clock_vec.png";
 const CalendarCard = ({ imgUrl }) => {
   return (
+
     <div className="max-w-[411px] h-[518px] justify-self-center    ">
+
       <img src={imgUrl} alt="" />
       <div className="relative">
         <div className="w-[338px] flex flex-col justify-between h-[226px] z-20 p-5 bg-white absolute -top-10  rounded-xl left-0 right-0 mx-auto box-border shadow-lg">
@@ -31,14 +33,18 @@ const CalendarCard = ({ imgUrl }) => {
           <div>
             <p className="flex gap-2 text-xs font-semibold mb-2">
               <div className="text-orange-600 flex items-center gap-2">
+
                 <img className="size-4" src={mapVec} alt="" /> Location :
+
               </div>
               <p className="text-neutral-700">Sunshine Campus</p>
             </p>
 
             <p className="flex gap-2 text-xs font-semibold">
               <div className="text-orange-600 flex items-center gap-2">
+
                 <img className="size-4" src={clockVec} alt="" /> Time :
+
               </div>
               <p className="text-neutral-700">9:00 AM - 11 AM</p>
             </p>

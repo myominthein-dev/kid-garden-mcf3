@@ -11,7 +11,7 @@ const NewsLetter = ({ color }) => {
     >
       <div className=" relative">
         <div className=" xl:inline-block hidden h-10 w-10 absolute left-0 top-0">
-          <img src={`${newsLetteLogo}`} alt="" />
+          <img src={`${newsLetteLogo}`} />
         </div>
         <div className="xl:max-w-[620px] flex flex-col justify-center items-center gap-4    relative ">
           <h1 className="text-2xl leading-9 my-2 text-white font-poppin font-bold text-center">

@@ -11,6 +11,8 @@ const GalleryPage = () => {
   return (
     <main>
       <BreadCrumb
+        leftImgShow={false}
+        flexFlow={"flex-col"}
         bgImg={breadCrumb2}
         leftImg={woof}
         lImgWidth={300}
