@@ -23,7 +23,7 @@ const HamburgerMenuRoute = ({ route, name }) => {
       <div
         className={` ${
           hoverEff ? "w-full" : "w-0"
-        } transition-all duration-1000  h-1 bg-gradient-to-r from-[#EA580C] via-[#FB923C] to-[#648F1C]  ease-in-out `}
+        } transition-all duration-300  h-1 bg-gradient-to-r from-[#EA580C] via-[#FB923C] to-[#648F1C]  ease-in-out `}
       ></div>
     </li>
   );
