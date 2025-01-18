@@ -21,9 +21,11 @@ const EventDetailPage = () => {
         leftImg={kid}
         rightImg={garaffe}
         rImgWidth={69}
-        lImgPos={"-top-16 left-48"}
+        lImgPos={"left-[15%] top-[-90%]"}
+        flexFlow={"flex-col"}
         rImgPos={"-top-4 right-5"}
         lImgWidth={60}
+        links={[{ title: " Events", path: "/events" }]}
         title={"Event Details"}
         currentPageTitle={"Event Details"}
       />

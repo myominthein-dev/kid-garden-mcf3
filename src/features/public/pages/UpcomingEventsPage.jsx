@@ -77,17 +77,17 @@ const UpcomingEventsPage = () => {
         {/* Card loop  */}
         <div className="my-10 xl:grid xl:grid-cols-3 justify-between items-center hidden gap-4">
           {events.map((e, i) => (
-            <CalendarCard key={i} imgUrl={e} />
+            <CalendarCard key={i} imgUrl={e} id={i} />
           ))}
         </div>
         <div className="my-10 md:grid xl:hidden hidden justify-between items-center md:grid-cols-2 gap-4">
           {events.slice(0, 6).map((e, i) => (
-            <CalendarCard key={i} imgUrl={e} />
+            <CalendarCard key={i} imgUrl={e} id={i} />
           ))}
         </div>
         <div className="my-10 md:hidden  grid justify-center  justify-items-center  items-center grid-cols-1 gap-4">
           {events.slice(0, 3).map((e, i) => (
-            <CalendarCard key={i} imgUrl={e} />
+            <CalendarCard key={i} imgUrl={e} id={i} />
           ))}
         </div>
         <DetailBtn

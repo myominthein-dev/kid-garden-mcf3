@@ -39,7 +39,7 @@ const publicRoute = [
     element: <UpcomingEventsPage />,
   },
   {
-    path: "event-details",
+    path: "/upcoming-events/event-detail/:id",
     element: <EventDetailPage />,
   },
 ];
