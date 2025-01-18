@@ -1,12 +1,22 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef} from "react";
 import newsLetteLogo from "../../../assets/homePage/flower_newsletter.png";
 import rightArrow from "../../../assets/homePage/arrow-right.png";
 import { initial } from "lodash";
+import {motion,useInView,useAnimation} from 'framer-motion'
 import Button from "./Button";
+import { itemVariants } from "../../../utils";
 
 const NewsLetter = ({ color }) => {
+  
+  const ref = useRef(null)
+    const isInView = useInView(ref, { once: true, amount: 0.1 })
+    const controls = useAnimation()
+  
+    if (isInView) {
+      controls.start('visible')
+    }
   return (
-    <div
+    <motion.div ref={ref} animate={controls} initial='hidden' variants={itemVariants}
       className={`xl:max-w-[1062px] xl:px-14 py-7 flex flex-col justify-center items-center rounded-lg relative mx-auto  xl:h-[212px] bg-${color}-500 border-2 border-black border-dashed`}
     >
       <div className=" relative">
@@ -36,7 +46,7 @@ const NewsLetter = ({ color }) => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

@@ -1,14 +1,21 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import Container from "./Container";
 import NewsLetter from "./NewsLetter";
 import footerLogo from "../../../assets/homePage/footer_tinyverse.png";
 import { useNavigate } from "react-router-dom";
-
+import {motion, useInView, useAnimation} from 'framer-motion'
 import { LuFacebook, LuInstagram, LuTwitter } from "react-icons/lu";
+import { itemVariants, titleVariants } from "../../../utils";
 
 const Footer = ({ bgImg, color }) => {
   const nav = useNavigate();
-
+  const ref = useRef(null)
+    const isInView = useInView(ref, { once: true, amount: 0.3 })
+    const controls = useAnimation()
+  
+    if (isInView) {
+      controls.start('visible')
+    }
   const link = (path) => {
     nav(path);
   };
@@ -24,31 +31,31 @@ const Footer = ({ bgImg, color }) => {
           <div className="flex items-center justify-center">
             <img src={footerLogo} />
           </div>
-          <p className="font-roboto  md:px-40 px-24 text-xs my-5 text-center text-neutral-700">
+          <motion.p ref={ref} initial='hidden'animate={controls} variants={titleVariants} className="font-roboto  md:px-40 px-24 text-xs my-5 text-center text-neutral-700">
             "Find the perfect class tailored to your child's needs and
             interests."
-          </p>
+          </motion.p>
           <ul
             className={`text-${color}-600 flex xl:gap-8 gap-4 xl:text-base  text-xs items-center  justify-center leading-4 font-semibold`}
           >
-            <li onClick={() => link("/")} className="cursor-pointer">
+            <motion.li ref={ref} initial='hidden' animate={controls} variants={titleVariants} onClick={() => link("/")} className="cursor-pointer">
               Home
-            </li>
-            <li onClick={() => link("/about-us")} className="cursor-pointer">
+            </motion.li>
+            <motion.li ref={ref} initial='hidden' animate={controls} variants={titleVariants} onClick={() => link("/about-us")} className="cursor-pointer">
               About Us
-            </li>
-            <li onClick={() => link("/our-courses")} className="cursor-pointer">
+            </motion.li>
+            <motion.li ref={ref} initial='hidden' animate={controls} variants={titleVariants} onClick={() => link("/our-courses")} className="cursor-pointer">
               Courses
-            </li>
-            <li onClick={() => link("/contact-us")} className="cursor-pointer">
+            </motion.li>
+            <motion.li ref={ref} initial='hidden' animate={controls} variants={titleVariants} onClick={() => link("/contact-us")} className="cursor-pointer">
               Contact Us
-            </li>
-            <li
+            </motion.li>
+            <motion.li ref={ref} initial='hidden'animate={controls} variants={titleVariants}
               onClick={() => link("/upcoming-events")}
               className="cursor-pointer"
             >
               Events
-            </li>
+            </motion.li>
           </ul>
 
           <div
@@ -59,9 +66,9 @@ const Footer = ({ bgImg, color }) => {
             <LuInstagram size={25} />
           </div>
 
-          <p className="font-roboto leading-4 text-center">
+          <motion.p ref={ref} initial='hidden'animate={controls} variants={titleVariants} className="font-roboto leading-4 text-center">
             © 2024 Tinyverse. All Rights Reserved.
-          </p>
+          </motion.p>
         </div>
       </Container>
     </footer>

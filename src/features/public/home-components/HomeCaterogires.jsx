@@ -1,10 +1,11 @@
-import React from "react";
+import { useEffect,React, useRef} from 'react'
+import { motion, useAnimation, useInView } from 'framer-motion'
 import Container from "../components/Container";
 import { LuBrainCircuit, LuCodepen, LuPuzzle, LuSlack } from "react-icons/lu";
 import Ellipse from "../components/Ellipse";
 import starOrange from "../../../assets/homePage/star-orange.svg";
 import starPurple from "../../../assets/homePage/star-purple.svg";
-import { motion } from "framer-motion";
+import { titleVariants } from '../../../utils';
 
 const HomeCategories = () => {
   const categories = [
@@ -42,61 +43,124 @@ const HomeCategories = () => {
     },
   ];
 
+  const ref = useRef(null)
+  const isInView = useInView(ref, { once: true, amount: 0.3 })
+  const controls = useAnimation()
+
+  if (isInView) {
+    controls.start('visible')
+  }
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.3,
+      },
+    },
+  }
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        type: 'spring',
+        stiffness: 100,
+      },
+    },
+  }
+
+  const categoryVariants = {
+    hidden: { scale: 0.8, opacity: 0 },
+    visible: {
+      scale: 1,
+      opacity: 1,
+      transition: {
+        type: 'spring',
+        stiffness: 70,
+        damping: 10,
+      },
+    },
+  }
+
+  const starVariants = {
+    initial: { x: 0, y: 0 },
+    animate: {
+      x: [0, 10, 0, -10, 0],
+      y: [0, 5, 0, -5, 0],
+      transition: {
+        duration: 5,
+        repeat: Infinity,
+        repeatType: "reverse",
+        ease: "easeInOut",
+      },
+    },
+  }
+
   return (
     <Container>
-      <div className="relative flex justify-center flex-col items-center py-24">
-        <h1 className="sub-heading">Course Categories</h1>
+      <motion.div 
+        ref={ref}
+        className="relative flex justify-center flex-col items-center py-24"
+        initial="hidden"
+        animate={controls}
+        variants={containerVariants}
+      >
+        <motion.h1 className="sub-heading" variants={titleVariants}>Course Categories</motion.h1>
         <motion.img
           src={starOrange}
           alt="Orange Star"
           className="absolute -top-4 left-8 lg:top-20 lg:left-10"
-          initial={{ x: -10, y: 0 }}
-          animate={{ x: 10, y: 0 }}
-          transition={{
-            duration: 3,
-            repeat: Infinity,
-            repeatType: "reverse",
-          }}
+          variants={starVariants}
+          initial="initial"
+          animate="animate"
         />
         <motion.img
           src={starPurple}
           alt="Purple Star"
           className="absolute top-8 right-10 lg:top-36 lg:right-20"
-          initial={{ x: 10, y: 0 }}
-          animate={{ x: -10, y: 0 }}
-          transition={{
-            duration: 3,
-            repeat: Infinity,
-            repeatType: "reverse",
-          }}
+          variants={starVariants}
+          initial="initial"
+          animate="animate"
         />
-        <h2 className="heading">Building Foundations for Lifelong Learning</h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 mt-8">
+        <motion.h2 className="heading" variants={itemVariants}>Building Foundations for Lifelong Learning</motion.h2>
+        <motion.div 
+          className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 mt-8"
+          variants={containerVariants}
+        >
           {categories.map((category, index) => (
-            <div
+            <motion.div
               key={index}
               className="flex flex-col items-center gap-7 p-3 md:p-7 border border-neutral-700 border-dashed rounded-xl"
+              variants={categoryVariants}
             >
               <Ellipse
                 initial="39% 61% 50% 50% / 37% 40% 60% 63%"
                 isAnimate={true}
-                width={window.innerWidth < 768 ? "100px" : "194px"}
-                height={window.innerWidth < 768 ? "80px" : "174px"}
+                width={typeof window !== 'undefined' && window.innerWidth < 768 ? "100px" : "194px"}
+                height={typeof window !== 'undefined' && window.innerWidth < 768 ? "80px" : "174px"}
                 shadow={true}
                 bgColor={category.bgColor}
                 borderColor={category.borderColor}
               >
                 {category.icon}
               </Ellipse>
-              <p className="text-lg md:text-xl font-pacifico text-neutral-900 text-center">
+              <motion.p 
+                className="text-lg md:text-xl font-pacifico text-neutral-900 text-center"
+                variants={itemVariants}
+              >
                 <span className="drop-shadow-lg">{category.title}</span>
-              </p>
-            </div>
+              </motion.p>
+            </motion.div>
           ))}
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </Container>
-  );
+  )
 };
 
 export default HomeCategories;

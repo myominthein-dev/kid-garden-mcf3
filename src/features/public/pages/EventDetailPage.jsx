@@ -6,7 +6,7 @@ import breadCrumb3 from "../../../assets/breadcrumb/breadcrumb-3.png";
 import Container from "../components/Container";
 
 import hollowenKid from "../../../assets/events/hollowenChildren.png";
-import playingInCompound from "../../../assets/events/playGround.png";
+//import playingInCompound from "../../../assets/events/playGround.png";
 import sun from "../../../assets/events/sun.png";
 import sunFlower from "../../../assets/events/sun_flower.png";
 import footerBg from "../../../assets/homePage/bg_footer.jpg";

@@ -1,4 +1,4 @@
-import React from "react";
+import {React, useRef ,useEffect} from "react";
 import Container from "../components/Container";
 import internetIcon from "../../../assets/homePage/internet.png";
 import paperIcon from "../../../assets/homePage/paper.png";
@@ -7,7 +7,8 @@ import schoolIcon from "../../../assets/homePage/school.png";
 import arrow from "../../../assets/homePage/arrow.svg";
 import vector from "../../../assets/homePage/vector.svg";
 import Ellipse from "../components/Ellipse";
-import { motion } from "framer-motion";
+import { motion, useAnimation, useInView } from "framer-motion";
+import { titleVariants } from "../../../utils";
 
 const HomeProcess = () => {
   const guides = [
@@ -33,7 +34,7 @@ const HomeProcess = () => {
       bgColor: "#F0ABFC3A",
       borderColor: "#F0ABFC",
       description:
-        "\"Find the perfect class tailored to your child's needs and interests.",
+        "Find the perfect class tailored to your child's needs and interests.",
     },
     {
       icon: schoolIcon,
@@ -44,10 +45,43 @@ const HomeProcess = () => {
         "Become part of our vibrant community and start your child's journey with us.",
     },
   ];
+
+  const ref = useRef(null);
+    const isInView = useInView(ref, { once: true, amount: 0.3 })
+  
+  const controls = useAnimation();
+
+ 
+  if (isInView) {
+    controls.start('visible')
+  }
+
+
+  const itemVariants = {
+    hidden: { scale: 0, opacity: 0 },
+    visible: {
+      scale: 1,
+      opacity: 1,
+      transition: {
+        type: 'spring',
+        stiffness: 100,
+        delay: 1.2,
+      },
+    },
+  }
+
+  
+
   return (
     <Container>
-      <div className="relative py-24 flex justify-center flex-col items-center">
-        <h1 className="sub-heading">Our Process</h1>
+      <motion.div
+        ref={ref}
+        className="relative py-24 flex justify-center flex-col items-center"
+        initial='hidden'
+        animate={controls}
+        
+      >
+        <motion.h1 ref={ref} initial='hidden' variants={titleVariants} animate={controls} className="sub-heading">Our Process</motion.h1>
         <motion.img
           src={vector}
           className=" absolute top-3 left-1 lg:top-10 lg:left-40"
@@ -55,10 +89,10 @@ const HomeProcess = () => {
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 3, repeat: Infinity, repeatType: "reverse" }}
         />
-        <h2 className="heading">Guiding Every Step</h2>
+        <motion.h2 ref={ref} initial='hidden' variants={titleVariants} animate={controls} className="heading">Guiding Every Step</motion.h2>
         <div className="relative mt-8 grid grid-cols-2 md:grid-rows-2 md:grid-cols-8 gap-x-4 gap-x-16 gap-y-16 md:gap-4">
           {guides.map((guide, index) => (
-            <div
+            <motion.div
               key={index}
               className={`w-[193px] flex flex-col justify-center items-center gap-7 lg:gap-12 ${
                 index === 0
@@ -69,6 +103,7 @@ const HomeProcess = () => {
                   ? "md:row-start-1 md:col-span-4 md:col-start-5"
                   : "md:row-start-2 md:col-span-4 md:col-start-8"
               }`}
+              variants={itemVariants}
             >
               <Ellipse
                 initial="50% 50% 50% 50% / 50% 50% 50% 50% "
@@ -93,7 +128,7 @@ const HomeProcess = () => {
                   {guide.description}
                 </p>
               </div>
-            </div>
+            </motion.div>
           ))}
           {/* Arrow Image */}
           <img
@@ -135,7 +170,7 @@ const HomeProcess = () => {
             borderColor="#FAC589"
           />
         </div>
-      </div>
+      </motion.div>
     </Container>
   );
 };
