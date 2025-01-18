@@ -4,14 +4,21 @@ import kid from "../../../assets/events/event_kid.png";
 import garaffe from "../../../assets/events/event_garaffee.png";
 import breadCrumb3 from "../../../assets/breadcrumb/breadcrumb-3.png";
 import Container from "../components/Container";
-import mapVec from "../../../assets/homePage/map_vec.png";
-import clockVec from "../../../assets/homePage/clock_vec.png";
-import hollowenKid from "../../../assets/homePage/kid_with_hollowen.png";
-import playingInCompound from "../../../assets/homePage/playing_in_compound.png";
+
+import hollowenKid from "../../../assets/events/hollowenChildren.png";
+import playingInCompound from "../../../assets/events/playGround.png";
 import sun from "../../../assets/events/sun.png";
 import sunFlower from "../../../assets/events/sun_flower.png";
 import footerBg from "../../../assets/homePage/bg_footer.jpg";
 import Footer from "../components/Footer";
+import {
+  LuClock2,
+  LuGlobe,
+  LuMail,
+  LuMapPin,
+  LuPhone,
+  LuUserRound,
+} from "react-icons/lu";
 
 const EventDetailPage = () => {
   return (
@@ -30,58 +37,121 @@ const EventDetailPage = () => {
         currentPageTitle={"Event Details"}
       />
 
-      <Container className={"my-10 py-5"}>
-        <div className="max-w-[600px] mx-auto flex flex-col gap-4 items-center">
-          <span className="bg-lime-500 text-white px-3 text-lg py-2 rounded-full">
+      <Container className={" py-5 flex flex-col md:gap-28 gap-10 "}>
+        {/* Title paragraph section */}
+        <div className="md:max-w-[600px] mx-auto flex flex-col gap-4  items-center my-4">
+          <p className="bg-lime-500 text-white px-2.5 py-0.5   text-base  rounded-full">
             Development
-          </span>
-          <h2 className="text-4xl font-poppin font-semibold leading-10">
-            Chrismas Party
+          </p>
+          <h2 className="md:text-4xl text-2xl font-poppin font-bold leading-10">
+            Christmas Party
           </h2>
-          <p className="leading-8 text-center text-neutral-700">
+          <p className="leading-8 text-center text-base text-neutral-700">
             Celebrate the festive season with fun activities, cheerful music,
             and holiday treats at our school's Christmas party. Let’s create
             magical moments together!
           </p>
-
-          <div className="flex items-center gap-6">
-            <p className="flex gap-2 text-xs font-semibold">
-              <div className="text-orange-600 flex items-center gap-2">
-                <img className="size-4" src={mapVec} /> Location :
+          {/* Location Time icons  */}
+          <div className="flex items-center md:gap-6 gap-2 text-nowrap ">
+            <p className="flex md:gap-2 text-xs gap-1.5 justify-center items-center font-semibold">
+              <div className="text-orange-500 flex items-center md:gap-2">
+                <LuMapPin size={20} /> Location :
               </div>
               <p className="text-neutral-700">Sunshine Campus</p>
             </p>
 
-            <p className="flex gap-2 text-xs font-semibold">
-              <div className="text-orange-600 flex items-center gap-2">
-                <img className="size-4" src={clockVec} /> Time :
+            <p className="flex md:gap-2 gap-1.5 text-xs justify-center items-center font-semibold">
+              <div className="text-orange-500 flex items-center gap-2">
+                <LuClock2 size={20} /> Time :
               </div>
-              <p className="text-neutral-700">9:00 AM - 11 AM</p>
+              <p className="text-neutral-700 text-xs">9:00 AM - 11 AM</p>
             </p>
-            <p className="text-orange-600 ">$ Free</p>
+            <p className="text-orange-500 ">$ Free</p>
+          </div>
+        </div>
+        {/* image section  */}
+        <div className="flex justify-between  items-center gap-4 px-8 mx-4   py-5 relative ">
+          <img
+            className="absolute  hidden xl:inline-block right-0 -top-20"
+            src={sunFlower}
+          />
+          <img
+            className="absolute  hidden xl:inline-block left-5 -bottom-20"
+            src={sun}
+          />
+
+          <div
+            className={
+              "flex justify-center md:flex-row flex-col-reverse items-center gap-6 mx-auto   "
+            }
+          >
+            <img
+              className="md:w-[628px] xl:-translate-y-12 xl:translate-x-0 xl:border-0 md:border-8 border-orange-500 rounded-xl md:translate-x-[40%] md:-translate-y-12 md:right-0 md:left-0  justify-self-center  z-40"
+              src={hollowenKid}
+            />
+            <img
+              className="md:w-[628px] xl:translate-y-12 xl:translate-x-0  md:right-0 md:left-0   rounded-xl md:-translate-x-[40%] md:translate-y-28  "
+              src={playingInCompound}
+            />
           </div>
         </div>
 
-        <div className="flex justify-between my-10 py-5 relative">
-          <img className="absolute left-5 -bottom-20" src={sun} />
-          <img className="absolute right-0 -top-20" src={sunFlower} />
-          <img className="w-[628px]" src={hollowenKid} />
-          <img className="w-[628px] relative top-20" src={playingInCompound} />
+        <div className="xl:columns-1  md:columns-2 md:inline-block hidden  justify-between gap-6  text-xl font-roboto leading-9 my-4">
+          <p className="  text-xl font-roboto xl:leading-9  text-pretty break-keep   text-neutral-700   ">
+            The Christmas Party at our school is a joyful annual tradition that
+            brings together students, parents, and teachers for a festive
+            celebration. This special event creates an opportunity for everyone
+            to connect and strengthen the sense of community within the school.
+            The day is filled with fun activities, including games, music, and
+            creative holiday crafts that bring out the festive spirit in
+            children. A highlight of the celebration is the visit from Santa
+            Claus, who spreads joy and hands out small surprises to the
+            students. Beautiful Christmas decorations and cheerful carols create
+            a warm and magical atmosphere throughout the campus.
+          </p>
         </div>
-
-        <div className="grid grid-cols-2 gap-3 my-20 py-10">
+        <div className="  md:hidden  justify-between flex flex-col sm:columns-2 gap-6  text-xl font-roboto leading-9 ">
           <p>
             The Christmas Party at our school is a joyful annual tradition that
             brings together students, parents, and teachers for a festive
             celebration. This special event creates an opportunity for everyone
             to connect and strengthen the sense of community within the school.
-          </p>
-          <p>
             The day is filled with fun activities, including games, music, and
             creative holiday crafts that bring out the festive spirit in
             children. A highlight of the celebration is the visit from Santa
             Claus, who spreads joy and hands out small surprises to the
-            students. Beautiful atmosphere throughout the campus.
+            students. Beautiful Christmas decorations and cheerful carols create
+            a warm and magical atmosphere throughout the campus.{" "}
+          </p>
+          <p>
+            Students can showcase their talents through performances, such as
+            singing, dancing, or acting in holiday-themed plays. Delicious
+            seasonal treats and refreshments are served to add to the festive
+            delight. The event aims to foster joy, unity, and togetherness while
+            making cherished memories for families. It’s also an opportunity for
+            children to learn the values of kindness, sharing, and gratitude
+            during this special time of year. The Christmas Party truly marks a
+            magical and unforgettable moment for our entire school community.
+          </p>
+        </div>
+        <div className=" flex md:flex-row items-start md:justify-center text-orange-500 flex-col gap-4 justify-start text-xs px-4">
+          <p className=" flex justify-center  items-center gap-1.5   text-nowrap">
+            <LuUserRound />
+            Organizer Name:{" "}
+            <span className=" text-neutral-700">Sunshine Campus</span>
+          </p>
+          <p className=" flex justify-center  items-center gap-1.5   text-nowrap">
+            <LuPhone />
+            Phone: <span className=" text-neutral-700">704-555-0127</span>
+          </p>
+          <p className=" flex justify-center  items-center gap-1.5   text-nowrap">
+            <LuMail />
+            Email:{" "}
+            <span className=" text-neutral-700">Tinyverse@gmail.com</span>
+          </p>
+          <p className=" flex justify-center  items-center gap-1.5   text-nowrap">
+            <LuGlobe />
+            Website: <span className=" text-neutral-700">Tinyverse.net</span>
           </p>
         </div>
       </Container>
