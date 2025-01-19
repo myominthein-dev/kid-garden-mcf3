@@ -1,61 +1,46 @@
-import { motion, useMotionValue, useSpring } from "framer-motion";
-import { useEffect, useRef } from "react";
-import bag from "../../../assets/all/a.png"
+import React, { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import { BsFillBackpack3Fill } from "react-icons/bs";
-export default function Drager() {
-    const ref = useRef(null);
-    const { x, y } = useFollowPointer(ref);
+import { HiOutlineBookOpen } from "react-icons/hi";
 
-    return (
-        <motion.div src={bag} className="z-40"
-            ref={ref}
-            style={{
-                ...ball,
-                translateX: x,
-                translateY: y,
-            }}
-        >
-            <BsFillBackpack3Fill size={'70'} color="brown" />
-        </motion.div>
-    );
-}
+const Drager = () => {
+  const [mousePosition, seMousePosition] = useState({ x: 0, y: 0 });
 
-const spring = { damping: 5, stiffness: 10, restDelta: 0.001 };
+  useEffect(() => {
+    const mouseMOveFun = (e) => {
+      // console.log(e);
 
-export function useFollowPointer(ref) {
-    const xPoint = useMotionValue(0);
-    const yPoint = useMotionValue(0);
-    const x = useSpring(xPoint, spring);
-    const y = useSpring(yPoint, spring);
+      seMousePosition({
+        x: e.clientX,
+        y: e.pageY,
+      });
+    };
+    window.addEventListener("mousemove", mouseMOveFun);
+    return () => {
+      window.removeEventListener("mousemove", mouseMOveFun);
+    };
+  });
+  const variants = {
+    default: {
+      x: mousePosition.x,
+      y: mousePosition.y,
+      transition: {
+        type: "tween", // Using tween for smooth transitions
+        duration: 0.5, // Duration of the transition
+        ease: "easeOut", // Ease function (can also be 'easeIn', 'easeInOut', etc.)
+      },
+    },
+  };
 
-    useEffect(() => {
-        const element = ref.current;
-        if (!element) return;
-
-        const handlePointerMove = ({ clientX, clientY }) => {
-            const { left, top, width, height } = element.getBoundingClientRect();
-            xPoint.set(
-                clientX - element.offsetLeft - element.offsetWidth / 10
-            )
-            yPoint.set(
-                clientY - element.offsetTop - element.offsetHeight / 10
-            )
-        };
-
-        window.addEventListener("pointermove", handlePointerMove);
-        return () => window.removeEventListener("pointermove", handlePointerMove);
-    }, [ref, xPoint, yPoint]);
-
-    return { x, y };
-}
-
-/**
- * ==============   Styles   ================
- */
-
-const ball = {
-    
-    
-    borderRadius: "50%",
-    position: "absolute",
+  return (
+    <motion.div
+      className=" absolute md:block hidden"
+      variants={variants}
+      animate="default"
+    >
+      <HiOutlineBookOpen size={"50"} color="#6BCE95" />
+    </motion.div>
+  );
 };
+
+export default Drager;
