@@ -1,6 +1,6 @@
 import {React, useRef} from "react";
 import { useInView,useAnimation,motion } from "framer-motion";
-import { itemVariants } from "../../../utils";
+import { categoryVariants, itemVariants } from "../../../utils";
 
 
 const ShortCol = ({ src, className }) => {
@@ -13,7 +13,7 @@ const ShortCol = ({ src, className }) => {
     }
   return (
     <div className={`w-full ${className} rounded-xl overflow-hidden `}>
-      <motion.img ref={ref} initial='hidden' animate={controls} variants={itemVariants} className=" h-full" src={src} alt />
+      <motion.img ref={ref} initial='hidden' animate={controls} variants={categoryVariants} className=" h-full" src={src} alt />
     </div>
   );
 };

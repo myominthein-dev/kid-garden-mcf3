@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useState,useRef } from "react";
 import StarOrange from "../../../assets/ourCoursesPage/StarOrange.svg";
 import StarPink from "../../../assets/ourCoursesPage/StarPink.svg";
-
+import {motion, useInView,  useAnimation} from 'framer-motion'
 import CourseCategoriesCard from "./CourseCategoriesCard";
 import Ellipse from "../components/Ellipse";
 import { LuBrainCircuit, LuCodepen, LuPuzzle, LuSlack } from "react-icons/lu";
@@ -42,6 +42,15 @@ const CourseCategoriesMain = () => {
       activeColor: "bg-lime-100",
     },
   ]);
+
+  const ref = useRef(null)
+  const isInView = useInView(ref, { once: true, amount: 0.3 })
+  const controls = useAnimation()
+
+  if (isInView) {
+    controls.start('visible')
+  }
+
   return (
     <div className="relative flex flex-col py-24 gap-24 justify-center items-center w-full">
       {/* Categories */}

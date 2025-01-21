@@ -5,7 +5,7 @@ import { LuBrainCircuit, LuCodepen, LuPuzzle, LuSlack } from "react-icons/lu";
 import Ellipse from "../components/Ellipse";
 import starOrange from "../../../assets/homePage/star-orange.svg";
 import starPurple from "../../../assets/homePage/star-purple.svg";
-import { titleVariants } from '../../../utils';
+import { categoryVariants, titleVariants } from '../../../utils';
 
 const HomeCategories = () => {
   const categories = [
@@ -74,18 +74,7 @@ const HomeCategories = () => {
     },
   }
 
-  const categoryVariants = {
-    hidden: { scale: 0.8, opacity: 0 },
-    visible: {
-      scale: 1,
-      opacity: 1,
-      transition: {
-        type: 'spring',
-        stiffness: 70,
-        damping: 10,
-      },
-    },
-  }
+  
 
   const starVariants = {
     initial: { x: 0, y: 0 },

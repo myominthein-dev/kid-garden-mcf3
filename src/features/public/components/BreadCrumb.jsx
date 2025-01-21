@@ -1,8 +1,9 @@
-import React from "react";
+import React, {useRef} from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Container from "./Container";
 import breadcrumbFooter from "../../../assets/breadcrumb/breadcrumbFooter.png";
-
+import {motion, useInView, useAnimation} from 'framer-motion'
+import { imageVariants, titleVariants } from "../../../utils";
 const BreadCrumb = ({
   bgImg,
   title,
@@ -18,6 +19,14 @@ const BreadCrumb = ({
   flexFlow,
 }) => {
   const navigate = useNavigate();
+  const ref = useRef(null)
+    const isInView = useInView(ref, { once: true, amount: 0.3 })
+    const controls = useAnimation()
+  
+    if (isInView) {
+      controls.start('visible')
+    }
+  
 
   return (
     <div className=" w-full flex items-center    justify-center gap-3 mb-5  py-1">
@@ -29,7 +38,7 @@ const BreadCrumb = ({
         <Container
           className={`flex ${flexFlow} h-full md:h-auto  md:flex-row justify-center gap-5 md:gap-0 md:justify-start items-center`}
         >
-          <img
+          <motion.img animate={controls} initial='hidden' ref={ref} variants={imageVariants}
             src={leftImg}
             className={`w-[${lImgWidth}px] ${
               leftImgShow ? "block " : "md:block hidden"
@@ -37,9 +46,9 @@ const BreadCrumb = ({
           />
           <ol className="w-full text-center">
             <div className="mb-4">
-              <h1 className="font-poppin font-semibold text-2xl text-neutral-800">
+              <motion.h1 animate={controls} initial='hidden' ref={ref} variants={titleVariants} className="font-poppin font-semibold text-2xl text-neutral-800">
                 {title}
-              </h1>
+              </motion.h1>
             </div>
             <div className="flex justify-center gap-4">
               <li className=" items-center breadCrumbLabel">
@@ -50,7 +59,7 @@ const BreadCrumb = ({
 
               {links &&
                 links.map((link, index) => (
-                  <li key={index} className="inline-flex  items-center">
+                  <motion.li animate={controls} initial='hidden' ref={ref} variants={title} key={index} className="inline-flex  items-center">
                     <Link
                       to={link.path}
                       className="gap-1 items-center breadCrumbLabel "
@@ -58,7 +67,7 @@ const BreadCrumb = ({
                       <span className="breadCrumbLabel">{">"}</span>
                       {link.title}
                     </Link>
-                  </li>
+                  </motion.li>
                 ))}
 
               <li aria-current="page">
@@ -71,7 +80,7 @@ const BreadCrumb = ({
               </li>
             </div>
           </ol>
-          <img
+          <motion.img animate={controls} initial='hidden' ref={ref} variants={imageVariants}
             src={rightImg}
             className={`w-[${rImgWidth}px] md:absolute ${
               leftImgShow ? "hidden md:block" : "block"

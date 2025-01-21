@@ -8,6 +8,7 @@ import Ellipse from "../components/Ellipse";
 import breadCrumb3 from "../../../assets/breadcrumb/breadcrumb-3.png";
 
 import { motion, useAnimation, useInView } from 'framer-motion'
+import { imageVariants } from '../../../utils';
 const HomeHeroSection = () => {
   const ellipseShapes = [
     {
@@ -62,18 +63,7 @@ const HomeHeroSection = () => {
     },
   }
 
-  const imageVariants = {
-    hidden: { y: 100, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        type: 'spring',
-        stiffness: 50,
-        delay: 0.5,
-      },
-    },
-  }
+  
 
   const cloudVariants = {
     hidden: { opacity: 0 },

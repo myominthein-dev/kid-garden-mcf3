@@ -19,6 +19,8 @@ const CourseCategoriesCard = ({
       })
     );
   };
+
+  
   return (
     <NavLink
       to={category.out_let}

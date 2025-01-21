@@ -6,6 +6,7 @@ import mapVec from "../../../assets/homePage/map_vec.png";
 import clockVec from "../../../assets/homePage/clock_vec.png";
 import { Link } from "react-router-dom";
 import { motion, useAnimation, useInView } from "framer-motion";
+import { categoryVariants } from "../../../utils";
 
 const CalendarCard = ({ imgUrl, id }) => {
 
@@ -38,7 +39,7 @@ const CalendarCard = ({ imgUrl, id }) => {
       to={`/upcoming-events/event-detail/${id}`}
       className="max-w-[411px] h-[518px] justify-self-center    "
     >
-     <motion.div ref={ref} initial='hidden' variants={itemVariants} animate={controls} >
+     <motion.div ref={ref} initial='hidden' variants={categoryVariants} animate={controls} >
      <img src={imgUrl} alt="" />
       <div className="relative">
         <div className="w-[338px] flex flex-col justify-between h-[226px] z-20 p-5 bg-white absolute -top-10  rounded-xl left-0 right-0 mx-auto box-border shadow-lg">
