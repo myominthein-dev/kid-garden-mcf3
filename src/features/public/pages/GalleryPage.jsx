@@ -1,3 +1,4 @@
+
 import BgImg from "../../../assets/gallery/bg.png";
 import BreadCrumb from "../components/BreadCrumb";
 import Footer from "../components/Footer";
@@ -23,6 +24,7 @@ const GalleryPage = () => {
       <GalleryHeroSection />
       <Footer bgImg={BgImg} color={"fuchsia"} />
     </main>
+
   );
 };
 
