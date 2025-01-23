@@ -5,8 +5,8 @@ import img3 from "../../../../assets/gallery/img3.png";
 import img4 from "../../../../assets/gallery/img4.png";
 import img5 from "../../../../assets/gallery/img5.png";
 import img6 from "../../../../assets/gallery/img6.png";
-
 const ImgGridRow1 = () => {
+  
   return (
     <div>
       <div className=" w-full xl:h-[640px] md:grid-flow-col md:auto-cols-fr grid md:grid-cols-9 direction-rtl  gap-6">

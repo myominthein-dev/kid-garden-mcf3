@@ -1,9 +1,17 @@
-import React from "react";
+import React, {useRef} from "react";
 import Container from "../components/Container";
 import ContactFaqGroup from "./ContactFaqGroup";
 import earth from "../../../assets/contact/earth.svg";
-import { motion } from "framer-motion";
+import { motion, useInView, useAnimation} from "framer-motion";
+import { titleVariants } from "../../../utils";
 const ContactUsFaqSection = () => {
+  const ref = useRef(null)
+      const isInView = useInView(ref, { once: true, amount: 0.3 })
+      const controls = useAnimation()
+    
+      if (isInView) {
+        controls.start('visible')
+      }
   return (
     <Container>
       <div className=" flex flex-col pt-12 pb-24 gap-14 md:gap-20  items-center w-full h-full relative">
@@ -22,12 +30,12 @@ const ContactUsFaqSection = () => {
           />
         </>
         <div className="   flex justify-center items-start sm:items-center  gap-4 flex-col w-full">
-          <h3 className=" text-orange-500 font-normal text-xl font-pacifico">
+          <motion.h1 ref={ref} initial='hidden' animate={controls} variants={titleVariants} className=" text-orange-500 font-normal text-xl font-pacifico">
             Contact Form
-          </h3>
-          <h1 className=" text-2xl sm:text-3xl md:text-4xl font-poppin font-semibold text-neutral-900">
+          </motion.h1>
+          <motion.h3 ref={ref} initial='hidden' animate={controls} variants={titleVariants} className=" text-2xl sm:text-3xl md:text-4xl font-poppin font-semibold text-neutral-900">
             Frequently Asked Questions
-          </h1>
+          </motion.h3>
         </div>
         <div className=" w-full sm:w-[70%] md:w-[60%] flex justify-center items-center h-full">
           <ContactFaqGroup />

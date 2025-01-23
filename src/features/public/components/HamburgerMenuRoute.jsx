@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { NavLink } from "react-router-dom";
-
+import { useInView, useAnimation, motion } from "framer-motion";
+import { itemVariants, titleVariants } from "../../../utils";
 const HamburgerMenuRoute = ({ route, name }) => {
   const [hoverEff, setHoverEff] = useState(false);
   const handalHoverEnter = () => {
@@ -9,8 +10,17 @@ const HamburgerMenuRoute = ({ route, name }) => {
   const handalHoverLeave = () => {
     setHoverEff(false);
   };
+
+  const ref = useRef(null)
+      const isInView = useInView(ref, { once: true, amount: 0.3 })
+      const controls = useAnimation()
+    
+      if (isInView) {
+        controls.start('visible')
+      }
+
   return (
-    <li className="z-50"
+    <motion.li initial='hidden' ref={ref} variants={itemVariants} animate={controls} className="z-50"
       onMouseEnter={() => handalHoverEnter()}
       onMouseLeave={() => handalHoverLeave()}
     >
@@ -25,7 +35,7 @@ const HamburgerMenuRoute = ({ route, name }) => {
           hoverEff ? "w-full" : "w-0"
         } transition-all duration-300  h-1 bg-gradient-to-r from-[#EA580C] via-[#FB923C] to-[#648F1C]  ease-in-out `}
       ></div>
-    </li>
+    </motion.li>
   );
 };
 

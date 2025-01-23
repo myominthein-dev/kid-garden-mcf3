@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useRef} from "react";
 import { Link, useNavigate } from "react-router-dom";
 import logo from "../../../assets/logo.svg";
 import { MdOutlinePhoneInTalk } from "react-icons/md";
@@ -6,6 +6,8 @@ import Container from "./Container";
 import HamburgerMenu from "./HamburgerMenu";
 import telephoneCall from "../../../assets/all/telephone-call.png";
 import HamburgerMenuRoute from "./HamburgerMenuRoute";
+import {motion, useInView, useAnimation} from 'framer-motion'
+import { titleVariants } from "../../../utils";
 const Header = () => {
   const nav = useNavigate();
 
@@ -19,19 +21,26 @@ const Header = () => {
     { PageName: " About us", PagePath: "/about-us" },
     { PageName: " Contact us", PagePath: "/contact-us" },
   ];
+  const ref = useRef(null)
+      const isInView = useInView(ref, { once: true, amount: 0.3 })
+      const controls = useAnimation()
+    
+      if (isInView) {
+        controls.start('visible')
+      }
   return (
     <header className="">
       <Container>
         <nav className="bg-white border-gray-200 py-2.5 dark:bg-gray-800">
           <div className="flex flex-row  justify-between items-center mx-auto">
             <Link to="/" className="flex items-center">
-              <img src={logo} className="mr-3 w-[193px] z-10 h-[110px]" />
+              <motion.img initial='hidden' ref={ref} animate={controls} variants={titleVariants} src={logo} className="mr-3 w-[193px] z-10 h-[110px]" />
             </Link>
             <div className=" gap-3 items-center md:order-2 md:flex hidden   cursor-pointer">
-              <img src={telephoneCall} />
-              <span className="bg-gradient-to-r from-[#EA580C] via-[#FB923C] to-[#648F1C] bg-clip-text text-transparent">
+              <motion.img initial='hidden' ref={ref} animate={controls} variants={titleVariants} src={telephoneCall} />
+              <motion.span initial='hidden' ref={ref} animate={controls} variants={titleVariants} className="bg-gradient-to-r from-[#EA580C] via-[#FB923C] to-[#648F1C] bg-clip-text text-transparent">
                 +66934526313
-              </span>
+              </motion.span>
             </div>
             <div
               className="hidden md:flex justify-center items-center w-full  lg:w-auto md:order-1"

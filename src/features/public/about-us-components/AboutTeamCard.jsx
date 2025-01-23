@@ -1,13 +1,21 @@
-import React from "react";
+import React,{useRef} from "react";
 import Ellipse from "../components/Ellipse";
 import StarPink from "../../../assets/ourCoursesPage/StarPink.svg";
-import { motion } from "framer-motion";
+import { motion, useInView, useAnimation } from "framer-motion";
+import { itemVariants } from "../../../utils";
 
 const AboutTeamCard = ({
   teacher: { id, name, position, image, bgColor, borderColor },
 }) => {
+  const ref = useRef(null)
+    const isInView = useInView(ref, { once: true, amount: 0.3 })
+    const controls = useAnimation()
+  
+    if (isInView) {
+      controls.start('visible')
+    }
   return (
-    <div className="relative  col-span-1 flex flex-col items-center gap-8">
+    <motion.div ref={ref} initial='hidden' animate={controls} variants={itemVariants} className="relative  col-span-1 flex flex-col items-center gap-8">
       <>
         <motion.img
           src={StarPink}
@@ -56,7 +64,7 @@ const AboutTeamCard = ({
           {position}
         </p>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

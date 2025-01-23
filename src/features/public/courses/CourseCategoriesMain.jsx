@@ -1,10 +1,12 @@
-import React, { useState,useRef } from "react";
+import React, { useState,useRef,useEffect} from "react";
 import StarOrange from "../../../assets/ourCoursesPage/StarOrange.svg";
 import StarPink from "../../../assets/ourCoursesPage/StarPink.svg";
 import {motion, useInView,  useAnimation} from 'framer-motion'
 import CourseCategoriesCard from "./CourseCategoriesCard";
 import Ellipse from "../components/Ellipse";
 import { LuBrainCircuit, LuCodepen, LuPuzzle, LuSlack } from "react-icons/lu";
+import { itemVariants, titleVariants } from "../../../utils";
+
 const CourseCategoriesMain = () => {
   const [courseCategoriesArray, setCourseCategoriesArray] = useState([
     {
@@ -47,9 +49,12 @@ const CourseCategoriesMain = () => {
   const isInView = useInView(ref, { once: true, amount: 0.3 })
   const controls = useAnimation()
 
-  if (isInView) {
-    controls.start('visible')
-  }
+  
+    if (isInView) {
+      controls.start('visible')
+    }
+ 
+  
 
   return (
     <div className="relative flex flex-col py-24 gap-24 justify-center items-center w-full">
@@ -58,24 +63,24 @@ const CourseCategoriesMain = () => {
         {/* star image */}
         <div>
           {" "}
-          <img
+          <motion.img animate={controls} variants={itemVariants} ref={ref} initial='hidden'
             className=" absolute top-0 md:top-28 left-14"
             src={StarOrange}
             alt=""
           />
-          <img
+          <motion.img animate={controls} variants={itemVariants} ref={ref} initial="hidden"
             className=" absolute right-0  top-10 md:top-36 xl:right-32 md:right-[7%]"
             src={StarPink}
             alt=""
           />
         </div>
         <div className="  flex justify-center items-center  gap-4 flex-col w-[75%] mx-auto md:w-[618px]">
-          <h3 className=" text-orange-500 font-normal text-xl font-pacifico">
+          <motion.h2 initial='hidden' ref={ref} animate={controls} variants={titleVariants} className=" text-orange-500 font-normal text-xl font-pacifico">
             Course Categories
-          </h3>
-          <h1 className=" text-[24px]  leading-[34px] text-center xl:text-4xl font-poppin font-semibold text-neutral-900">
+          </motion.h2>
+          <motion.h2 initial='hidden' ref={ref} animate={controls} variants={titleVariants} className=" text-[24px]  leading-[34px] text-center xl:text-4xl font-poppin font-semibold text-neutral-900">
             Building Foundations for Lifelong Learning
-          </h1>
+          </motion.h2>
         </div>
       </div>
 

@@ -1,7 +1,8 @@
-import React from "react";
+import React,{useRef} from "react";
 import { useForm } from "react-hook-form";
 import CountryList from "country-list-with-dial-code-and-flag";
-
+import {motion, useInView, useAnimation} from "framer-motion"
+import { titleVariants } from "../../../utils";
 const res = CountryList.getAll();
 console.log(res);
 // Response => Array<Country>
@@ -13,9 +14,17 @@ const ContactForm = () => {
     watch,
     reset,
   } = useForm();
+
+  const ref = useRef(null)
+      const isInView = useInView(ref, { once: true, amount: 0.3 })
+      const controls = useAnimation()
+    
+      if (isInView) {
+        controls.start('visible')
+      }
   return (
     <form className="space-y-4 md:space-y-6 w-full">
-      <div>
+      <motion.div ref={ref} initial='hidden' animate={controls} variants={titleVariants}>
         <label
           htmlFor="name"
           className="block mb-2 text-sm font-medium text-gray-900 dark:text-white font-pacifico"
@@ -50,8 +59,8 @@ const ContactForm = () => {
             Name must not be at more than 50 letters !
           </p>
         )}
-      </div>
-      <div>
+      </motion.div >
+      <motion.div ref={ref} initial='hidden' animate={controls} variants={titleVariants}>
         <label
           htmlFor="email"
           className="block mb-2 text-sm font-medium text-gray-900 dark:text-white font-pacifico"
@@ -80,15 +89,15 @@ const ContactForm = () => {
         {errors.email?.type === "pattern" && (
           <p className="text-red-500 mt-2 text-sm">Invalid email address !</p>
         )}
-      </div>
-      <div>
+      </motion.div >
+      <motion.div ref={ref} initial='hidden' animate={controls} variants={titleVariants}>
         <label
           htmlFor="phone"
           className="block mb-2 text-sm font-medium text-gray-900 dark:text-white font-pacifico"
         >
           Phone Number
         </label>
-        <div className="flex rounded-full ">
+        <motion.div ref={ref} initial='hidden' animate={controls} variants={titleVariants} className="flex rounded-full ">
           <select
             id="states"
             className="bg-transparent text-gray-900 text-sm inline-block w-28 focus:border-orange-400 focus:ring-0 border border-orange-400 border-e-0 rounded-full rounded-e-none disabled:opacity-75  p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-orange-500 dark:focus:border-orange-500"
@@ -135,9 +144,9 @@ const ContactForm = () => {
               Name must not be at more than 50 letters !
             </p>
           )}
-        </div>
-      </div>
-      <div>
+        </motion.div >
+      </motion.div >
+      <motion.div ref={ref} initial='hidden' animate={controls} variants={titleVariants}>
         <label
           htmlFor="Message"
           className="block mb-2 text-sm font-medium text-gray-900 dark:text-white font-pacifico"
@@ -175,12 +184,12 @@ const ContactForm = () => {
             Message must not be at more than 500 letters !
           </p>
         )}
-      </div>
-      <div className="flex justify-center items-center">
+      </motion.div>
+      <motion.div ref={ref} initial='hidden' animate={controls} variants={titleVariants} className="flex justify-center items-center">
         <button className="bg-orange-500 px-6 py-3 rounded-full text-white w-full sm:w-auto ">
           Contact Us
         </button>
-      </div>
+      </motion.div>
     </form>
   );
 };

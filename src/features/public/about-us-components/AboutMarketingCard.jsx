@@ -1,8 +1,16 @@
-import React from "react";
-
+import React, {useRef} from "react";
+import {motion, useInView, useAnimation} from "framer-motion"
+import { itemVariants } from "../../../utils";
 const AboutMarketingCard = ({ content: { id, title, description, image } }) => {
+  const ref = useRef(null)
+    const isInView = useInView(ref, { once: true, amount: 0.3 })
+    const controls = useAnimation()
+  
+    if (isInView) {
+      controls.start('visible')
+    }
   return (
-    <div
+    <motion.div ref={ref} animate={controls} initial='hidden' variants={itemVariants}
       className={`col-span-1 flex flex-col  justify-center items-start p-4 gap-5 rounded-lg bg-white ${
         id === 2
           ? "mt-0 md:mt-8"
@@ -34,7 +42,7 @@ const AboutMarketingCard = ({ content: { id, title, description, image } }) => {
       <p className=" text-base md:text-[20px] leading-[30px] text-gray-700">
         {description}
       </p>
-    </div>
+    </motion.div>
   );
 };
 

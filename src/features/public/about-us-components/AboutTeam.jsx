@@ -1,10 +1,17 @@
-import React from "react";
+import React, {useRef} from "react";
 import Container from "../components/Container";
 import AboutTeamGroup from "./AboutTeamGroup";
 import StarOrange from "../../../assets/ourCoursesPage/StarOrange.svg";
 import greenArrow from "../../../assets/contactUsPage/greenArrow.svg";
-import { motion } from "framer-motion";
+import { motion, useInView, useAnimation } from "framer-motion";
 const AboutTeam = () => {
+  const ref = useRef(null)
+    const isInView = useInView(ref, { once: true, amount: 0.3 })
+    const controls = useAnimation()
+  
+    if (isInView) {
+      controls.start('visible')
+    }
   return (
     <Container>
       <div className=" flex flex-col py-24 gap-14 md:gap-24 justify-center items-center w-full min-h-screen ">
