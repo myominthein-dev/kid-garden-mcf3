@@ -2,19 +2,15 @@ import { createBrowserRouter } from "react-router-dom";
 
 import PublicLayout from "../features/public/components/PublicLayout";
 import publicRoute from "./publicRoute";
-import authRoute from "./authRoute";
-import NotFound from "../components/NotFound";
-import dashboardRoute from "./dashboardRoute";
+import NotFound from "../features/public/pages/NotFound";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <PublicLayout />,
-    errorElement: <NotFound />,
     children: [...publicRoute],
+    errorElement: <NotFound />,
   },
-  ...authRoute,
-  ...dashboardRoute,
 ]);
 
 export default router;

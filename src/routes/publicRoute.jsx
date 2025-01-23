@@ -1,14 +1,17 @@
-import { lazy } from "react";
-const GalleryPage = lazy(() => import("../features/public/pages/GalleryPage"));
 
+import React, { lazy } from "react";
+
+const CoursePage = lazy(() => import("../features/public/pages/CoursePage"));
+const GalleryPage = lazy(() => import("../features/public/pages/GalleryPage"));
+const HomePage = lazy(() => import("../features/public/pages/HomePage"));
 const AboutUsPage = lazy(() => import("../features/public/pages/AboutUsPage"));
 const ContactUsPage = lazy(() =>
   import("../features/public/pages/ContactUsPage")
 );
-const HomePage = lazy(() => import("../features/public/pages/HomePage"));
-const OurCoursePage = lazy(() =>
-  import("../features/public/pages/OurCoursePage")
-);
+import coursesDetailRoute from "./coursesDetailRoute";
+import UpcomingEventsPage from "../features/public/pages/UpcomingEventsPage";
+import EventDetailPage from "../features/public/pages/EventDetailPage";
+
 
 const publicRoute = [
   {
@@ -30,6 +33,24 @@ const publicRoute = [
   {
     path: "contact-us",
     element: <ContactUsPage />,
+  },
+
+  {
+    path: "our-courses",
+    element: <CoursePage />,
+    children: [...coursesDetailRoute],
+  },
+  {
+    path: "gallery",
+    element: <GalleryPage />,
+  },
+  {
+    path: "upcoming-events",
+    element: <UpcomingEventsPage />,
+  },
+  {
+    path: "/upcoming-events/event-detail/:id",
+    element: <EventDetailPage />,
   },
 ];
 
