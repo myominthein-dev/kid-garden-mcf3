@@ -18,10 +18,7 @@ const publicRoute = [
     index: true,
     element: <HomePage />,
   },
-  {
-    path: "our-courses",
-    element: <OurCoursePage />,
-  },
+  
   {
     path: "gallery",
     element: <GalleryPage />,
