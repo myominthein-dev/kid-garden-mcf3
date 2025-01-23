@@ -2,7 +2,7 @@ import React, { useState, useRef } from "react";
 import { NavLink } from "react-router-dom";
 import { useInView, useAnimation, motion } from "framer-motion";
 import { itemVariants, titleVariants } from "../../../utils";
-const HamburgerMenuRoute = ({ route, name }) => {
+const HamburgerMenuRoute = ({ route, name,toggleMenu }) => {
   const [hoverEff, setHoverEff] = useState(false);
   const handalHoverEnter = () => {
     setHoverEff(true);
@@ -20,7 +20,7 @@ const HamburgerMenuRoute = ({ route, name }) => {
       }
 
   return (
-    <motion.li initial='hidden' ref={ref} variants={itemVariants} animate={controls} className="z-50"
+    <motion.li onClick={toggleMenu} initial='hidden' ref={ref} variants={itemVariants} animate={controls} className="z-50"
       onMouseEnter={() => handalHoverEnter()}
       onMouseLeave={() => handalHoverLeave()}
     >

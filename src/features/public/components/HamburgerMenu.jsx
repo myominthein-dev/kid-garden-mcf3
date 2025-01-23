@@ -70,6 +70,7 @@ const HamburgerMenu = ({ routerPath }) => {
             {routerPath.map((path, index) => {
               return (
                 <HamburgerMenuRoute
+                  toggleMenu={toggleMenu}
                   key={index}
                   route={path.PagePath}
                   name={path.PageName}
