@@ -1,4 +1,4 @@
-import React,{useRef} from "react";
+import React,{useEffect, useRef} from "react";
 import { Link, useNavigate } from "react-router-dom";
 import logo from "../../../assets/logo.svg";
 import { MdOutlinePhoneInTalk } from "react-icons/md";
@@ -7,7 +7,7 @@ import HamburgerMenu from "./HamburgerMenu";
 import telephoneCall from "../../../assets/all/telephone-call.png";
 import HamburgerMenuRoute from "./HamburgerMenuRoute";
 import {motion, useInView, useAnimation} from 'framer-motion'
-import { titleVariants } from "../../../utils";
+import { containerVariants, itemVariants, titleVariants } from "../../../utils";
 const Header = () => {
   const nav = useNavigate();
 
@@ -21,20 +21,49 @@ const Header = () => {
     { PageName: " About us", PagePath: "/about-us" },
     { PageName: " Contact us", PagePath: "/contact-us" },
   ];
-  const ref = useRef(null)
+      const ref = useRef(null)
       const isInView = useInView(ref, { once: true, amount: 0.3 })
       const controls = useAnimation()
-    
-      if (isInView) {
-        controls.start('visible')
+
+      const logoVariants = {
+        initial: { opacity: 0, y: 30 },
+        animate: {
+          opacity: 1,
+          y: 0,
+          transition: {
+            duration: 0.5,
+            ease: "easeOut",
+          },
+        },
+        hover: {
+          scale: 1.05,
+          transition: {
+            duration: 0.2,
+            ease: "easeInOut",
+          },
+        },
       }
+    
+  useEffect(()=>{
+    if (isInView) {
+      controls.start('visible')
+    }
+  },[isInView,controls])
   return (
     <header className="">
       <Container>
         <nav className="bg-white border-gray-200 py-2.5 dark:bg-gray-800">
-          <div className="flex flex-row  justify-between items-center mx-auto">
+          <motion.div variants={containerVariants} className="flex flex-row  justify-between items-center mx-auto">
             <Link to="/" className="flex items-center">
-              <motion.img initial='hidden' ref={ref} animate={controls} variants={titleVariants} src={logo} className="mr-3 w-[193px] z-10 h-[110px]" />
+            <motion.img
+              src={logo}
+              alt="Company Logo"
+              className="mr-3 w-[193px] z-10 h-[110px]"
+              variants={logoVariants}
+              initial="initial"
+              animate="animate"
+              whileHover="hover"
+            />
             </Link>
             <div className=" gap-3 items-center md:order-2 md:flex hidden   cursor-pointer">
               <motion.img initial='hidden' ref={ref} animate={controls} variants={titleVariants} src={telephoneCall} />
@@ -101,7 +130,7 @@ const Header = () => {
             </div>
 
             <HamburgerMenu routerPath={routerPath} />
-          </div>
+          </motion.div>
         </nav>
       </Container>
     </header>
