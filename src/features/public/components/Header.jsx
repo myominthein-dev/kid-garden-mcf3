@@ -1,4 +1,4 @@
-import React,{useEffect, useRef} from "react";
+import React,{useEffect, useRef, useState} from "react";
 import { Link, useNavigate } from "react-router-dom";
 import logo from "../../../assets/logo.svg";
 import { MdOutlinePhoneInTalk } from "react-icons/md";
@@ -10,6 +10,27 @@ import {motion, useInView, useAnimation} from 'framer-motion'
 import { containerVariants, itemVariants, titleVariants } from "../../../utils";
 const Header = () => {
   const nav = useNavigate();
+  const [isVisible, setIsVisible] = useState(true)
+  const [lastScrollY, setLastScrollY] = useState(0);
+  const handleScroll = () => {
+    const currentScrollY = window.scrollY;
+
+    if (currentScrollY > lastScrollY && currentScrollY > 100) {
+      setIsVisible(false);
+    } else {
+      setIsVisible(true);
+    }
+
+    setLastScrollY(currentScrollY);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [lastScrollY]);
 
   const link = (path) => {
     nav(path);
@@ -49,8 +70,12 @@ const Header = () => {
       controls.start('visible')
     }
   },[isInView,controls])
+
+
   return (
-    <header className="">
+    <header className={`sticky top-0 z-50 transition-all duration-300 bg-white ${
+      isVisible ? "translate-y-0" : "-translate-y-full"
+    } `}>
       <Container>
         <nav className="bg-white border-gray-200 py-2.5 dark:bg-gray-800">
           <motion.div variants={containerVariants} className="flex flex-row  justify-between items-center mx-auto">
