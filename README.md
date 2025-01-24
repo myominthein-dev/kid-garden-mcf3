@@ -23,7 +23,7 @@
 
 * Github host
 * Events-related page and footer
-* Animations
+
 
 ## Project Link
 
