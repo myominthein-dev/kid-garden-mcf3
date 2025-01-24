@@ -2,6 +2,8 @@
 
 ![Project Logo or Screenshot](/src/assets/logo.svg)
 
+
+![Project Preview](/src/assets/kid-garden_preview.jpg)
 ## Description
 
     This is a co-operative project of MMS-Connections program intend for team-collaboration skill, team-git skill and individual remote-connection skill to meet the requirements of real-world projects. We perform as a front-end team out of UI/UX team , front-end team and backend team.
