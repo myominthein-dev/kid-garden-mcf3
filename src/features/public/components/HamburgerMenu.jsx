@@ -1,8 +1,8 @@
-import { useState, useEffect, useRef} from "react";
+import { useState, useEffect, useRef } from "react";
 import { Menu, X } from "lucide-react";
 import { Link, NavLink } from "react-router-dom";
 import HamburgerMenuRoute from "./HamburgerMenuRoute";
-import {motion,useInView, useAnimation} from "framer-motion"
+import { motion, useInView, useAnimation } from "framer-motion";
 const HamburgerMenu = ({ routerPath }) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -10,39 +10,42 @@ const HamburgerMenu = ({ routerPath }) => {
     setIsOpen(!isOpen);
   };
 
-  const ref = useRef(null)
-      const isInView = useInView(ref, { once: true, amount: 0.3 })
-      const controls = useAnimation()
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 0.3 });
+  const controls = useAnimation();
 
-      const logoVariants = {
-        initial: { opacity: 0, y: 30 },
-        animate: {
-          opacity: 1,
-          y: 0,
-          transition: {
-            duration: 0.5,
-            ease: "easeOut",
-          },
-        },
-        hover: {
-          scale: 1.05,
-          transition: {
-            duration: 0.2,
-            ease: "easeInOut",
-          },
-        },
-      }
-    
-  useEffect(()=>{
+  const logoVariants = {
+    initial: { opacity: 0, y: 30 },
+    animate: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+        ease: "easeOut",
+      },
+    },
+    hover: {
+      scale: 1.05,
+      transition: {
+        duration: 0.2,
+        ease: "easeInOut",
+      },
+    },
+  };
+
+  useEffect(() => {
     if (isInView) {
-      controls.start('visible')
+      controls.start("visible");
     }
-  },[isInView,controls])
+  }, [isInView, controls]);
 
   return (
-    <motion.div variants={logoVariants}
-    initial="initial"
-    animate="animate" className="relative md:hidden block">
+    <motion.div
+      variants={logoVariants}
+      initial="initial"
+      animate="animate"
+      className="relative md:hidden block"
+    >
       {/* Hamburger Button */}
       <button
         onClick={toggleMenu}
