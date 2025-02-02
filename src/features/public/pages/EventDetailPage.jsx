@@ -4,9 +4,8 @@ import kid from "../../../assets/events/event_kid.png";
 import garaffe from "../../../assets/events/event_garaffee.png";
 import breadCrumb3 from "../../../assets/breadcrumb/breadcrumb-3.png";
 import Container from "../components/Container";
-
+import playingInCompound from "../../../assets/homePage/playing_in_compound.png"
 import hollowenKid from "../../../assets/events/hollowenChildren.png";
-import playingInCompound from "../../../assets/events/playGround.png";
 import sun from "../../../assets/events/sun.png";
 import sunFlower from "../../../assets/events/sun_flower.png";
 import footerBg from "../../../assets/homePage/bg_footer.jpg";
