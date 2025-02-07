@@ -52,28 +52,26 @@ const CalendarCard = ({ imgUrl, id }) => {
             </p>
           </div>
           <h5 className="text-orange-500 font-semibold font-poppin text-xs leading-4">
-            $ Free 
+          ဝင်ကြေးအခမဲ့
           </h5>
-          <h2 className="text-3xl font-semibold leading-9 ">Christmas Party</h2>
+          <h2 className="text-3xl font-semibold leading-9 ">ခရစ္စမတ်ပွဲ 🎄✨</h2>
           <p className="text-xs leading-4 text-neutral-700">
-            "Join us for an exciting day filled with games, learning activities,
-            and creative workshops! 🎨✨ Don’t miss the opportunity to make the
-            best memories with your family!"
+            "Jကစားပြိုင်ပွဲများ၊ သင်ကြားမှု လှုပ်ရှားမှုများနှင့် ဖန်တီးမှု အလုပ်ရုံဆွေးနွေးပွဲများပါဝင်သည့် စိတ်လှုပ်ရှားဖွယ်နေ့တစ်နေ့ကို ကျွန်ုပ်တို့နှင့်အတူ ပါဝင်လိုက်ပါ! 🎨✨ မိသားစုနှင့်အတူ အမှတ်တရများဖန်တီးရန် အခွင့်အရေးကို မလွှတ်တမ်းယူလိုက်ပါနဲ့"
           </p>
 
           <div>
             <div className="flex gap-2 text-xs font-semibold mb-2">
               <div className="text-orange-600 flex items-center gap-2">
-                <img className="size-4" src={mapVec} alt="" /> Location :
+                <img className="size-4" src={mapVec} alt="" /> တည်နေရာ  :
               </div>
               <p className="text-neutral-700">Sunshine Campus</p>
             </div>
 
             <div className="flex gap-2 text-xs font-semibold">
               <div className="text-orange-600 flex items-center gap-2">
-                <img className="size-4" src={clockVec} alt="" /> Time :
+                <img className="size-4" src={clockVec} alt="" /> အချိန် :
               </div>
-              <p className="text-neutral-700">9:00 AM - 11 AM</p>
+              <p className="text-neutral-700">မနက် ၉:၀၀ မှ ၁၁:၀၀ နာရီအထိ</p>
             </div>
           </div>
         </div>

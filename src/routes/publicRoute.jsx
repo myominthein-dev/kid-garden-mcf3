@@ -15,7 +15,7 @@ import EventDetailPage from "../features/public/pages/EventDetailPage";
 
 const publicRoute = [
   {
-    index: true,
+    index: '/',
     element: <HomePage />,
   },
   
@@ -28,7 +28,7 @@ const publicRoute = [
     element: <AboutUsPage />,
   },
   {
-    path: "contact-us",
+    path: "/en/contact-us",
     element: <ContactUsPage />,
   },
 
@@ -46,7 +46,7 @@ const publicRoute = [
     element: <UpcomingEventsPage />,
   },
   {
-    path: "/upcoming-events/event-detail/:id",
+    path: "upcoming-events/event-detail/:id",
     element: <EventDetailPage />,
   },
 ];

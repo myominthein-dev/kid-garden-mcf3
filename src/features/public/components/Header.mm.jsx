@@ -37,11 +37,11 @@ const Header = () => {
     nav(path);
   };
   const routerPath = [
-    { PageName: "Home", PagePath: "/" },
-    { PageName: "Courses", PagePath: "/our-courses" },
-    { PageName: "Gallery", PagePath: "/gallery" },
-    { PageName: " About us", PagePath: "/about-us" },
-    { PageName: " Contact us", PagePath: "/contact-us" },
+    { PageName: "ပင်မစာမျက်နှာ", PagePath: "/mm" },
+    { PageName: "ကျွန်ုပ်တို့၏သင်ရိုးများ", PagePath: "/mm/our-courses" },
+    { PageName: "ဓာတ်ပုံများ", PagePath: "/mm/gallery" },
+    { PageName: "  ကျွန်ုပ်တို့အကြောင်း", PagePath: "/mm/about-us" },
+    { PageName: " ဆက်သွယ်ရန်", PagePath: "/mm/contact-us" },
   ];
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.3 });
@@ -73,16 +73,14 @@ const Header = () => {
   }, [isInView, controls]);
 
   return (
-    <header className={`sticky top-0 z-50 transition-all duration-300 bg-white ${
-        isVisible ? "translate-y-0" : "-translate-y-full"
-      }`}>
+    <header className="">
       <Container>
         <nav className="bg-white border-gray-200 py-2.5 dark:bg-gray-800">
           <motion.div
             variants={containerVariants}
             className="flex flex-row  justify-between items-center mx-auto"
           >
-            <Link to="/" className="flex items-center">
+            <Link to="/mm" className="flex items-center">
               <motion.img
                 src={logo}
                 alt="Company Logo"
@@ -94,8 +92,7 @@ const Header = () => {
               />
             </Link>
             <div className=" gap-3 items-center md:order-2 md:flex hidden   cursor-pointer">
-            <LanguageToggle />
-              
+              <LanguageToggle/>
               <motion.img
                 initial="hidden"
                 ref={ref}
@@ -103,7 +100,7 @@ const Header = () => {
                 variants={titleVariants}
                 src={telephoneCall}
               />
-             
+          
               <motion.span
                 initial="hidden"
                 ref={ref}

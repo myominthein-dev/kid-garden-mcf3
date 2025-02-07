@@ -1,9 +1,7 @@
 import {React, useRef} from "react";
 import { useInView,useAnimation,motion } from "framer-motion";
 import { categoryVariants, itemVariants } from "../../../utils";
-
-
-const ShortCol = ({ src, className }) => {
+const LongCol = ({ src, className }) => {
   const ref = useRef(null)
     const isInView = useInView(ref, { once: true, amount: 0.3 })
     const controls = useAnimation()
@@ -12,10 +10,12 @@ const ShortCol = ({ src, className }) => {
       controls.start('visible')
     }
   return (
-    <div className={`w-full ${className} rounded-xl overflow-hidden `}>
-      <motion.img ref={ref} initial='hidden' animate={controls} variants={categoryVariants} className=" h-full" src={src}  />
+    <div className={`grid grid-rows-subgrid gap-4 row-span-2 ${className}`}>
+      <div className=" row-start-1 row-end-3 rounded-xl overflow-hidden">
+        <motion.img ref={ref} initial='hidden' animate={controls} variants={categoryVariants} className=" h-full w-full " src={src} />
+      </div>
     </div>
   );
 };
 
-export default ShortCol;
+export default LongCol;

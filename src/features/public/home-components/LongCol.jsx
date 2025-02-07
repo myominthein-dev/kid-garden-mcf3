@@ -12,7 +12,7 @@ const LongCol = ({ src, className }) => {
   return (
     <div className={`grid grid-rows-subgrid gap-4 row-span-2 ${className}`}>
       <div className=" row-start-1 row-end-3 rounded-xl overflow-hidden">
-        <motion.img ref={ref} initial='hidden' animate={controls} variants={categoryVariants} className=" h-full w-full " src={src} alt />
+        <motion.img ref={ref} initial='hidden' animate={controls} variants={categoryVariants} className=" h-full w-full " src={src}  />
       </div>
     </div>
   );
