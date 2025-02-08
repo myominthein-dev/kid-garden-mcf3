@@ -24,10 +24,10 @@ const NewsLetter = ({ color }) => {
           <img src={`${newsLetteLogo}`} />
         </div>
         <div className="xl:max-w-[620px] flex flex-col justify-center items-center gap-4    relative ">
-          <h1 className="text-2xl leading-9 my-2 text-white font-poppin font-bold text-center">
+          <h1 className="text-xl leading-9 my-2 text-white font-poppin font-bold text-center">
           ကျွန်ုပ်တို့နှင့်ဆက်သွယ်ကြပါစို့
           </h1>
-          <p className="text-white  text-xs text-center font-roboto xl:w-full md:w-[85%] w-[90%]">
+          <p className="text-white  text-[9px] md:text-xs text-center font-roboto xl:w-full md:w-[85%] w-[90%]">
           ကျောင်းနှင့် ပတ်သတ်သော သီတင်းများ၊ လာမည့်အစီစဉ်များ နှင့် အထူးအစီစဉ်များကို အစဉ်မပြတ်သိရှိစေရန် ကျုန်ုပ်တို့ အစိရင်ခံစာကို ရယူပါ
           </p>
           <div className=" flex justify-between   xl:max-w-[600px]  gap-6 xl:h-[36px]">
@@ -38,7 +38,7 @@ const NewsLetter = ({ color }) => {
             />
             <Button
               label="စာရင်းသွင်းရန်"
-              className={"xl:text-sm "}
+              className={"text-[9px] xl:text-sm "}
               color={color}
             />
           </div>

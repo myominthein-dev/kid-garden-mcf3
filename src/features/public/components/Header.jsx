@@ -73,8 +73,8 @@ const Header = () => {
   }, [isInView, controls]);
 
   return (
-    <header className={`sticky top-0 z-50 transition-all duration-300 bg-white ${
-        isVisible ? "translate-y-0" : "-translate-y-full"
+    <header className={`lg:sticky top-0 z-50 transition-all duration-300 bg-white ${
+        isVisible ? "lg:translate-y-0" : "lg:-translate-y-full"
       }`}>
       <Container>
         <nav className="bg-white border-gray-200 py-2.5 dark:bg-gray-800">
@@ -97,6 +97,7 @@ const Header = () => {
               
               <motion.img
                 initial="hidden"
+                className="hidden xl:block"
                 ref={ref}
                 animate={controls}
                 variants={titleVariants}
@@ -108,7 +109,7 @@ const Header = () => {
                 ref={ref}
                 animate={controls}
                 variants={titleVariants}
-                className="bg-gradient-to-r from-[#EA580C] via-[#FB923C] to-[#648F1C] bg-clip-text text-transparent"
+                className="bg-gradient-to-r hidden xl:block from-[#EA580C] via-[#FB923C] to-[#648F1C] bg-clip-text text-transparent"
               >
                 +66934526313
               </motion.span>
@@ -119,7 +120,7 @@ const Header = () => {
               className="hidden md:flex justify-center items-center w-full  lg:w-auto md:order-1"
               id="mobile-menu-2"
             >
-              <ul className="flex  mt-4 font-medium md:flex-row lg:space-x-8 lg:mt-0">
+              <ul className="flex  mt-4 font-medium md:flex-row lg:space-x-8 md:mt-0">
                 {routerPath.map((path, index) => {
                   return (
                     <HamburgerMenuRoute

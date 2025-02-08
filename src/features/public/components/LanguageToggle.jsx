@@ -23,21 +23,10 @@ export const LanguageToggle = () => {
     }
   }
 
-  const ref = useRef(null);
-    const isInView = useInView(ref, { once: true, amount: 0.3 });
-    const controls = useAnimation();
-  
-  useEffect(() => {
-      if (isInView) {
-        controls.start("visible");
-      }
-    }, [isInView, controls]);
+ 
   
   return (
-    <motion.div initial="hidden"
-                    ref={ref}
-                    animate={controls}
-                    variants={titleVariants}
+    <motion.div 
       onClick={toggleLanguage}
       className="relative bg-gray-200 z-30 rounded-md w-20 h-8 focus:outline-none "
       aria-label={`Switch to ${language === "en" ? "Myanmar" : "English"}`}

@@ -54,13 +54,13 @@ const CalendarCard = ({ imgUrl, id }) => {
           <h5 className="text-orange-500 font-semibold font-poppin text-xs leading-4">
           ဝင်ကြေးအခမဲ့
           </h5>
-          <h2 className="text-3xl font-semibold leading-9 ">ခရစ္စမတ်ပွဲ 🎄✨</h2>
-          <p className="text-xs leading-4 text-neutral-700">
+          <h2 className="text-xl font-semibold leading-9 ">ခရစ္စမတ်ပွဲ 🎄✨</h2>
+          <p className="text-[10px] leading-4 text-neutral-700">
             "Jကစားပြိုင်ပွဲများ၊ သင်ကြားမှု လှုပ်ရှားမှုများနှင့် ဖန်တီးမှု အလုပ်ရုံဆွေးနွေးပွဲများပါဝင်သည့် စိတ်လှုပ်ရှားဖွယ်နေ့တစ်နေ့ကို ကျွန်ုပ်တို့နှင့်အတူ ပါဝင်လိုက်ပါ! 🎨✨ မိသားစုနှင့်အတူ အမှတ်တရများဖန်တီးရန် အခွင့်အရေးကို မလွှတ်တမ်းယူလိုက်ပါနဲ့"
           </p>
 
           <div>
-            <div className="flex gap-2 text-xs font-semibold mb-2">
+            <div className="flex gap-2 text-[10px] font-semibold mb-2">
               <div className="text-orange-600 flex items-center gap-2">
                 <img className="size-4" src={mapVec} alt="" /> တည်နေရာ  :
               </div>

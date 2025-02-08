@@ -49,7 +49,7 @@ const Footer = ({ bgImg, color }) => {
             ကျွန်ုပ်တို့နှင့်အတူ အနာဂတ်ကို ဖန်တီးကြပါစို့!
           </motion.p>
           <ul
-            className={`text-${color}-600 flex xl:gap-8 w-full gap-4 xl:text-base  text-xs items-center  justify-center leading-4 font-semibold`}
+            className={`text-${color}-600 flex xl:gap-8 w-full gap-2 xl:text-base text-[9px]   items-center  justify-center leading-4 font-semibold`}
           >
             {routerPath.map(({ PageName, PagePath }, index) => {
               return (
@@ -82,7 +82,7 @@ const Footer = ({ bgImg, color }) => {
             initial="hidden"
             animate={controls}
             variants={titleVariants}
-            className="font-roboto leading-4 text-center"
+            className="font-roboto text-sm md:text-lg leading-4 text-center"
           >
             © 2024 Tinyverse. All Rights Reserved.
           </motion.p>

@@ -3,9 +3,9 @@ import { Link, useNavigate } from "react-router-dom";
 import logo from "../../../assets/logo.svg";
 import { MdOutlinePhoneInTalk } from "react-icons/md";
 import Container from "./Container";
-import HamburgerMenu from "./HamburgerMenu";
+import HamburgerMenu from "./HamburgerMenu.mm";
 import telephoneCall from "../../../assets/all/telephone-call.png";
-import HamburgerMenuRoute from "./HamburgerMenuRoute";
+import HamburgerMenuRoute from "./HamburgerMenuRoute.mm";
 import { motion, useInView, useAnimation } from "framer-motion";
 import { containerVariants, itemVariants, titleVariants } from "../../../utils";
 import { LanguageToggle } from "./LanguageToggle";
@@ -98,6 +98,7 @@ const Header = () => {
                 animate={controls}
                 variants={titleVariants}
                 src={telephoneCall}
+                className="hidden xl:block"
               />
           
               <motion.span
@@ -105,7 +106,7 @@ const Header = () => {
                 ref={ref}
                 animate={controls}
                 variants={titleVariants}
-                className="bg-gradient-to-r from-[#EA580C] via-[#FB923C] to-[#648F1C] bg-clip-text text-transparent"
+                className="bg-gradient-to-r hidden xl:block from-[#EA580C] via-[#FB923C] to-[#648F1C] bg-clip-text text-transparent"
               >
                 +66934526313
               </motion.span>
@@ -116,7 +117,7 @@ const Header = () => {
               className="hidden md:flex justify-center items-center w-full  lg:w-auto md:order-1"
               id="mobile-menu-2"
             >
-              <ul className="flex  mt-4 font-medium md:flex-row lg:space-x-4 lg:mt-0">
+              <ul className="flex  mt-4 font-medium md:flex-row lg:space-x-2 lg:mt-0">
                 {routerPath.map((path, index) => {
                   return (
                     <HamburgerMenuRoute
