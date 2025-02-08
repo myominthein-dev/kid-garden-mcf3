@@ -92,7 +92,6 @@ const Header = () => {
               />
             </Link>
             <div className=" gap-3 items-center md:order-2 md:flex hidden   cursor-pointer">
-              <LanguageToggle/>
               <motion.img
                 initial="hidden"
                 ref={ref}
@@ -110,12 +109,14 @@ const Header = () => {
               >
                 +66934526313
               </motion.span>
+              <LanguageToggle/>
+
             </div>
             <div
               className="hidden md:flex justify-center items-center w-full  lg:w-auto md:order-1"
               id="mobile-menu-2"
             >
-              <ul className="flex  mt-4 font-medium md:flex-row lg:space-x-8 lg:mt-0">
+              <ul className="flex  mt-4 font-medium md:flex-row lg:space-x-4 lg:mt-0">
                 {routerPath.map((path, index) => {
                   return (
                     <HamburgerMenuRoute

@@ -10,6 +10,7 @@ const PublicLayout = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    localStorage.setItem('lang','en')
     const timer = setTimeout(() => setLoading(false), 3500); // Show fallback for 3000ms
     return () => clearTimeout(timer);
   }, []);

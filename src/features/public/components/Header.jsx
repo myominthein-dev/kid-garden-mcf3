@@ -94,7 +94,6 @@ const Header = () => {
               />
             </Link>
             <div className=" gap-3 items-center md:order-2 md:flex hidden   cursor-pointer">
-            <LanguageToggle />
               
               <motion.img
                 initial="hidden"
@@ -113,6 +112,8 @@ const Header = () => {
               >
                 +66934526313
               </motion.span>
+            <LanguageToggle />
+
             </div>
             <div
               className="hidden md:flex justify-center items-center w-full  lg:w-auto md:order-1"

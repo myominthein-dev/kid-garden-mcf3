@@ -1,17 +1,28 @@
 
 
 import  React, { useEffect, useState } from "react"
-import { useLanguage } from "../contexts/LanguageContext"
 import { motion } from "framer-motion"
 import { Router, useNavigate, useSearchParams } from "react-router-dom"
 
 export const LanguageToggle = () => {
-  const { language, setLanguage } = useLanguage()
+  const originLan = localStorage.getItem('lang')
+  const [ language, setLanguage ] = useState(originLan)
   const nav = useNavigate();
   const toggleLanguage = () => {
     setLanguage(language === "en" ? "mm" : "en")
-     
+
+    if (language == 'mm') {
+      localStorage.clear();
+      localStorage.setItem('lang','en')
+      nav('/')
+    } else {
+      localStorage.clear();
+      localStorage.setItem('lang','mm')
+      nav('/mm')
+    }
   }
+  
+  
 
   return (
     <button

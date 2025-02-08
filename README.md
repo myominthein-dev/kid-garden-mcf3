@@ -24,6 +24,7 @@ This is a co-operative project of MMS-Connections program intend for team-collab
 * Github host
 * Events-related page and footer
 * Animations
+* Deploy to netlify platform
 
 ## Project Link
 
