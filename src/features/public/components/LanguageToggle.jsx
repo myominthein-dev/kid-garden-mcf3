@@ -1,8 +1,9 @@
 
 
-import  React, { useEffect, useState } from "react"
-import { motion } from "framer-motion"
+import  React, { useEffect, useState, useRef } from "react"
+import { motion, useInView, useAnimation } from "framer-motion"
 import { Router, useNavigate, useSearchParams } from "react-router-dom"
+import { titleVariants } from "../../../utils"
 
 export const LanguageToggle = () => {
   const originLan = localStorage.getItem('lang')
@@ -21,23 +22,34 @@ export const LanguageToggle = () => {
       nav('/mm')
     }
   }
-  
-  
 
+  const ref = useRef(null);
+    const isInView = useInView(ref, { once: true, amount: 0.3 });
+    const controls = useAnimation();
+  
+  useEffect(() => {
+      if (isInView) {
+        controls.start("visible");
+      }
+    }, [isInView, controls]);
+  
   return (
-    <button
+    <motion.div initial="hidden"
+                    ref={ref}
+                    animate={controls}
+                    variants={titleVariants}
       onClick={toggleLanguage}
-      className="relative bg-gray-200 z-30 rounded-md w-16 h-8 focus:outline-none "
+      className="relative bg-gray-200 z-30 rounded-md w-20 h-8 focus:outline-none "
       aria-label={`Switch to ${language === "en" ? "Myanmar" : "English"}`}
     >
       <motion.div
-        className="absolute top-1 left-1 bg-white rounded-md w-6 h-6 flex items-center justify-center font-semibold text-xs"
+        className="absolute top-1 left-1 bg-white rounded-md w-10 h-6 flex items-center justify-center font-semibold text-xs"
         animate={{ x: language === "en" ? 0 : 32 }}
         transition={{ type: "spring", stiffness: 300, damping: 20 }}
       >
-        {language.toUpperCase()}
+        {language == "mm" ? "MM" : "ENG"}
       </motion.div>
-    </button>
+    </motion.div>
   )
 }
 
