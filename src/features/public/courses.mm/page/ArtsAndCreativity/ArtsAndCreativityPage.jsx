@@ -8,10 +8,10 @@ import ArtsAndCreativityVedio from "../../../../../assets/ourCoursesPage/ArtsAnd
 import RectangleTwo from "../../../../../assets/ourCoursesPage/Rectangle2.png";
 const ArtsAndCreativityPage = () => {
   const learningSkill = [
-    "Fosters Self-Expression",
-    "Empowerment",
-    "Cognitiveness",
-    "Improves Motor Skills",
+    "ကိုယ်ကျင့်တရား ",
+    "ဖန်တီးမှုစာပေ",
+    "စာဖတ်ခြင်းနှင့် ဗဟုသုတ",
+    "စာရေးသားစွမ်းရည်",
   ];
   return (
     <div className=" my-10 ">
@@ -20,20 +20,19 @@ const ArtsAndCreativityPage = () => {
         imgPeopleUrl={ArtsAndCreativityOne}
         flexFlow={"xl:flex-row-reverse"}
         DimaondGroupPositon={"md:top-1 md:right-[10%] top-0"}
-        headerText={" Art and Creative"}
+        headerText={"အနုပညာနှင့်ဖန်တီးမှု"}
         ParagText={
-          "In early education play a crucial role in fostering self-expression, imagination, and emotional development in children. Through activities like drawing, painting, crafting, music, and movement, kids explore their unique ideas and feelings. These activities not only enhance fine motor skills and hand-eye coordination but also build confidence and problem-solving abilities."
+          "ကလေးများ၏မိမိကိုယ်ကိုဖော်ပြနိုင်မှုစိတ်ကူးဉာဏ်ဖန်တီးနိုင်မှုနှင့်စိတ်လှုပ်ရှားမှုဖွံ့ဖြိုးတိုးတက်မှုကိုတိုးတက်စေရာအရေးကြီးသောအခန်းကဏ္ဍကိုမျှဝေပေးနိုင်သည်ပုံဆွဲခြင်းရောင်စုံဆေးခြယ်ခြင်းယာယီလုပ်ဆောင်ခြင်းတေးဂီတနှင့်ခန္ဓာကိုယ်လှုပ်ရှားမှုများကနေတစ်ဆင့်ကလေးများသည်မိမိ၏ထူးခြားသည့်အတွေးအမြင်များနှင့် ခံစားမှုများကို ထွက်ဖော်လေ့လာနိုင်သည်။ "
         }
         LgParagTex={[
-          "In early education play a crucial role in fostering self-expression, imagination, and emotional development in children. Through activities like drawing, painting, crafting, music, and movement, kids explore their unique ideas and feelings. ",
-          "elements and how to use them to create their own artwork. Children will also practice fine motor skills by using tools like brushes, crayons, and scissors, improving hand-eye coordination.",
+          "ကလေးများ၏မိမိကိုယ်ကိုဖော်ပြနိုင်မှုစိတ်ကူးဉာဏ်ဖန်တီးနိုင်မှုနှင့်စိတ်လှုပ်ရှားမှုဖွံ့ဖြိုးတိုးတက်မှုကိုတိုးတက်စေရာအရေးကြီးသောအခန်းကဏ္ဍကိုမျှဝေပေးနိုင်သည်ပုံဆွဲခြင်းရောင်စုံဆေးခြယ်ခြင်းယာယီလုပ်ဆောင်ခြင်းတေးဂီတနှင့်ခန္ဓာကိုယ်လှုပ်ရှားမှုများကနေတစ်ဆင့်ကလေးများသည်မိမိ၏ထူးခြားသည့်အတွေးအမြင်များနှင့် ခံစားမှုများကို ထွက်ဖော်လေ့လာနိုင်သည်။ ",
         ]}
       />
       {/* What Your Kid Will Learn */}
       <WhatYourKidWillLearn
         flexFlow={"flex-row-reverse"}
         text={
-          " In art, kids will learn to express themselves through drawing, painting, and sculpting, fostering creativity and imagination. They will explore colors and shapes, developing an understanding of visual elements and how to use them to create their own artwork. Children will also practice fine motor skills by using tools like brushes, crayons, and scissors, improving hand-eye coordination."
+          "သင်တန်းအမျိုးအစားများ သည် သင်တန်းများကို ဘာသာရပ်၊ ရည်ရွယ်ချက်နှင့် လေ့လာမှုပုံစံအလိုက် ခွဲခြားထားခြင်းဖြစ်သည်။ ဥပမာ - ပညာရေး၊ အလုပ်အကိုင်၊ နည်းပညာ၊ ဘာသာစကားစသည့် အမျိုးအစားများ ပါဝင်သည်။"
         }
         learningSkill={learningSkill}
         ImageUrl={RectangleTwo}
