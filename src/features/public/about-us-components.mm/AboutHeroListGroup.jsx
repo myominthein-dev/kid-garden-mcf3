@@ -1,5 +1,5 @@
 import React from "react";
-import { heroContents } from "./data";
+import { heroContents } from "./mmData";
 import AboutHeroList from "./AboutHeroList";
 
 const AboutHeroListGroup = () => {

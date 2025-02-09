@@ -21,9 +21,9 @@ const AboutUsPage = () => {
         lImgPos={"md:-top-0 md:-left-44 relative bottom-[-28%]  "}
         rImgPos={" right-44"}
         lImgWidth={600}
-        title={"About Us"}
+        title={"ကျွန်ုပ်တို့၏သင်ရိုးများ"}
         flexFlow={"flex-col-reverse"}
-        currentPageTitle={"About Us"}
+        currentPageTitle={"ကျွန်ုပ်တို့အကြောင်း"}
       />
       <AboutUsHeroSection />
       <AboutMarketing />

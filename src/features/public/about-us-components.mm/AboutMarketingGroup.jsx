@@ -1,5 +1,5 @@
 import React from "react";
-import { aboutMarkets } from "./data";
+import { aboutMarkets } from "./mmData";
 import AboutMarketingCard from "./AboutMarketingCard";
 
 const AboutMarketingGroup = () => {

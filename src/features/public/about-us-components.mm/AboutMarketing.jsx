@@ -1,4 +1,4 @@
-import React, {useRef} from "react";
+import React, { useRef } from "react";
 import Container from "../components/Container";
 import AboutMarketingGroup from "./AboutMarketingGroup";
 import StarOrange from "../../../assets/ourCoursesPage/StarOrange.svg";
@@ -9,13 +9,13 @@ import notation from "../../../assets/contactUsPage/notation.png";
 import { motion, useInView, useAnimation } from "framer-motion";
 import { itemVariants, titleVariants } from "../../../utils";
 const AboutMarketing = () => {
-  const ref = useRef(null)
-    const isInView = useInView(ref, { once: true, amount: 0.3 })
-    const controls = useAnimation()
-  
-    if (isInView) {
-      controls.start('visible')
-    }
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 0.3 });
+  const controls = useAnimation();
+
+  if (isInView) {
+    controls.start("visible");
+  }
   return (
     <section className="bg-[#FEF5DB]">
       <Container>
@@ -75,16 +75,33 @@ const AboutMarketing = () => {
                   repeatType: "reverse",
                 }}
               />
-              <div className=" flex flex-col gap-5 md:gap-7 items-center md:items-start justify-center pt-24 md:pt-0 mt-10 md:mt-0 w-full md:w-[50%] lg:w-auto">
-                <motion.h1 ref={ref} animate={controls} initial='hidden' variants={titleVariants} className="font-poppin font-semibold text-xl sm:3xl md:text-4xl text-center md:text-start">
-                  What We Believe in Tinyverse
+              <div className=" ms-4 flex flex-col gap-5 md:gap-7 items-center md:items-start justify-center pt-24 md:pt-0 mt-10 md:mt-0 w-full md:w-[50%] lg:w-auto">
+                <motion.h1
+                  ref={ref}
+                  animate={controls}
+                  initial="hidden"
+                  variants={titleVariants}
+                  className="font-poppin font-semibold text-xl sm:3xl md:text-4xl text-center md:text-start"
+                >
+                  အရည်အသွေးအာမခံချက်
                 </motion.h1>
-                <motion.p ref={ref} animate={controls} initial='hidden' variants={titleVariants} className="font-roboto text-base md:text-[20px] leading-[30px] text-gray-700 w-auto text-center md:text-start">
-                  We are a passionate team of early childhood educators who
-                  believe every child is unique, capable, and full of potential.
+                <motion.p
+                  ref={ref}
+                  animate={controls}
+                  initial="hidden"
+                  variants={titleVariants}
+                  className="font-roboto text-base w-72 leading-[30px] text-gray-700  text-center md:text-start"
+                >
+                  စနစ်တကျစစ်ဆေးပြီး၊ ရလဒ်အပြည့်အဝ တာဝန်ယူမှုရှိစွာပေးဆောင်ပါသည်။
                 </motion.p>
-                <motion.button ref={ref} animate={controls} initial='hidden' variants={itemVariants} className="bg-orange-500 px-6 py-3 rounded-full text-white">
-                  About Us
+                <motion.button
+                  ref={ref}
+                  animate={controls}
+                  initial="hidden"
+                  variants={itemVariants}
+                  className="bg-orange-500 px-6 py-3 rounded-full text-white"
+                >
+                  ဆက်သွယ်ရန်
                 </motion.button>
               </div>
               <motion.img
