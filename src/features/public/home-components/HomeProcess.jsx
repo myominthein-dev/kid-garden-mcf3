@@ -90,21 +90,21 @@ const HomeProcess = () => {
           transition={{ duration: 3, repeat: Infinity, repeatType: "reverse" }}
         />
         <motion.h2 ref={ref} initial='hidden' variants={titleVariants} animate={controls} className="heading">Guiding Every Step</motion.h2>
-        <div className="relative mt-8 grid grid-cols-2 md:grid-rows-2 md:grid-cols-8 gap-x-4 gap-x-16 gap-y-16 md:gap-4">
+        <div  className="relative mt-8  w-full grid grid-cols-2 lg:grid-rows-2 lg:grid-cols-8 gap-x-4 xl:gap-x-16 gap-y-16 lg:gap-4">
           {guides.map((guide, index) => (
             <motion.div
-              key={index}
-              className={`w-[193px] flex flex-col justify-center items-center gap-7 lg:gap-12 ${
-                index === 0
-                  ? "md:row-start-1 md:col-span-4 md:col-start-1"
-                  : index === 1
-                  ? "md:row-start-2 md:col-span-4 md:col-start-3"
-                  : index === 2
-                  ? "md:row-start-1 md:col-span-4 md:col-start-5"
-                  : "md:row-start-2 md:col-span-4 md:col-start-8"
-              }`}
-              variants={itemVariants}
-            >
+                          key={index}
+                          className={`w-full flex flex-col justify-center items-center gap-7 lg:gap-12 ${
+                            index === 0
+                              ? "lg:row-start-1 lg:col-span-4 lg:col-start-1"
+                              : index === 1
+                              ? "lg:row-start-2 lg:col-span-4 lg:col-start-3"
+                              : index === 2
+                              ? "lg:row-start-1 lg:col-span-4 lg:col-start-5"
+                              : "lg:row-start-2 lg:col-span-4 lg:col-start-8"
+                          }`}
+                          variants={itemVariants}
+                        >
               <Ellipse
                 initial="50% 50% 50% 50% / 50% 50% 50% 50% "
                 isAnimate={false}
@@ -132,20 +132,20 @@ const HomeProcess = () => {
           ))}
           {/* Arrow Image */}
           <img
-            src={arrow}
-            className="size-14 md:size-20 absolute rotate-[320deg] md:rotate-0 top-[5%] left-[45%] md:top-[35%] md:left-[17%]"
-            alt="I am Arrow"
-          />
-          <img
-            src={arrow}
-            className="size-14 md:size-20 rotate-[320deg] md:rotate-0 absolute top-[60%] left-[45%] md:top-[40%] md:right-[20%] md:left-auto"
-            alt="I am Arrow"
-          />
-          <img
-            src={arrow}
-            className="size-14 md:size-20 rotate-90 md:rotate-[270deg] absolute  top-[45%] left-[45%] md:top-[35%] md:left-[40%]"
-            alt="I am Arrow"
-          />
+                      src={arrow}
+                      className="size-14 md:size-20 absolute rotate-[320deg] lg:rotate-0 top-[5%] left-[45%] lg:top-[35%] lg:left-[17%]"
+                      alt="I am Arrow"
+                    />
+                    <img
+                      src={arrow}
+                      className="size-14 lg:size-20 rotate-[320deg] lg:rotate-0 absolute top-[60%] left-[45%] lg:top-[40%] lg:right-[20%] lg:left-auto"
+                      alt="I am Arrow"
+                    />
+                    <img
+                      src={arrow}
+                      className="size-14 lg:size-20 rotate-90 lg:rotate-[270deg] absolute  top-[45%] left-[45%] lg:top-[35%] lg:left-[40%]"
+                      alt="I am Arrow"
+                    />
         </div>
         {/* Two absolute ellipses */}
         <div className="hidden lg:block absolute bottom-20 left-0">

@@ -73,8 +73,8 @@ const Header = () => {
   }, [isInView, controls]);
 
   return (
-    <header className={`lg:sticky top-0 z-50 transition-all duration-300 bg-white ${
-        isVisible ? "lg:translate-y-0" : "lg:-translate-y-full"
+    <header className={`sticky top-0 z-50 transition-all duration-300 bg-white ${
+        isVisible ? "translate-y-0" : "-translate-y-[130%]"
       }`}>
       <Container>
         <nav className="bg-white border-gray-200 py-2.5 dark:bg-gray-800">

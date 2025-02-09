@@ -58,7 +58,7 @@ const EventCalendar = () => {
           <CalendarCard key={index} imgUrl={img.image} />
         ))}
       </div>
-      <div className=" inline-block md:hidden mt-4 mb-24">
+      <div className=" inline-block md:hidden  mb-24">
         <DetailBtn content={"View all events"} />
       </div>
     </Container>

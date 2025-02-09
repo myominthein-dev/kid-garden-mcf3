@@ -73,7 +73,9 @@ const Header = () => {
   }, [isInView, controls]);
 
   return (
-    <header className="">
+    <header className={`sticky top-0 z-50 transition-all duration-300 bg-white ${
+      isVisible ? "translate-y-0" : "-translate-y-[130%]"
+    }`}>
       <Container>
         <nav className="bg-white border-gray-200 py-2.5 dark:bg-gray-800">
           <motion.div

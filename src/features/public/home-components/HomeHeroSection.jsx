@@ -98,16 +98,16 @@ const HomeHeroSection = () => {
       animate={controls}
       variants={containerVariants}
     >
-      <motion.div className="flex flex-col gap-3 items-center justify-center" variants={containerVariants}>
+      <motion.div className="flex flex-col gap-1 lg:gap-2 items-center justify-center" variants={containerVariants}>
         <motion.h1 className="sub-heading" variants={itemVariants}>Quality School</motion.h1>
-        <motion.div className="heading" variants={itemVariants}>
+        <motion.div className="heading md:text-4xl" variants={itemVariants}>
           <h2 className="text-neutral-700">Welcome to a Place</h2>
           <h2 className="text-neutral-700">
             Where <span className="text-orange-600">Learning is Fun!</span>
           </h2>
         </motion.div>
         <motion.p 
-          className="text-neutral-700 font-roboto text-lg w-[300px] sm:w-[400px] text-center mb-7" 
+          className="text-neutral-700 font-roboto text-lg md:text-xl w-[300px] sm:w-[400px] text-center mb-7" 
           variants={itemVariants}
         >
           Our nurturing environment inspires children to explore, grow, and

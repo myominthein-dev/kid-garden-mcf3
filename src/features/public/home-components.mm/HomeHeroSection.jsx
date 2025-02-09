@@ -105,7 +105,7 @@ const HomeHeroSection = () => {
           </h2>
         </motion.div>
         <motion.p 
-          className="text-neutral-700 text-sm  font-roboto md:ext-lg w-[300px] sm:w-[600px] text-center mb-7" 
+          className="text-neutral-700 text-sm  font-roboto md:text-lg w-[300px] sm:w-[600px] text-center mb-7" 
           variants={itemVariants}
         >
           ကျုန်ုပ်တို့၏ ဂရုတစိုက်ရှိသောရပ်ဝန်းသည် ကလေးငယ်များ လေ့လာသင်ယူရန်၊ တောက်ပစွာ ဖွံ့ဖြိုးနိုင်ရန်အတွက် အထောက်ပံ့ဖြစ်စေမှာပါ

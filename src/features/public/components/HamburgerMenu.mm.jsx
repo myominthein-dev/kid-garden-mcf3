@@ -59,21 +59,16 @@ const HamburgerMenu = ({ routerPath }) => {
       </div>
 
       {/* Menu Overlay */}
-      <div
-        className={`fixed inset-0 z-40 bg-black bg-opacity-50 transition-opacity duration-300 ease-in-out ${
-          isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
-        }`}
-        onClick={toggleMenu}
-      ></div>
+      
 
       {/* Menu Content */}
       <div
-        className={`fixed  top-0 left-0  z-40 h-full w-2/3 md:w-1/3 bg-white shadow-lg transform transition-transform duration-300 ease-in-out ${
-          isOpen ? "translate-x-0" : "-translate-x-full"
+        className={` fixed z-40   w-2/3 md:w-1/3 mt-5  shadow-lg transform transition-transform duration-300 ease-in-out ${
+          isOpen ? "-translate-x-full" : "translate-x-full"
         }`}
       >
-        <nav className="p-4 w-3/4  absolute top-[5%] left-[5%]  ">
-          <ul className="space-y-2">
+        <nav className="p-4  bg-white rounded-lg  absolute top-[5%] left-[5%]  ">
+          <ul className="flex">
             {routerPath.map((path, index) => {
               return (
                 <HamburgerMenuRoute

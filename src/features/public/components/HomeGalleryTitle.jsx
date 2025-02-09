@@ -16,14 +16,14 @@ const HomeGalleryTitle = () => {
     <div className=" flex justify-between items-end relative ">
       <div className=" flex flex-col gap-4">
         <motion.h1 animate={controls} ref={ref} initial='hidden' variants={titleVariants}  className=" font-pacifico text-xl text-orange-500 font-medium leading-9">
-          Photo Gallery
+        ဓာတ်ပုံစုစည်းမှု
         </motion.h1>
-        <motion.p animate={controls} ref={ref} initial='hidden' variants={titleVariants} className=" font-poppin md:text-4xl text-2xl  leading-[54px] text-neutral-900 font-bold">
-          Achieving Excellence Together
+        <motion.p animate={controls} ref={ref} initial='hidden' variants={titleVariants} className=" font-poppin md:text-xl text-lg lg:text-2xl leading-[64px] text-neutral-900 font-semibold">
+        အတူတကွ ရရှိထားသော <br />အောင်မြင်မှုမှတ်တမ်းများ
         </motion.p>
       </div>
-      <div className=" hidden md:flex   ">
-        <DetailBtn content={"View all photos"} />
+      <div className=" hidden md:flex ">
+        <DetailBtn content={"ဓာတ်ပုံအားလုံးကို ကြည့်ရှုပါ"} />
       </div>
     </div>
   );

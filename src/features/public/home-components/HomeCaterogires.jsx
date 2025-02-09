@@ -118,9 +118,9 @@ const HomeCategories = () => {
         />
         <motion.h2 className="heading" variants={itemVariants}>Building Foundations for Lifelong Learning</motion.h2>
         <motion.div 
-          className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 mt-8"
-          variants={containerVariants}
-        >
+                  className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8 mt-8"
+                  variants={containerVariants}
+                >
           {categories.map((category, index) => (
             <motion.div
               key={index}

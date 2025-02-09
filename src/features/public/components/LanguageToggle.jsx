@@ -2,12 +2,13 @@
 
 import  React, { useEffect, useState, useRef } from "react"
 import { motion, useInView, useAnimation } from "framer-motion"
-import { Router, useNavigate, useSearchParams } from "react-router-dom"
+import { Router, useLocation, useNavigate, useSearchParams } from "react-router-dom"
 import { titleVariants } from "../../../utils"
 
 export const LanguageToggle = () => {
   const originLan = localStorage.getItem('lang')
   const [ language, setLanguage ] = useState(originLan)
+  const {pathname} = useLocation();
   const nav = useNavigate();
   const toggleLanguage = () => {
     setLanguage(language === "en" ? "mm" : "en")
@@ -15,10 +16,12 @@ export const LanguageToggle = () => {
     if (language == 'mm') {
       localStorage.clear();
       localStorage.setItem('lang','en')
+      console.log(location)
       nav('/')
     } else {
       localStorage.clear();
       localStorage.setItem('lang','mm')
+      console.log(location)
       nav('/mm')
     }
   }

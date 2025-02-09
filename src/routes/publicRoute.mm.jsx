@@ -6,9 +6,9 @@ const GalleryPage = lazy(() => import("../features/public/pages.mm/GalleryPage")
 const HomePage = lazy(() => import("../features/public/pages.mm/HomePage"));
 const AboutUsPage = lazy(() => import("../features/public/pages.mm/AboutUsPage"));
 const ContactUsPage = lazy(() =>
-  import("../features/public/pages/ContactUsPage")
+  import("../features/public/pages.mm/ContactUsPage")
 );
-import coursesDetailRoute from "./coursesDetailRoute";
+import coursesDetailRoute from "./coursesDetailRoute.mm";
 import UpcomingEventsPage from "../features/public/pages.mm/UpcomingEventsPage";
 import EventDetailPage from "../features/public/pages.mm/EventDetailPage";
 
