@@ -17,8 +17,8 @@ const CoursePage = () => {
         leftImg={youngGirl}
         rightImg={rabbit}
         leftImgShow={false}
-        title={"Our Courses"}
-        currentPageTitle={"Our Courses"}
+        title={"ကျွန်ုပ်တို့၏သင်ရိုးများ"}
+        currentPageTitle={"ကျွန်ုပ်တို့၏သင်ရိုးများ"}
         flexFlow={"flex-col"}
       />
       <Container>

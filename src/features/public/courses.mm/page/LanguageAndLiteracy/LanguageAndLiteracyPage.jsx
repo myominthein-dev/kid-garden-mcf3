@@ -9,10 +9,10 @@ import LanguageAndLiteracyVedio from "../../../../../assets/ourCoursesPage/Langu
 
 const LanguageAndLiteracyPage = () => {
   const learningSkill = [
-    "Speaking and Listening",
-    "Reading Readiness",
-    "Phonics and Vocabulary",
-    "Writing Skills",
+    "ကိုယ်ကျင့်တရား",
+    "စာဖတ်ခြင်းနှင့် ဗဟုသုတ",
+    "ဖန်တီးမှုစာပေ",
+    "စာရေးသားစွမ်းရည်",
   ];
   return (
     <div className=" my-10 ">
@@ -23,20 +23,20 @@ const LanguageAndLiteracyPage = () => {
         DimaondGroupPositon={
           "xl:top-0 xl:left-[45%] lg:top-1 lg:right-[10%] top-0 left-[10%]"
         }
-        headerText={" Language and Literacy"}
+        headerText={"ဘာသာစကားနှင့် ယဉ်ကျေးမှု"}
         ParagText={
-          "We focuses on helping young children develop foundational communication skills, including speaking, listening, reading, andwriting. Through storytelling, phonics, and vocabulary-building      activities, children learn to express themselves, understand others,and explore the joy of language. These skills lay the groundwork for academic success and lifelong learning."
+          "ဘာသာစကားနှင့် ယဉ်ကျေးမှုဆိုသည်မှာ စာဖတ်ခြင်း၊ စာရေးခြင်းနှင့် စာပေများကို နားလည်နိုင်စွမ်းကို ဆိုလိုသည်။ ၎င်းတွင် အတွေးအခေါ်များကို ထိထိမိမိ ဖော်ပြနိုင်စွမ်းနှင့် ဘာသာစကားကို ထိရောက်စွာ အသုံးချနိုင်စွမ်းလည်း ပါဝင်သည်။"
         }
         LgParagTex={[
-          "We focuses on helping young children develop foundational communication skills, including speaking, listening, reading, and writing and explore the joy of language. These skills lay the groundwork for academic success and lifelong learning",
-          "Through storytelling, phonics, and vocabulary-building activities, children learn to express themselves, understand others, and explore the joy of language. These skills lay the groundwork for academic success and lifelong learning.",
+          "ဘာသာစကားနှင့် ယဉ်ကျေးမှုဆိုသည်မှာ စာဖတ်ခြင်း၊ စာရေးခြင်းနှင့် စာပေများကို နားလည်နိုင်စွမ်းကို ဆိုလိုသည်။ ",
+          "၎င်းတွင် အတွေးအခေါ်များကို ထိထိမိမိ ဖော်ပြနိုင်စွမ်းနှင့် ဘာသာစကားကို ထိရောက်စွာ အသုံးချနိုင်စွမ်းလည်း ပါဝင်သည်။",
         ]}
       />
       {/* What Your Kid Will Learn */}
       <WhatYourKidWillLearn
         flexFlow={"flex-row"}
         text={
-          " Focuses on helping young children develop foundational communication skills, including speaking, listening, reading, and writing. Through storytelling, phonics, and vocabulary-building activities, children learn to express themselves, understand others, and explore the joy of language. These skills lay the groundwork for academic success and lifelong learning."
+          " သင်တန်းအမျိုးအစားများ သည် သင်တန်းများကို ဘာသာရပ်၊ ရည်ရွယ်ချက်နှင့် လေ့လာမှုပုံစံအလိုက် ခွဲခြားထားခြင်းဖြစ်သည်။ ဥပမာ - ပညာရေး၊ အလုပ်အကိုင်၊ နည်းပညာ၊ ဘာသာစကားစသည့် အမျိုးအစားများ ပါဝင်သည်။"
         }
         learningSkill={learningSkill}
         ImageUrl={RectangleImg}

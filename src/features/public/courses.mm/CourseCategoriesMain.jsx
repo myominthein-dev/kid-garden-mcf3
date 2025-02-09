@@ -1,7 +1,7 @@
-import React, { useState,useRef,useEffect} from "react";
+import React, { useState, useRef, useEffect } from "react";
 import StarOrange from "../../../assets/ourCoursesPage/StarOrange.svg";
 import StarPink from "../../../assets/ourCoursesPage/StarPink.svg";
-import {motion, useInView,  useAnimation} from 'framer-motion'
+import { motion, useInView, useAnimation } from "framer-motion";
 import CourseCategoriesCard from "./CourseCategoriesCard";
 import Ellipse from "../components/Ellipse";
 import { LuBrainCircuit, LuCodepen, LuPuzzle, LuSlack } from "react-icons/lu";
@@ -10,7 +10,7 @@ import { itemVariants, titleVariants } from "../../../utils";
 const CourseCategoriesMain = () => {
   const [courseCategoriesArray, setCourseCategoriesArray] = useState([
     {
-      title: " Language and Literacy",
+      title: "ဘာသာစကားနှင့် ယဉ်ကျေးမှု",
       icon: (
         <LuBrainCircuit className="text-white  w-[30px] h-[30px] border-none" />
       ),
@@ -20,7 +20,7 @@ const CourseCategoriesMain = () => {
       iconColor: "#FDA4AF",
     },
     {
-      title: "Arts and Creativity",
+      title: "ကိုယ်ပိုင်သင်ယူမှုစွမ်းရည်များ ",
       icon: <LuCodepen className="text-white w-[30px] h-[30px] border-none" />,
       activeColor: "bg-orange-100",
       active: false,
@@ -28,7 +28,7 @@ const CourseCategoriesMain = () => {
       iconColor: "#FB923C",
     },
     {
-      title: "Math and Problem-Solving",
+      title: "သင်္ချာနှင့်လေ့လာခြင်း",
       icon: <LuPuzzle className="text-white w-[30px] h-[30px] border-none" />,
       out_let: "math-and-problem-solving",
       active: false,
@@ -36,7 +36,7 @@ const CourseCategoriesMain = () => {
       activeColor: " bg-fuchsia-100",
     },
     {
-      title: "Social Development",
+      title: "ဒီဂျစ်တယ်ပညာရေး",
       icon: <LuSlack className="text-white w-[30px] h-[30px] border-none" />,
       out_let: "social-development",
       active: false,
@@ -45,16 +45,13 @@ const CourseCategoriesMain = () => {
     },
   ]);
 
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, amount: 0.3 })
-  const controls = useAnimation()
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 0.3 });
+  const controls = useAnimation();
 
-  
-    if (isInView) {
-      controls.start('visible')
-    }
- 
-  
+  if (isInView) {
+    controls.start("visible");
+  }
 
   return (
     <div className="relative flex flex-col py-24 gap-24 justify-center items-center w-full">
@@ -63,23 +60,43 @@ const CourseCategoriesMain = () => {
         {/* star image */}
         <div>
           {" "}
-          <motion.img animate={controls} variants={itemVariants} ref={ref} initial='hidden'
+          <motion.img
+            animate={controls}
+            variants={itemVariants}
+            ref={ref}
+            initial="hidden"
             className=" absolute top-0 md:top-28 left-14"
             src={StarOrange}
             alt=""
           />
-          <motion.img animate={controls} variants={itemVariants} ref={ref} initial="hidden"
+          <motion.img
+            animate={controls}
+            variants={itemVariants}
+            ref={ref}
+            initial="hidden"
             className=" absolute right-0  top-10 md:top-36 xl:right-32 md:right-[7%]"
             src={StarPink}
             alt=""
           />
         </div>
         <div className="  flex justify-center items-center  gap-4 flex-col w-[75%] mx-auto md:w-[618px]">
-          <motion.h2 initial='hidden' ref={ref} animate={controls} variants={titleVariants} className=" text-orange-500 font-normal text-xl font-pacifico">
-            Course Categories
+          <motion.h2
+            initial="hidden"
+            ref={ref}
+            animate={controls}
+            variants={titleVariants}
+            className=" text-orange-500 font-normal text-xl font-pacifico"
+          >
+            သင်တန်းအမျိုးအစားများ
           </motion.h2>
-          <motion.h2 initial='hidden' ref={ref} animate={controls} variants={titleVariants} className=" text-[24px]  leading-[34px] text-center xl:text-4xl font-poppin font-semibold text-neutral-900">
-            Building Foundations for Lifelong Learning
+          <motion.h2
+            initial="hidden"
+            ref={ref}
+            animate={controls}
+            variants={titleVariants}
+            className=" text-[24px]  text-center xl:text-[36px] font-poppin font-semibold text-neutral-900"
+          >
+            တစ်သက်တာသင်ယူမှုအတွက် အခြေခံများ တည်ဆောက်ကြပါစို့
           </motion.h2>
         </div>
       </div>

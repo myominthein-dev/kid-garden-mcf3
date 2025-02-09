@@ -9,10 +9,10 @@ import SocialDevelopmentPageVedio from "../../../../../assets/ourCoursesPage/Soc
 
 const SocialDevelopmentPage = () => {
   const learningSkill = [
-    "Use Hands-On Activities",
-    "Relate Math to Daily Life",
-    "Incorporate Games",
-    "Encourage Critical Thinking",
+    "ကိုယ်ကျင့်တရား",
+    "ဖန်တီးမှုစာပေ",
+    "စာဖတ်ခြင်းနှင့် ဗဟုသုတ",
+    "စာရေးသားစွမ်းရည်",
   ];
   return (
     <div className=" my-10 ">
@@ -23,20 +23,20 @@ const SocialDevelopmentPage = () => {
         DimaondGroupPositon={
           "xl:top-0 xl:left-[45%] hidden md:block md:top-1 md:right-[10%]"
         }
-        headerText={" Math and Problem-Solving"}
+        headerText={"လူမှုဖွံ့ဖြိုးတိုးတက်မှု"}
         ParagText={
-          "in early education focus on developing children’s ability to understand numbers, shapes, patterns, and relationships. Through engaging activities like counting, sorting, measuring, and solving simple puzzles, children learn to approach challenges logically and think critically."
+          "ဆက်သွယ်ပြောဆိုခြင်း၊နားလည်မှုအဖွဲ့လိုက်လုပ်ဆောင်ခြင်းနှင့် တိုင်ပင်ဖြေရှင်းမှုကဲ့သို့သောကျွမ်းကျင်မှုများဖွံ့ဖြိုးတိုးတက်လာစေခြင်း ပါဝင်သည်။ အုပ်စုလှုပ်ရှားမှုများ၊ ကစားခြင်းနှင့် ညွှန်ကြားချက်အတိုင်း ဆက်ဆံမှုမှတဆင့် ကလေးများသည် ဝေမျှခြင်းနှင့် ပူးပေါင်းလုပ်ဆောင်ခြင်းတို့ကို သင်ယူကြသည်။"
         }
         LgParagTex={[
-          "We refers to the process by which children learn to interact with others, build relationships, and understand social norms. It involves the development of skills like communication,",
-          " empathy, teamwork, and conflict resolution. Through group activities, play, and guided interaction, children learn how to share, cooperate.",
+          "ဆက်သွယ်ပြောဆိုခြင်း၊နားလည်မှုအဖွဲ့လိုက်လုပ်ဆောင်ခြင်းနှင့် တိုင်ပင်ဖြေရှင်းမှုကဲ့သို့သောကျွမ်းကျင်မှုများဖွံ့ဖြိုးတိုးတက်လာစေခြင်း ပါဝင်သည်။ ",
+          "အုပ်စုလှုပ်ရှားမှုများ၊ ကစားခြင်းနှင့် ညွှန်ကြားချက်အတိုင်း ဆက်ဆံမှုမှတဆင့် ကလေးများသည် ဝေမျှခြင်းနှင့် ပူးပေါင်းလုပ်ဆောင်ခြင်းတို့ကို သင်ယူကြသည်။",
         ]}
       />
       {/* What Your Kid Will Learn */}
       <WhatYourKidWillLearn
         flexFlow={"flex-row"}
         text={
-          "Kids will learn to count and recognize numbers, helping them understand basic numerical concepts. They will explore addition and subtraction through interactive activities, developing early arithmetic skills. Children will also learn to identify and create patterns using objects, shapes, or colors. Basic measurement skills will be introduced, such as comparing sizes, lengths, and weights."
+          "သင်တန်းအမျိုးအစားများ သည် သင်တန်းများကို ဘာသာရပ်၊ ရည်ရွယ်ချက်နှင့် လေ့လာမှုပုံစံအလိုက် ခွဲခြားထားခြင်းဖြစ်သည်။ ဥပမာ - ပညာရေး၊ အလုပ်အကိုင်၊ နည်းပညာ၊ ဘာသာစကားစသည့် အမျိုးအစားများ ပါဝင်သည်။"
         }
         learningSkill={learningSkill}
         ImageUrl={RectangleTwo}

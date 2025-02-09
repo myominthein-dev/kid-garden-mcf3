@@ -1,6 +1,4 @@
-
-
-import React, { useRef,useEffect } from "react";
+import React, { useRef, useEffect } from "react";
 import { motion, useInView, useAnimation } from "framer-motion";
 import Container from "../../components/Container";
 import potato from "../../../../assets/coursePage/potato_1.png";
@@ -9,7 +7,14 @@ import handRaisingKid from "../../../../assets/coursePage/hadng_raising_kid.png"
 import drawingKid from "../../../../assets/coursePage/kid_drawing.png";
 import sunFlower from "../../../../assets/coursePage/sun_flower.png";
 import sun from "../../../../assets/coursePage/sun.png";
-import { containerVariants, floatingVariants, imageVariants, itemVariants, rotatingVariants, titleVariants } from "../../../../utils";
+import {
+  containerVariants,
+  floatingVariants,
+  imageVariants,
+  itemVariants,
+  rotatingVariants,
+  titleVariants,
+} from "../../../../utils";
 
 const LangLiteracy = () => {
   const ref = useRef(null);
@@ -22,7 +27,6 @@ const LangLiteracy = () => {
     }
   }, [isInView, controls]);
 
- 
   return (
     <Container className={"my-16 py-5"}>
       <motion.div
@@ -32,7 +36,7 @@ const LangLiteracy = () => {
         variants={containerVariants}
         className="max-w-[1183px] max-sm:w-full relative mx-auto"
       >
-        <motion.div 
+        <motion.div
           variants={floatingVariants}
           initial="initial"
           animate="animate"
@@ -103,7 +107,12 @@ const LangLiteracy = () => {
             className="bg-white max-sm:absolute max-sm:top-[50%] max-sm:left-[10%] rounded-full px-12 py-3 z-30"
           >
             <h3 className="text-[#FF9E0E] text-4xl">1.7K</h3>
-            <motion.p variants={itemVariants} className="leading-9 text-lg text-[#333931]">Enrolled Student</motion.p>
+            <motion.p
+              variants={itemVariants}
+              className="leading-9 text-lg text-[#333931]"
+            >
+              Enrolled Student
+            </motion.p>
           </motion.div>
           <motion.div
             variants={itemVariants}
@@ -111,7 +120,7 @@ const LangLiteracy = () => {
           >
             <motion.img
               variants={imageVariants}
-              src={drawingKid }
+              src={drawingKid}
               alt="Kid drawing"
               layout="fill"
               objectFit="contain"
@@ -123,7 +132,7 @@ const LangLiteracy = () => {
           >
             <motion.img
               variants={imageVariants}
-              src={handRaisingKid }
+              src={handRaisingKid}
               alt="Kid raising hand"
               layout="fill"
               objectFit="contain"

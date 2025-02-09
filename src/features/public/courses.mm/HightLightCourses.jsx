@@ -56,7 +56,7 @@ const HightLightCourses = ({ VedioUrl }) => {
             variants={titleVariants}
             className=" font-normal text-[20px] leading-[35px] font-pacifico text-orange-500"
           >
-            Play Video
+            ဗီဒီယိုကြည့်ကြရအောင်
           </motion.h2>
         </div>
         <div className=" relative">
@@ -67,7 +67,7 @@ const HightLightCourses = ({ VedioUrl }) => {
             variants={titleVariants}
             className=" text-[36px] leading-[54px]  text-neutral-900 font-poppin font-semibold"
           >
-            Highlight of A Course
+            သင်ကြားမည့် အဓိက အကြောင်းအရာများ
           </motion.h1>
           <motion.img
             ref={ref}

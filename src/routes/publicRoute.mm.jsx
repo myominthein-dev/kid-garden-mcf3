@@ -1,10 +1,13 @@
-
 import React, { lazy } from "react";
 
 const CoursePage = lazy(() => import("../features/public/pages.mm/CoursePage"));
-const GalleryPage = lazy(() => import("../features/public/pages.mm/GalleryPage"));
+const GalleryPage = lazy(() =>
+  import("../features/public/pages.mm/GalleryPage")
+);
 const HomePage = lazy(() => import("../features/public/pages.mm/HomePage"));
-const AboutUsPage = lazy(() => import("../features/public/pages.mm/AboutUsPage"));
+const AboutUsPage = lazy(() =>
+  import("../features/public/pages.mm/AboutUsPage")
+);
 const ContactUsPage = lazy(() =>
   import("../features/public/pages.mm/ContactUsPage")
 );
@@ -12,13 +15,12 @@ import coursesDetailRoute from "./coursesDetailRoute.mm";
 import UpcomingEventsPage from "../features/public/pages.mm/UpcomingEventsPage";
 import EventDetailPage from "../features/public/pages.mm/EventDetailPage";
 
-
 export const publicRoute = [
   {
-    path: "/mm" ,
+    path: "/mm",
     element: <HomePage />,
   },
-  
+
   {
     path: "/mm/gallery",
     element: <GalleryPage />,

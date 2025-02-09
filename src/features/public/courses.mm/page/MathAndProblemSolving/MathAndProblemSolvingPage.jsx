@@ -9,10 +9,10 @@ import HightLightCourses from "../../HightLightCourses";
 
 const MathAndProblemSolvingPage = () => {
   const learningSkill = [
-    "Use Hands-On Activities",
-    "Relate Math to Daily Life",
-    "Incorporate Games",
-    "Encourage Critical Thinking",
+    "ကိုယ်ကျင့်တရား",
+    "ဖန်တီးမှုစာပေ",
+    "စာဖတ်ခြင်းနှင့် ဗဟုသုတ",
+    "စာရေးသားစွမ်းရည်",
   ];
   return (
     <div className=" my-10 ">
@@ -23,20 +23,20 @@ const MathAndProblemSolvingPage = () => {
         DimaondGroupPositon={
           "xl:top-0 xl:left-[45%] top-0  md:top-1 right-[10%]"
         }
-        headerText={" Math and Problem-Solving"}
+        headerText={"သင်္ချာနှင့် ပြဿနာဖြေရှင်းခြင်း"}
         ParagText={
-          "in early education focus on developing children’s ability to understand numbers, shapes, patterns, and relationships. Through engaging activities like counting, sorting, measuring, and solving simple puzzles, children learn to approach challenges logically and think critically."
+          "ကလေးများ၏ နံပါတ်များ၊ ပုံသဏ္ဍာန်များ၊ပုံစံများနှင့်ဆက်စပ်မှုများကို နားလည်နိုင်စေရန်ကျွမ်းကျင်မှုကိုဖွံ့ဖြိုးတိုးတက်စေရန်အာရုံစိုက်ရသည်။ ရေတွက်ခြင်း၊ အမျိုးအစားခွဲခြင်း၊ တိုင်းတာခြင်းနှင့် ရိုးရှင်းသော ပဟေဠိများဖြေရှင်းခြင်းကဲ့သို့သောလှုပ်ရှားမှုများမှတဆင့်ကလေးများသည် စိန်ခေါ်မှုများကို သင်္ချာဆန်၍ သင်ယူနိုင်ပြီး ယုတ္တိပညာနှင့် ဝါရင့်အတွေးအခေါ်များကို ဖွံ့ဖြိုးတိုးတက်စေသည်။"
         }
         LgParagTex={[
-          "in early education focus on developing children’s ability to understand numbers, shapes, patterns, and relationships. Through engaging activities like ",
-          "counting, sorting, measuring, and solving simple puzzles, children learn to approach challenges logically and think critically.",
+          "ကလေးများ၏ နံပါတ်များ၊ ပုံသဏ္ဍာန်များ၊ပုံစံများနှင့်ဆက်စပ်မှုများကို နားလည်နိုင်စေရန်ကျွမ်းကျင်မှုကိုဖွံ့ဖြိုးတိုးတက်စေရန်အာရုံစိုက်ရသည်။ ",
+          " ရေတွက်ခြင်း၊ အမျိုးအစားခွဲခြင်း၊ တိုင်းတာခြင်းနှင့် ရိုးရှင်းသော ပဟေဠိများဖြေရှင်းခြင်းကဲ့သို့သောလှုပ်ရှားမှုများမှတဆင့်ကလေးများသည် စိန်ခေါ်မှုများကို သင်္ချာဆန်၍ သင်ယူနိုင်ပြီး ယုတ္တိပညာနှင့် ဝါရင့်အတွေးအခေါ်များကို ဖွံ့ဖြိုးတိုးတက်စေသည်။",
         ]}
       />
       {/* What Your Kid Will Learn */}
       <WhatYourKidWillLearn
         flexFlow={"flex-row"}
         text={
-          "Kids will learn to count and recognize numbers, helping them understand basic numerical concepts. They will explore addition and subtraction through interactive activities, developing early arithmetic skills. Children will also learn to identify and create patterns using objects, shapes, or colors. Basic measurement skills will be introduced, such as comparing sizes, lengths, and weights."
+          "သင်တန်းအမျိုးအစားများ သည် သင်တန်းများကို ဘာသာရပ်၊ ရည်ရွယ်ချက်နှင့် လေ့လာမှုပုံစံအလိုက် ခွဲခြားထားခြင်းဖြစ်သည်။ ဥပမာ - ပညာရေး၊ အလုပ်အကိုင်၊ နည်းပညာ၊ ဘာသာစကားစသည့် အမျိုးအစားများ ပါဝင်သည်။"
         }
         learningSkill={learningSkill}
         ImageUrl={RectangleTwo}
