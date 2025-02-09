@@ -1,4 +1,3 @@
-
 import BgImg from "../../../assets/gallery/bg.png";
 import BreadCrumb from "../components/BreadCrumb";
 import Footer from "../components/Footer.mm";
@@ -18,13 +17,12 @@ const GalleryPage = () => {
         leftImg={woof}
         lImgWidth={300}
         rightImg={youngBoy}
-        title={"Gallery"}
-        currentPageTitle={"Gallery"}
+        title={"ဓာတ်ပုံများ"}
+        currentPageTitle={"ဓာတ်ပုံများ"}
       />
       <GalleryHeroSection />
       <Footer bgImg={BgImg} color={"fuchsia"} />
     </main>
-
   );
 };
 

@@ -1,4 +1,4 @@
-import React, {useRef} from "react";
+import React, { useRef } from "react";
 import Container from "../components/Container";
 import StarOrange from "../../../assets/ourCoursesPage/StarOrange.svg";
 import StarPink from "../../../assets/ourCoursesPage/StarPink.svg";
@@ -8,23 +8,35 @@ import AboutHeroListGroup from "./AboutHeroListGroup";
 import { motion, useAnimation, useInView } from "framer-motion";
 import { imageVariants, titleVariants } from "../../../utils";
 const AboutUsHeroSection = () => {
-   const ref = useRef(null)
-      const isInView = useInView(ref, { once: true, amount: 0.3 })
-      const controls = useAnimation()
-    
-      if (isInView) {
-        controls.start('visible')
-      }
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 0.3 });
+  const controls = useAnimation();
+
+  if (isInView) {
+    controls.start("visible");
+  }
   return (
     <Container>
       <div className=" flex flex-col pt-24 gap-14 md:gap-24 justify-center items-center w-full min-h-screen ">
         {" "}
         <div className="  flex justify-center items-start sm:items-center  gap-4 flex-col w-full">
-          <motion.h2 ref={ref} animate={controls} initial='hidden' variants={titleVariants} className=" text-orange-500 font-normal text-lg sm:text-xl font-pacifico">
-            How We Work
+          <motion.h2
+            ref={ref}
+            animate={controls}
+            initial="hidden"
+            variants={titleVariants}
+            className=" text-orange-500 font-normal text-lg sm:text-xl font-pacifico"
+          >
+            ကျွန်ုပ်တို့၏ လုပ်ဆောင်ပုံ
           </motion.h2>
-          <motion.h3 ref={ref} animate={controls} initial='hidden' variants={titleVariants} className=" text-2xl sm:text-3xl md:text-4xl font-poppin font-semibold text-neutral-900">
-            We Are Best In Education
+          <motion.h3
+            ref={ref}
+            animate={controls}
+            initial="hidden"
+            variants={titleVariants}
+            className=" text-base sm:text-xl md:text-3xl font-poppin font-semibold text-neutral-900"
+          >
+            ပညာရေးနှင့် အနာဂတ်ကို တိုးတက်အောင် ဆောင်ရွက်ကြပါစို့!
           </motion.h3>
         </div>
         <div className="relative  justify-between h-full  w-full pt-20 gap-5 grid  md:grid-cols-2  md:grid-flow-col">
@@ -68,7 +80,11 @@ const AboutUsHeroSection = () => {
                 repeatType: "reverse",
               }}
             />
-            <motion.img ref={ref} animate={controls} initial='hidden' variants={imageVariants}
+            <motion.img
+              ref={ref}
+              animate={controls}
+              initial="hidden"
+              variants={imageVariants}
               src={ourClass}
               alt="ourClass"
               className="w-full h-full object-cover"
