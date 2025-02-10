@@ -4,12 +4,13 @@ import kid from "../../../assets/events/event_kid.png";
 import garaffe from "../../../assets/events/event_garaffee.png";
 import breadCrumb3 from "../../../assets/breadcrumb/breadcrumb-3.png";
 import Container from "../components/Container";
-import playingInCompound from "../../../assets/homePage/playing_in_compound.png"
+import playingInCompound from "../../../assets/homePage/playing_in_compound.png";
 import hollowenKid from "../../../assets/events/hollowenChildren.png";
 import sun from "../../../assets/events/sun.png";
 import sunFlower from "../../../assets/events/sun_flower.png";
 import footerBg from "../../../assets/homePage/bg_footer.jpg";
 import Footer from "../components/Footer";
+import sunAnimation from "../../../../src/features/public/lotties/sunAnimatin.json";
 import {
   LuClock2,
   LuGlobe,
@@ -18,6 +19,7 @@ import {
   LuPhone,
   LuUserRound,
 } from "react-icons/lu";
+import Lottie from "lottie-react";
 
 const EventDetailPage = () => {
   return (
@@ -70,9 +72,10 @@ const EventDetailPage = () => {
         </div>
         {/* image section  */}
         <div className="flex justify-between  items-center gap-4 px-8 mx-4   py-5 relative ">
-          <img
-            className="absolute  hidden xl:inline-block right-0 -top-20"
-            src={sunFlower}
+          <Lottie
+            className=" absolute  hidden xl:inline-block skew-x-6 skew-y-3 right-0 -top-20 w-40 "
+            animationData={sunAnimation}
+            loop
           />
           <img
             className="absolute  hidden xl:inline-block left-5 -bottom-20"
