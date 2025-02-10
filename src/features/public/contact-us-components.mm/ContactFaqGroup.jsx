@@ -5,35 +5,35 @@ const ContactFaqGroup = () => {
   const [faqs, setFaqs] = useState([
     {
       id: 1,
-      question: "Will the child be safe?",
+      question: "ကလေးဘေးအန္တရာယ်ကင်းမလား?",
       answer:
         " Our kindergarten is equipped with secure facilities, childproof environments, and a well-trained staff to ensure a safe and nurturing atmosphere.",
       isOpen: false,
     },
     {
       id: 2,
-      question: "What should a child bring to kindergarten?",
+      question: "ကလေးက ကျောင်းသွားရင် ဘာတွေ ယူသင့်ပါသလဲ?",
       answer:
-        "When you’re ready to make an offer, we’ll help with negotiations, paperwork",
+        "ကျောင်းအိတ်သေးသေး၊ ရေဗူး၊ နေ့လယ်စာဘူး၊ အဝတ်အစား နေလောင်ကာခရင်မ်တို့ကိုလည်း ထည့်သွင်းပေးပါ။",
       isOpen: true,
     },
     {
       id: 3,
-      question: "What if child special need?",
+      question: "ကလေးမှာ လိုအပ်မှုများ ရှိပါက ဘာလုပ်မလဲ?",
       answer:
         "We warmly welcome children with special needs and are committed to providing an inclusive and supportive environment",
       isOpen: false,
     },
     {
       id: 4,
-      question: "How long is a typical kindergarten day?",
+      question: "ကလေးရဲ့ကျောင်းနေ့ကာလဘယ်လောက်ရှိသလဲ?",
       answer:
         "A typical kindergarten day lasts around 6 to 8 hours, depending on the program you choose",
       isOpen: false,
     },
     {
       id: 5,
-      question: "What are the duties of a nanny?",
+      question: "ဆရာ/ဆရာမများ၏တာဝန်များကဘာတွေဖြစ်ပါသလဲ?",
       answer:
         "The duties of a nanny typically include providing attentive care and support for your child in a safe, nurturing environment",
       isOpen: false,

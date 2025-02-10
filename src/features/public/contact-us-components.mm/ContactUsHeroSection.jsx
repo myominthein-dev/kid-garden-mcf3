@@ -55,10 +55,10 @@ const ContactUsHeroSection = () => {
         <div className=" flex flex-col py-24 gap-14 md:gap-20 justify-center items-center w-full h-full relative min-h-screen">
           <div className="  flex justify-center items-start sm:items-center  gap-4 flex-col w-full">
             <h3 className=" text-orange-500 font-normal text-xl font-pacifico">
-              Contact Form
+              ဆက်သွယ်ရန်ဖောင်
             </h3>
             <h1 className=" text-2xl sm:text-3xl md:text-4xl font-poppin font-semibold text-neutral-900">
-              Get In Touch with Us!
+              ကျွန်ုပ်တို့နှင့်ဆက်သွယ်ပါ!
             </h1>
           </div>
           <div className=" w-full sm:w-2/3 lg:w-1/3  flex justify-center items-center">
