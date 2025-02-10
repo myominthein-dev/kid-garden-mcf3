@@ -1,4 +1,4 @@
-import React, { lazy } from "react";
+import { lazy } from "react";
 
 const CoursePage = lazy(() => import("../features/public/pages.mm/CoursePage"));
 const GalleryPage = lazy(() =>
