@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { Menu, X } from "lucide-react";
 import { Link, NavLink } from "react-router-dom";
-import HamburgerMenuRoute from "./HamburgerMenuRoute";
+import HamburgerMenuRoute from "./HamburgerMenuRoute.mm";
 import { motion, useInView, useAnimation } from "framer-motion";
 import { LanguageToggle } from "./LanguageToggle";
 const HamburgerMenu = ({ routerPath }) => {
@@ -63,12 +63,12 @@ const HamburgerMenu = ({ routerPath }) => {
 
       {/* Menu Content */}
       <div
-        className={` fixed z-40   w-2/3 md:w-1/3 mt-5  shadow-lg transform transition-transform duration-300 ease-in-out ${
-          isOpen ? "-translate-x-full" : "translate-x-full"
+        className={` fixed z-40  w-full md:w-1/3 mt-5  shadow-lg transform transition-transform duration-300 ease-in-out ${
+          isOpen ? "-translate-x-[65%]" : "translate-x-44"
         }`}
       >
-        <nav className="p-4  bg-white rounded-lg  absolute top-[5%] left-[5%]  ">
-          <ul className="flex">
+        <nav className="p-2    w-full rounded-lg">
+          <ul className="flex  items-center justify-center">
             {routerPath.map((path, index) => {
               return (
                 <HamburgerMenuRoute

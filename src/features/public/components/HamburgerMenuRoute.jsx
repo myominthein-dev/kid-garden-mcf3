@@ -42,7 +42,7 @@ const HamburgerMenuRoute = ({ route, name, toggleMenu }) => {
     >
       <NavLink
         to={route}
-        className={`block py-2 px-1 text-[9px]  text-nowrap text-gray-800 font-pacifico rounded transition-all duration-1000 ease-in-out ${
+        className={`block py-2 px-2 text-sm lg:text-lg  text-nowrap text-gray-800 font-pacifico rounded transition-all duration-1000 ease-in-out ${
           mobileOutLine ? "active" : ""
         }`}
       >
