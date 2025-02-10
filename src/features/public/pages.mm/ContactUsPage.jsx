@@ -22,13 +22,12 @@ const ContactUsPage = () => {
         lImgPos={"md:-top-0 md:-left-44 relative bottom-[-28%] "}
         rImgPos={" right-44"}
         lImgWidth={600}
-        title={"Contact Us"}
-        currentPageTitle={"Contact Us"}
+        title={"ဆက်သွယ်ရန်"}
+        currentPageTitle={"ဆက်သွယ်ရန်"}
       />
       <ContactUsHeroSection />
       <ContactUsFaqSection />
       <Footer bgImg={footerBg} color={"orange"} />
-
     </>
   );
 };
