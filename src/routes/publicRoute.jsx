@@ -1,4 +1,3 @@
-
 import React, { lazy } from "react";
 
 const CoursePage = lazy(() => import("../features/public/pages/CoursePage"));
@@ -12,13 +11,12 @@ import coursesDetailRoute from "./coursesDetailRoute";
 import UpcomingEventsPage from "../features/public/pages/UpcomingEventsPage";
 import EventDetailPage from "../features/public/pages/EventDetailPage";
 
-
 const publicRoute = [
   {
-    index: '/',
+    index: "/",
     element: <HomePage />,
   },
-  
+
   {
     path: "gallery",
     element: <GalleryPage />,
@@ -28,7 +26,7 @@ const publicRoute = [
     element: <AboutUsPage />,
   },
   {
-    path: "/en/contact-us",
+    path: "/contact-us",
     element: <ContactUsPage />,
   },
 
