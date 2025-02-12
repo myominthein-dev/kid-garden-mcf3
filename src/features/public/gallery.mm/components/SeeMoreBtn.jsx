@@ -7,7 +7,7 @@ const SeeMoreBtn = ({ className, onClick }) => {
         className={`${className} py-3 px-6 bg-fuchsia-600 rounded-2xl font-medium font-poppin text-white text-sm leading-4`}
         onClick={onClick}
       >
-        See More Photos
+        ဓာတ်ပုံအားလုံးကို ကြည့်ရှုပါ
       </div>
     </div>
   );

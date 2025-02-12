@@ -30,7 +30,7 @@ const TopTitle = () => {
         variants={titleVariants}
         className=" text-xl leading-9 font-medium  font-pacifico"
       >
-        ဓာတ်ပုံများ
+        Gallery
       </motion.h2>
       <motion.p
         ref={ref}
@@ -39,7 +39,7 @@ const TopTitle = () => {
         variants={titleVariants}
         className=" xl:text-4xl text-xl font-poppin leading-[54px] font-semibold"
       >
-        အမှတ်တရရက်စွဲများ
+        Our Colourful Journey
       </motion.p>
       <motion.img
         ref={ref}
