@@ -1,7 +1,7 @@
 import BgImg from "../../../assets/gallery/bg.png";
 import BreadCrumb from "../components/BreadCrumb";
 import Footer from "../components/Footer.mm";
-import GalleryHeroSection from "../gallery/GalleryHeroSection";
+import GalleryHeroSection from "../gallery.mm/GalleryHeroSection";
 
 import breadCrumb2 from "../../../assets/breadcrumb/breadcrumb-2.jpg";
 import woof from "../../../assets/breadcrumb/woof.png";
