@@ -64,7 +64,7 @@ const BreadCrumb = ({
                 {title}
               </motion.h1>
             </div>
-            <div className="flex justify-center gap-4">
+            <div className="flex justify-center sm:text-base text-xs text-nowrap gap-4">
               <li className=" items-center breadCrumbLabel">
                 <Link to="/" className=" gap-1 items-center ">
                   <span className="breadCrumbLabel">
@@ -87,7 +87,7 @@ const BreadCrumb = ({
                       to={link.path}
                       className="gap-1 items-center breadCrumbLabel "
                     >
-                      <span className="breadCrumbLabel">{">"}</span>
+                      <span className="breadCrumbLabel ">{">"}</span>
                       {link.title}
                     </Link>
                   </motion.li>

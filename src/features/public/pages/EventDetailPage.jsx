@@ -53,15 +53,15 @@ const EventDetailPage = () => {
             magical moments together!
           </p>
           {/* Location Time icons  */}
-          <div className="flex sm:w-full w-80 justify-center items-center md:gap-6 gap-2 text-nowrap ">
-            <p className="flex md:gap-2 text-xs gap-1.5 justify-center items-center font-semibold">
+          <div className="flex sm:w-full w-80 px-4 text-xs justify-center items-center md:gap-6 gap-2 text-nowrap ">
+            <p className="flex md:gap-2 text-xs gap-1 justify-center items-center md:font-semibold">
               <div className="text-orange-500 flex items-center md:gap-2">
                 <LuMapPin size={20} /> Location :
               </div>
               <p className="text-neutral-700">Sunshine Campus</p>
             </p>
 
-            <p className="flex md:gap-2 gap-1.5 text-xs justify-center items-center font-semibold">
+            <p className="flex md:gap-2 gap-1 text-xs justify-center items-center md:font-semibold">
               <div className="text-orange-500 flex items-center gap-2">
                 <LuClock2 size={20} /> Time :
               </div>
