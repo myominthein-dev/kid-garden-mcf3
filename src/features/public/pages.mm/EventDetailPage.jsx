@@ -43,36 +43,36 @@ const EventDetailPage = () => {
 
       <Container className={" py-5 flex flex-col md:gap-28 gap-10 "}>
         {/* Title paragraph section */}
-        <div className="md:max-w-[600px] mx-auto flex flex-col gap-4  items-center my-4">
-          <p className="bg-lime-500  text-white px-8 py-1 text-sm   text-base  rounded-full">
+        <div className="md:max-w-[600px]  w-full  mx-auto flex flex-col gap-4  items-center my-4">
+          <p className="bg-lime-500  text-white px-8 py-1   text-base  rounded-full">
             ဖွံ့ဖြိုးမှု
           </p>
           <h2 className="md:text-4xl flex items-center justify-center align-baseline text-2xl font-poppin font-bold leading-10">
             ခရစ္စမတ်ပွဲ <TbChristmasTree className=" text-lime-400" />
             <BsStars className=" text-yellow-300" />
           </h2>
-          <p className="leading-8 text-center text-  text-neutral-700">
+          <p className="leading-8 text-center md:text-center md:text-base text-sm text-pretty  text-neutral-700">
             ကစားပြိုင်ပွဲများ၊ သင်ကြားမှု လှုပ်ရှားမှုများနှင့် ဖန်တီးမှု
             အလုပ်ရုံဆွေးနွေးပွဲများပါဝင်သည့် စိတ်လှုပ်ရှားဖွယ်နေ့တစ်နေ့ကို
             ကျွန်ုပ်တို့နှင့်အတူ ပါဝင်လိုက်ပါ! 🎨✨ မိသားစုနှင့်အတူ
             အမှတ်တရများဖန်တီးရန် အခွင့်အရေးကို မလွှတ်တမ်းယူလိုက်ပါနဲ့
           </p>
           {/* Location Time icons  */}
-          <div className="flex items-center md:gap-6 gap-2 text-nowrap ">
-            <p className="flex md:gap-2 text-xs gap-1.5 justify-center items-center font-semibold">
-              <div className="text-orange-500 flex items-center md:gap-2">
+          <div className="grid md:grid-cols-3 grid-cols-2 gap-4 space-x-1  md:space-x-0 sm:w-full justify-self-center  text-xs justify-center items-center md:gap-6 sm:gap-2  text-nowrap ">
+            <p className="flex md:gap-2 text-xs gap-1 justify-center items-center font-semibold">
+              <div className="text-orange-500 flex items-center text-xs md:gap-2">
                 <LuMapPin size={20} /> တည်နေရာ :
               </div>
               <p className="text-neutral-700">Sunshine Campus</p>
             </p>
 
-            <p className="flex md:gap-2 gap-1.5 text-xs justify-center items-center font-semibold">
-              <div className="text-orange-500 flex items-center gap-2">
+            <p className="flex md:gap-2 gap-1 text-xs justify-center items-center font-semibold">
+              <div className="text-orange-500 flex items-center gap-1">
                 <LuClock2 size={20} /> အချိန် :
               </div>
               <p className="text-neutral-700 text-xs">9:00 AM - 11 AM</p>
             </p>
-            <p className="text-orange-500  text-xs flex items-center justify-center gap-2 ">
+            <p className="text-orange-500  md:col-span-1 col-span-2 justify-self-center   text-xs flex items-center justify-center gap-1 ">
               <GrCurrency size={20} className=" mt-1" />
               ဝင်ကြေးအခမဲ့
             </p>

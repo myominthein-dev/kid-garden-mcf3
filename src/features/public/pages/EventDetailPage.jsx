@@ -38,9 +38,9 @@ const EventDetailPage = () => {
         currentPageTitle={"Event Details"}
       />
 
-      <Container className={" py-5 flex flex-col md:gap-28 gap-10 "}>
+      <Container className={" py-5 flex w-full flex-col md:gap-28 gap-10 "}>
         {/* Title paragraph section */}
-        <div className="md:max-w-[600px] mx-auto flex flex-col gap-4  items-center my-4">
+        <div className="md:max-w-[600px] w-full  mx-auto flex flex-col gap-4  items-center my-4">
           <p className="bg-lime-500 text-white px-2.5 py-0.5   text-base  rounded-full">
             Development
           </p>
@@ -53,15 +53,15 @@ const EventDetailPage = () => {
             magical moments together!
           </p>
           {/* Location Time icons  */}
-          <div className="flex items-center md:gap-6 gap-2 text-nowrap ">
-            <p className="flex md:gap-2 text-xs gap-1.5 justify-center items-center font-semibold">
+          <div className="flex sm:w-full w-80 px-4 text-xs justify-center items-center md:gap-6 gap-2 text-nowrap ">
+            <p className="flex md:gap-2 text-xs gap-1 justify-center items-center md:font-semibold">
               <div className="text-orange-500 flex items-center md:gap-2">
                 <LuMapPin size={20} /> Location :
               </div>
               <p className="text-neutral-700">Sunshine Campus</p>
             </p>
 
-            <p className="flex md:gap-2 gap-1.5 text-xs justify-center items-center font-semibold">
+            <p className="flex md:gap-2 gap-1 text-xs justify-center items-center md:font-semibold">
               <div className="text-orange-500 flex items-center gap-2">
                 <LuClock2 size={20} /> Time :
               </div>
