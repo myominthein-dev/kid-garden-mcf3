@@ -66,7 +66,10 @@ const BreadCrumb = ({
             </div>
             <div className="flex justify-center sm:text-base text-[1rem]   text-nowrap gap-4">
               <li className=" items-center breadCrumbLabel   ">
-                <Link to="/" className=" gap-1 items-center   ">
+                <Link
+                  to={languageSwitch === "mm" ? "/mm/" : "/"}
+                  className=" gap-1 items-center   "
+                >
                   <span className="breadCrumbLabel">
                     {languageSwitch === "mm" ? "ပင်မစာမျက်နှာ" : "Home"}
                   </span>
