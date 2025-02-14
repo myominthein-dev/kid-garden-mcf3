@@ -52,7 +52,7 @@ const BreadCrumb = ({
               leftImgShow ? "block " : "md:block hidden"
             }  md:absolute ${lImgPos}`}
           />
-          <ol className="w-full text-center">
+          <ol className="w-full text-center ">
             <div className="mb-4">
               <motion.h1
                 animate={controls}
@@ -64,9 +64,12 @@ const BreadCrumb = ({
                 {title}
               </motion.h1>
             </div>
-            <div className="flex justify-center sm:text-base text-xs text-nowrap gap-4">
-              <li className=" items-center breadCrumbLabel">
-                <Link to="/" className=" gap-1 items-center ">
+            <div className="flex justify-center sm:text-base text-[1rem]   text-nowrap gap-4">
+              <li className=" items-center breadCrumbLabel   ">
+                <Link
+                  to={languageSwitch === "mm" ? "/mm/" : "/"}
+                  className=" gap-1 items-center   "
+                >
                   <span className="breadCrumbLabel">
                     {languageSwitch === "mm" ? "ပင်မစာမျက်နှာ" : "Home"}
                   </span>
@@ -81,11 +84,11 @@ const BreadCrumb = ({
                     ref={ref}
                     variants={title}
                     key={index}
-                    className="inline-flex  items-center"
+                    className="inline-flex  items-center "
                   >
                     <Link
                       to={link.path}
-                      className="gap-1 items-center breadCrumbLabel "
+                      className="gap-1 items-center breadCrumbLabel  "
                     >
                       <span className="breadCrumbLabel ">{">"}</span>
                       {link.title}

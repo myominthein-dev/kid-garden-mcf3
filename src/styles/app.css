@@ -30,7 +30,7 @@
 
 @layer components {
   .breadCrumbLabel {
-    @apply font-pacifico font-normal text-orange-500 text-xl;
+    @apply font-pacifico font-normal text-orange-500;
   }
 
   .sub-heading {
