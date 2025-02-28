@@ -20,9 +20,9 @@ const PublicLayout = () => {
       style={{
         cursor: `url(${myIcon}), auto`, // Use imported file
       }}
-      className=" overflow-x-hidden flex flex-col min-h-screen"
+      className=" overflow-x-hidden  flex flex-col min-h-screen"
     >
-      <Header />
+      <Header/>
       {loading ? (
         <PageLoading />
       ) : (

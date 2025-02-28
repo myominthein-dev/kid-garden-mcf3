@@ -1,7 +1,7 @@
 import {React, useRef} from "react";
 
 import Container from "../components/Container";
-import HomeGalleryTitle from "../components/HomeGalleryTitle";
+import HomeGalleryTitle from "../components/HomeGalleryTitle.mm";
 import DetailBtn from "./DetailBtn";
 import HomeGalleryalbum from "./HomeGalleryalbum";
 const HomeGallery = () => {

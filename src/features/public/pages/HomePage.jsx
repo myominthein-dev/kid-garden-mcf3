@@ -10,6 +10,7 @@ import HomeGallery from "../home-components/HomeGallery";
 const HomePage = () => {
   return (
     <>
+      
       <HomeHeroSection />
       <HomeCaterogires />
       <HomeProcess />
